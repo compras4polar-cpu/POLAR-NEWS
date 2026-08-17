@@ -1,0 +1,15 @@
+{
+  "name": "polar-compras-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend Node.js (Vercel Functions + Cron) para atualização automática do Painel de Inteligência - Compras Internacionais da Polar Indústria.",
+  "engines": {
+    "node": ">=18.x"
+  },
+  "dependencies": {
+    "@vercel/kv": "^2.0.0",
+    "@sendgrid/mail": "^8.1.3",
+    "@sparticuz/chromium": "^123.0.1",
+    "puppeteer-core": "^22.15.0"
+  }
+}

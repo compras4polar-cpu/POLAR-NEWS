@@ -1,0 +1,1728 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Painel de Inteligência — Compras Internacionais | Polar Indústria</title>
+<style>
+  :root{
+    --bg:#f8f9fa;
+    --card:#ffffff;
+    --text:#1a1a2e;
+    --text-muted:#5a5a72;
+    --border:#e2e2ea;
+    --green:#15803d;
+    --green-bg:#eaf7ee;
+    --red:#b91c1c;
+    --red-bg:#fdecec;
+    --orange:#c2540a;
+    --orange-bg:#fdf1e6;
+    --blue:#1d4ed8;
+    --blue-bg:#eaf0fd;
+    --gray:#57596b;
+    --gray-bg:#eef0f4;
+    --yellow:#92720c;
+    --yellow-bg:#fbf3d9;
+    --shadow: 0 1px 2px rgba(20,20,40,0.04), 0 2px 8px rgba(20,20,40,0.05);
+    --radius: 10px;
+    /* superfícies "sólidas" (botão primário, aba ativa) — sempre escuras, texto sempre claro, independente do tema */
+    --solid:#1a1a2e;
+    --solid-text:#ffffff;
+    --table-head:#f4f5f8;
+    --modal-overlay: rgba(20,20,32,0.5);
+    --warn-bg:#fbf3d9;
+    --warn-border:#e9d69a;
+    --warn-text:#5c4a05;
+    --hover-bg:#f1f2f6;
+    --dashed-border:#c7c9d6;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1117;
+      --card:#171a23;
+      --text:#eef0f5;
+      --text-muted:#9296a8;
+      --border:#2a2e3a;
+      --green:#4ade80;
+      --green-bg:rgba(74,222,128,0.14);
+      --red:#f87171;
+      --red-bg:rgba(248,113,113,0.14);
+      --orange:#fb923c;
+      --orange-bg:rgba(251,146,60,0.14);
+      --blue:#60a5fa;
+      --blue-bg:rgba(96,165,250,0.14);
+      --gray:#9296a8;
+      --gray-bg:rgba(146,150,168,0.14);
+      --yellow:#facc15;
+      --yellow-bg:rgba(250,204,21,0.14);
+      --shadow: 0 1px 2px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.4);
+      --solid:#2b2f42;
+      --solid-text:#ffffff;
+      --table-head:#1d2029;
+      --modal-overlay: rgba(0,0,0,0.65);
+      --warn-bg:rgba(250,204,21,0.12);
+      --warn-border:#5c4a05;
+      --warn-text:#facc15;
+      --hover-bg:#1f232e;
+      --dashed-border:#343a49;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1117;
+    --card:#171a23;
+    --text:#eef0f5;
+    --text-muted:#9296a8;
+    --border:#2a2e3a;
+    --green:#4ade80;
+    --green-bg:rgba(74,222,128,0.14);
+    --red:#f87171;
+    --red-bg:rgba(248,113,113,0.14);
+    --orange:#fb923c;
+    --orange-bg:rgba(251,146,60,0.14);
+    --blue:#60a5fa;
+    --blue-bg:rgba(96,165,250,0.14);
+    --gray:#9296a8;
+    --gray-bg:rgba(146,150,168,0.14);
+    --yellow:#facc15;
+    --yellow-bg:rgba(250,204,21,0.14);
+    --shadow: 0 1px 2px rgba(0,0,0,0.5), 0 2px 10px rgba(0,0,0,0.4);
+    --solid:#2b2f42;
+    --solid-text:#ffffff;
+    --table-head:#1d2029;
+    --modal-overlay: rgba(0,0,0,0.65);
+    --warn-bg:rgba(250,204,21,0.12);
+    --warn-border:#5c4a05;
+    --warn-text:#facc15;
+    --hover-bg:#1f232e;
+    --dashed-border:#343a49;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1320px;margin:0 auto;padding:20px 24px 60px;}
+
+  a{color:var(--blue);}
+
+  /* ===== HEADER ===== */
+  header.app-header{
+    background:var(--card);
+    border-bottom:1px solid var(--border);
+    padding:20px 0;
+    margin-bottom:24px;
+  }
+  .header-inner{
+    max-width:1320px;margin:0 auto;padding:0 24px;
+    display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start;
+  }
+  .header-titles h1{
+    font-size:1.55rem;margin:0 0 4px;font-weight:700;letter-spacing:-0.01em;
+  }
+  .header-titles p.subtitle{margin:0;color:var(--text-muted);font-size:0.95rem;font-weight:500;}
+  .header-meta{display:flex;flex-direction:column;gap:6px;font-size:0.82rem;color:var(--text-muted);min-width:260px;}
+  .header-meta strong{color:var(--text);}
+  .countdown-chip{
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--blue-bg);color:var(--blue);
+    border-radius:999px;padding:3px 12px;font-weight:700;font-variant-numeric:tabular-nums;
+    width:fit-content;
+  }
+  .header-actions{display:flex;gap:10px;flex-wrap:wrap;align-self:flex-start;}
+  button.action-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--card);color:var(--text);
+    border:1px solid var(--border);border-radius:8px;
+    padding:9px 16px;font-size:0.88rem;font-weight:600;cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:background .15s ease, transform .05s ease;
+  }
+  button.action-btn:hover{background:var(--hover-bg);}
+  button.action-btn:active{transform:translateY(1px);}
+  button.action-btn:focus-visible{outline:3px solid var(--blue);outline-offset:1px;}
+  button.action-btn.primary{background:var(--solid);color:var(--solid-text);border-color:var(--solid);}
+  button.action-btn.primary:hover{filter:brightness(1.15);}
+
+  .data-integrity-banner{
+    background:var(--warn-bg);border:1px solid var(--warn-border);color:var(--warn-text);
+    border-radius:8px;padding:10px 14px;font-size:0.82rem;margin-bottom:22px;
+    display:flex;gap:8px;align-items:flex-start;
+  }
+  .data-integrity-banner b{color:var(--warn-text);}
+
+  /* ===== SECTIONS ===== */
+  section{margin-bottom:34px;}
+  .section-head{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .section-head h2{font-size:1.05rem;margin:0;font-weight:700;letter-spacing:-0.01em;}
+  .section-head .section-meta{font-size:0.78rem;color:var(--text-muted);}
+
+  /* ===== KPI CARDS ===== */
+  .kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+  .kpi-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;gap:6px;position:relative;
+  }
+  .kpi-top{display:flex;justify-content:space-between;align-items:center;}
+  .kpi-name{font-size:0.78rem;font-weight:700;color:var(--text-muted);text-transform:uppercase;letter-spacing:.04em;}
+  .kpi-icon{font-size:1.1rem;}
+  .kpi-value{font-size:1.9rem;font-weight:800;letter-spacing:-0.02em;margin:2px 0 0;}
+  .kpi-unit{font-size:0.75rem;color:var(--text-muted);font-weight:600;}
+  .kpi-change{display:inline-flex;align-items:center;gap:4px;font-weight:700;font-size:0.85rem;border-radius:6px;padding:2px 8px;width:fit-content;}
+  .kpi-change.up{color:var(--green);background:var(--green-bg);}
+  .kpi-change.down{color:var(--red);background:var(--red-bg);}
+  .kpi-change.flat{color:var(--gray);background:var(--gray-bg);}
+  .kpi-period{font-size:0.72rem;color:var(--text-muted);}
+  .kpi-foot{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);font-size:0.7rem;color:var(--text-muted);}
+  .badge{
+    font-size:0.62rem;font-weight:800;letter-spacing:.03em;border-radius:5px;padding:2px 6px;text-transform:uppercase;
+  }
+  .badge.real{background:var(--green-bg);color:var(--green);}
+  .badge.stale{background:var(--orange-bg);color:var(--orange);}
+  .badge.na{background:var(--gray-bg);color:var(--gray);}
+  .kpi-source-link{font-size:0.7rem;}
+
+  /* ===== RISK INDEX ===== */
+  .risk-panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px 22px;display:flex;gap:26px;flex-wrap:wrap;align-items:center;}
+  .risk-score-block{display:flex;flex-direction:column;gap:4px;min-width:170px;}
+  .risk-score{font-size:2.6rem;font-weight:800;letter-spacing:-0.02em;}
+  .risk-score small{font-size:1.1rem;font-weight:700;color:var(--text-muted);}
+  .risk-label{font-weight:800;font-size:0.85rem;letter-spacing:.03em;text-transform:uppercase;border-radius:6px;padding:3px 10px;width:fit-content;}
+  .risk-bar-wrap{flex:1;min-width:240px;}
+  .risk-bar-track{background:var(--gray-bg);border-radius:999px;height:14px;overflow:hidden;border:1px solid var(--border);}
+  .risk-bar-fill{height:100%;border-radius:999px;transition:width .4s ease;}
+  .risk-bar-scale{display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-muted);margin-top:4px;}
+  .risk-components{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+  .risk-chip{font-size:0.7rem;background:var(--gray-bg);color:var(--text);border-radius:6px;padding:3px 8px;}
+
+  /* ===== INSIGHTS ===== */
+  .insights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;}
+  .insight-card{
+    background:var(--card);border:1px solid var(--border);border-left:4px solid var(--gray);
+    border-radius:8px;padding:12px 14px;box-shadow:var(--shadow);
+  }
+  .insight-card.crit{border-left-color:var(--red);}
+  .insight-card.high{border-left-color:var(--orange);}
+  .insight-card.med{border-left-color:var(--yellow);}
+  .insight-card.low{border-left-color:var(--green);}
+  .insight-tag{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--text-muted);display:block;margin-bottom:3px;}
+  .insight-text{font-size:0.86rem;}
+
+  /* ===== TABLES ===== */
+  .table-scroll{overflow-x:auto;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);}
+  table{width:100%;border-collapse:collapse;font-size:0.85rem;min-width:640px;}
+  thead th{
+    background:var(--table-head);color:var(--text-muted);text-transform:uppercase;font-size:0.68rem;letter-spacing:.03em;
+    text-align:left;padding:10px 14px;border-bottom:1px solid var(--border);white-space:nowrap;
+  }
+  tbody td{padding:10px 14px;border-bottom:1px solid var(--border);vertical-align:top;}
+  tbody tr:last-child td{border-bottom:none;}
+  td.num, th.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .trend-chip{font-size:0.68rem;font-weight:800;border-radius:5px;padding:2px 7px;display:inline-block;}
+  .trend-chip.alta{background:var(--red-bg);color:var(--red);}
+  .trend-chip.baixa{background:var(--green-bg);color:var(--green);}
+  .trend-chip.estavel{background:var(--gray-bg);color:var(--gray);}
+  .trend-chip.na{background:var(--gray-bg);color:var(--gray);}
+  .src-note{font-size:0.72rem;color:var(--text-muted);}
+  .na-cell{color:var(--text-muted);font-style:italic;font-size:0.8rem;}
+
+  /* ===== TABS ===== */
+  .tabs-nav{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;}
+  .tab-btn{
+    background:var(--card);border:1px solid var(--border);border-radius:8px;padding:8px 16px;
+    font-size:0.82rem;font-weight:700;color:var(--text-muted);cursor:pointer;
+  }
+  .tab-btn[aria-selected="true"]{background:var(--solid);color:var(--solid-text);border-color:var(--solid);}
+  .tab-btn:focus-visible{outline:3px solid var(--blue);}
+  .tab-panel{display:none;}
+  .tab-panel.active{display:block;}
+  .table-footnote{font-size:0.75rem;color:var(--text-muted);margin-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;}
+  .unavailable-box{
+    background:var(--gray-bg);border:1px dashed var(--dashed-border);border-radius:8px;padding:16px 18px;font-size:0.85rem;color:var(--text-muted);
+  }
+  .unavailable-box b{color:var(--text);}
+
+  /* ===== STRAITS ===== */
+  .straits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .strait-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:14px 16px;}
+  .strait-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
+  .strait-name{font-weight:700;font-size:0.95rem;}
+  .strait-region{font-size:0.72rem;color:var(--text-muted);margin-bottom:6px;}
+  .strait-status{font-size:0.68rem;font-weight:800;text-transform:uppercase;border-radius:5px;padding:3px 8px;letter-spacing:.02em;}
+  .strait-status.crit{background:var(--red-bg);color:var(--red);}
+  .strait-status.warn{background:var(--orange-bg);color:var(--orange);}
+  .strait-status.ok{background:var(--green-bg);color:var(--green);}
+  .strait-indicator{font-size:0.82rem;margin:8px 0;font-weight:600;}
+  .strait-desc{font-size:0.78rem;color:var(--text-muted);margin-bottom:8px;}
+  .strait-foot{font-size:0.68rem;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:6px;}
+
+  /* ===== NATURAL EVENTS ===== */
+  .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .event-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;gap:6px;}
+  .event-emoji{font-size:1.5rem;}
+  .event-title{font-weight:700;font-size:0.95rem;}
+  .event-region{font-size:0.75rem;color:var(--text-muted);}
+  .event-indicator{background:var(--gray-bg);border-radius:6px;padding:6px 10px;font-size:0.8rem;font-weight:700;width:fit-content;}
+  .event-desc{font-size:0.82rem;color:var(--text);}
+  .event-period{font-size:0.78rem;font-weight:600;}
+  .event-foot{display:flex;justify-content:space-between;font-size:0.68rem;color:var(--text-muted);border-top:1px dashed var(--border);padding-top:8px;margin-top:4px;flex-wrap:wrap;gap:4px;}
+  .risk-pill{font-size:0.65rem;font-weight:800;text-transform:uppercase;border-radius:5px;padding:2px 7px;}
+  .risk-pill.alto{background:var(--red-bg);color:var(--red);}
+  .risk-pill.medio{background:var(--orange-bg);color:var(--orange);}
+  .risk-pill.baixo{background:var(--green-bg);color:var(--green);}
+  .risk-pill.monitor{background:var(--blue-bg);color:var(--blue);}
+
+  /* ===== ALERTS ===== */
+  .alert-card{
+    background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:16px 18px;margin-bottom:12px;border-left:5px solid var(--gray);
+  }
+  .alert-card.critico{border-left-color:var(--red);}
+  .alert-card.alta{border-left-color:var(--orange);}
+  .alert-card.media{border-left-color:var(--yellow);}
+  .alert-card.info{border-left-color:var(--blue);}
+  .alert-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
+  .alert-title-wrap{display:flex;align-items:center;gap:8px;}
+  .alert-title{font-weight:700;font-size:0.98rem;}
+  .sev-badge{font-size:0.68rem;font-weight:800;text-transform:uppercase;border-radius:5px;padding:3px 9px;white-space:nowrap;}
+  .sev-badge.critico{background:var(--red-bg);color:var(--red);}
+  .sev-badge.alta{background:var(--orange-bg);color:var(--orange);}
+  .sev-badge.media{background:var(--yellow-bg);color:var(--yellow);}
+  .sev-badge.info{background:var(--blue-bg);color:var(--blue);}
+  .alert-text{font-size:0.87rem;margin:6px 0 10px;}
+  .alert-meta{display:flex;gap:16px;flex-wrap:wrap;font-size:0.72rem;color:var(--text-muted);}
+
+  /* ===== RECOMMENDATIONS ===== */
+  .rec-signal{font-weight:700;}
+  .rec-risk{font-size:0.68rem;font-weight:800;text-transform:uppercase;border-radius:5px;padding:3px 8px;}
+  .rec-risk.alto{background:var(--red-bg);color:var(--red);}
+  .rec-risk.medio{background:var(--orange-bg);color:var(--orange);}
+  .rec-risk.baixo{background:var(--green-bg);color:var(--green);}
+  .rec-risk.na{background:var(--gray-bg);color:var(--gray);}
+
+  /* ===== FOOTER ===== */
+  footer.app-footer{border-top:1px solid var(--border);padding-top:20px;margin-top:10px;font-size:0.78rem;color:var(--text-muted);}
+  footer.app-footer h3{font-size:0.8rem;color:var(--text);margin:14px 0 6px;}
+  .source-list{display:flex;flex-wrap:wrap;gap:6px 4px;}
+  .source-list span{background:var(--gray-bg);border-radius:5px;padding:2px 8px;}
+  .footer-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:4px 20px;margin-top:4px;}
+  .footer-links a{color:var(--text-muted);text-decoration:none;}
+  .footer-links a:hover{text-decoration:underline;color:var(--blue);}
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1080px){
+    .kpi-grid{grid-template-columns:repeat(2,1fr);}
+    .straits-grid{grid-template-columns:repeat(2,1fr);}
+    .events-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width: 640px){
+    .kpi-grid{grid-template-columns:1fr;}
+    .straits-grid{grid-template-columns:1fr;}
+    .events-grid{grid-template-columns:1fr;}
+    .header-inner{flex-direction:column;}
+    .header-actions{width:100%;}
+    button.action-btn{flex:1;justify-content:center;}
+  }
+
+  /* ===== PRINT ===== */
+  @media print{
+    body{background:#fff;}
+    .no-print{display:none !important;}
+    .wrap{max-width:100%;padding:0 8px;}
+    section{margin-bottom:16px;page-break-inside:avoid;}
+    .kpi-grid, .straits-grid, .events-grid{grid-template-columns:repeat(2,1fr) !important;}
+    .kpi-card,.strait-card,.event-card,.alert-card,.insight-card,.risk-panel{box-shadow:none;border:1px solid #ccc;}
+    .tab-panel{display:block !important;}
+    a{color:inherit;text-decoration:none;}
+    table{font-size:0.72rem;}
+  }
+
+  /* ===== MODAL ===== */
+  .modal-overlay{
+    position:fixed;inset:0;background:var(--modal-overlay);display:none;
+    align-items:center;justify-content:center;z-index:999;padding:20px;
+  }
+  .modal-overlay.show{display:flex;}
+  .modal-box{
+    background:var(--card);color:var(--text);border:1px solid var(--border);border-radius:12px;max-width:460px;width:100%;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,0.25);
+  }
+  .modal-box h3{margin:0 0 10px;font-size:1.05rem;display:flex;align-items:center;gap:8px;}
+  .modal-box p{font-size:0.88rem;color:var(--text-muted);margin:0 0 16px;}
+  .modal-box button{
+    background:var(--solid);color:var(--solid-text);border:none;border-radius:8px;padding:9px 18px;font-weight:700;cursor:pointer;font-size:0.85rem;
+  }
+  .modal-box button:focus-visible{outline:3px solid var(--blue);outline-offset:1px;}
+</style>
+</head>
+<body>
+
+<header class="app-header">
+  <div class="header-inner">
+    <div class="header-titles">
+      <h1>Painel de Inteligência — Compras Internacionais</h1>
+      <p class="subtitle">Matérias-primas para espumas de colchão · Polar Indústria</p>
+    </div>
+    <div class="header-meta">
+      <div><strong>Última atualização:</strong> <span id="lastUpdateText">—</span></div>
+      <div><strong>Próxima atualização automática:</strong> <span id="nextUpdateText">—</span></div>
+      <div class="countdown-chip no-print">⏱ Próxima em <span id="countdownText">30:00</span></div>
+    </div>
+    <div class="header-actions no-print">
+      <button class="action-btn primary" id="btnRefresh" aria-label="Atualizar dados do painel">⟳ Atualizar Dados</button>
+      <button class="action-btn" id="btnPrint" aria-label="Imprimir ou salvar como PDF">🖨 Imprimir / Salvar PDF</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="data-integrity-banner no-print">
+    <span>⚠️</span>
+    <div><b>Integridade de dados:</b> todos os valores abaixo foram coletados de fontes públicas reais (ver rodapé) em 17/08/2026, com data e link de origem em cada card/tabela. Onde não existia número público verificável e gratuito (ex.: TCPP, aminas catalisadoras, surfactante de silicone PU, frete China→Brasil, séries CONTRATO/CHINA FOB), o campo está marcado como <b>"não disponível em fonte gratuita"</b> em vez de um valor estimado.</div>
+  </div>
+
+  <!-- ===================== KPIs ===================== -->
+  <section id="kpi-section">
+    <div class="section-head">
+      <h2>Indicadores-Chave</h2>
+      <span class="section-meta">Câmbio · Petróleo · Frete</span>
+    </div>
+    <div class="kpi-grid" id="kpiGrid"></div>
+  </section>
+
+  <!-- ===================== RISK INDEX ===================== -->
+  <section id="risk-section">
+    <div class="section-head">
+      <h2>Índice de Risco da Cadeia Internacional</h2>
+      <span class="section-meta">Escala 0–100 · calculado a partir dos dados abaixo</span>
+    </div>
+    <div class="risk-panel" id="riskPanel"></div>
+  </section>
+
+  <!-- ===================== INSIGHTS ===================== -->
+  <section id="insights-section">
+    <div class="section-head">
+      <h2>Leitura Executiva</h2>
+      <span class="section-meta">Gerada automaticamente a partir dos dados</span>
+    </div>
+    <div class="insights-grid" id="insightsGrid"></div>
+  </section>
+
+  <!-- ===================== CHEMICALS ===================== -->
+  <section id="chemicals-section">
+    <div class="section-head">
+      <h2>Preços de Químicos</h2>
+      <span class="section-meta">Referência: 17/08/2026 · fontes por linha na tabela</span>
+    </div>
+    <div class="tabs-nav no-print" role="tablist" aria-label="Tipo de preço de químicos">
+      <button class="tab-btn" role="tab" id="tabBtnSpot" aria-selected="true" aria-controls="tabPanelSpot" data-tab="spot">SPOT</button>
+      <button class="tab-btn" role="tab" id="tabBtnContract" aria-selected="false" aria-controls="tabPanelContract" data-tab="contract">CONTRATO</button>
+      <button class="tab-btn" role="tab" id="tabBtnFob" aria-selected="false" aria-controls="tabPanelFob" data-tab="fob">CHINA FOB</button>
+    </div>
+    <div id="tabPanelSpot" class="tab-panel active" role="tabpanel" aria-labelledby="tabBtnSpot"></div>
+    <div id="tabPanelContract" class="tab-panel" role="tabpanel" aria-labelledby="tabBtnContract"></div>
+    <div id="tabPanelFob" class="tab-panel" role="tabpanel" aria-labelledby="tabBtnFob"></div>
+  </section>
+
+  <!-- ===================== FREIGHT ===================== -->
+  <section id="freight-section">
+    <div class="section-head">
+      <h2>Frete Marítimo</h2>
+      <span class="section-meta">Referência: ver data por linha</span>
+    </div>
+    <div class="table-scroll">
+      <table id="freightTable"></table>
+    </div>
+    <div class="table-footnote" id="freightFootnote"></div>
+  </section>
+
+  <!-- ===================== STRAITS ===================== -->
+  <section id="straits-section">
+    <div class="section-head">
+      <h2>Estreitos de Navegação</h2>
+      <span class="section-meta">Status em 17/08/2026</span>
+    </div>
+    <div class="straits-grid" id="straitsGrid"></div>
+  </section>
+
+  <!-- ===================== NATURAL EVENTS ===================== -->
+  <section id="events-section">
+    <div class="section-head">
+      <h2>Fenômenos Naturais — Impacto em Portos e Rotas</h2>
+      <span class="section-meta">Eventos reais monitorados em ago/2026</span>
+    </div>
+    <div class="events-grid" id="eventsGrid"></div>
+  </section>
+
+  <!-- ===================== GEOPOLITICAL ALERTS ===================== -->
+  <section id="alerts-section">
+    <div class="section-head">
+      <h2>Alertas e Inteligência Geopolítica</h2>
+      <span class="section-meta">Ordenados por severidade</span>
+    </div>
+    <div id="alertsList"></div>
+  </section>
+
+  <!-- ===================== RECOMMENDATIONS ===================== -->
+  <section id="recommendations-section">
+    <div class="section-head">
+      <h2>Recomendação de Ação</h2>
+      <span class="section-meta">Geradas por regras a partir dos sinais de mercado</span>
+    </div>
+    <div class="table-scroll">
+      <table id="recTable"></table>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="app-footer">
+    <h3>Fontes consultadas nesta versão</h3>
+    <div class="source-list" id="sourceListConsulted"></div>
+
+    <h3>Fontes adicionais recomendadas para integração futura (indicadas pelo usuário / não consultadas ao vivo nesta versão)</h3>
+    <div class="footer-links" id="sourceListFuture"></div>
+
+    <h3>Aviso sobre metodologia de dados</h3>
+    <p>Os valores acima foram coletados manualmente de fontes públicas reais em 17/08/2026 e estão fixados ("hard-coded") neste arquivo — este HTML não realiza chamadas de rede (fetch/API) e funciona 100% offline, conforme especificação técnica do projeto. Cada card e linha de tabela informa a data e a fonte específica do dado. Itens sem fonte pública gratuita disponível (TCPP, aminas catalisadoras, surfactante de silicone PU, frete China→Brasil/Santos, séries de preço CONTRATO e CHINA FOB distintas do SPOT) estão explicitamente marcados como indisponíveis, e não foram preenchidos com números estimados. Para operação em produção, conectar APIs/assinaturas reais (ICIS, Drewry, Platts, Xeneta, Baltic Exchange, LME, Kpler, MarineTraffic) via backend Node.js/Python com agendamento CRON — ver arquitetura em <code>dashboardData</code> no código-fonte.</p>
+
+    <h3>Automação futura</h3>
+    <p>Requer pipeline backend com Puppeteer/Playwright + SendGrid/AWS SES + node-cron agendado para 06:00 BRT diariamente, com envio para compras4.polar@gmail.com.</p>
+
+    <div class="footer-links" style="margin-top:14px;">
+      <span><strong>Compatibilidade:</strong> Google Chrome 128+, Microsoft Edge 128+, Mozilla Firefox 130+, Safari 17+</span>
+      <span><strong>Versão:</strong> 1.0</span>
+      <span><strong>Geração deste snapshot de dados:</strong> 17 de agosto de 2026 às 09:30 BRT (-03:00)</span>
+    </div>
+  </footer>
+
+</div>
+
+<div class="modal-overlay no-print" id="modalOverlay">
+  <div class="modal-box">
+    <h3>⟳ Atualização de dados</h3>
+    <p id="modalText"></p>
+    <button id="modalClose">Entendi</button>
+  </div>
+</div>
+
+<script>
+/* =========================================================================
+   CAMADA DE DADOS
+   Todos os valores abaixo foram coletados manualmente de fontes públicas
+   reais em 17/08/2026 (ver campo "source" e "date" de cada item).
+   Nenhum número foi estimado/inventado. Onde não existe fonte gratuita
+   verificável, o campo correspondente é null e a camada de renderização
+   deve exibir "não disponível" em vez de um valor fictício.
+
+   Estrutura pensada para permitir substituição futura por chamadas reais
+   a um backend (ex.: fetch('/api/market') ) sem alterar as funções de
+   renderização abaixo.
+   ========================================================================= */
+
+const dashboardData = {
+
+  lastUpdate: "17 de agosto de 2026 às 09:30 BRT (-03:00)",
+  nextUpdateIntervalMinutes: 30,
+
+  // Taxa de câmbio usada para conversões CNY -> USD nesta versão (ver market[1])
+  fxUsdCny: 6.74089,
+
+  market: [
+    {
+      id: "usdbrl",
+      name: "USD/BRL",
+      icon: "💵",
+      value: 5.2236,
+      unit: "R$",
+      format: "currency-brl",
+      change: 0.727,
+      changeLabel: "▲ 0,73% vs. dia anterior",
+      changeDirection: "up", // alta do dólar = atenção para custo de importação
+      period: "13/08 → 14/08/2026 (PTAX oficial)",
+      asOf: "14/08/2026",
+      source: "Banco Central do Brasil — PTAX oficial (API Olinda)",
+      sourceUrl: "https://www.bcb.gov.br/conversao",
+      note: "PTAX de 14/08/2026 é a mais recente publicada oficialmente pelo BCB no momento da coleta (BCB publica 1x/dia, ~13h). Câmbio comercial intradiário de 17/08 09:22 BRT: R$ 5,209 (fonte: InfoMoney).",
+      dataStatus: "real"
+    },
+    {
+      id: "usdcny",
+      name: "USD/CNY",
+      icon: "🇨🇳",
+      value: 6.74089,
+      unit: "¥",
+      format: "currency-cny",
+      change: -0.04,
+      changeLabel: "▼ 0,04% em 24h",
+      changeDirection: "down",
+      period: "24h",
+      asOf: "17/08/2026",
+      source: "Trading Economics",
+      sourceUrl: "https://tradingeconomics.com/china/currency",
+      note: "Yuan acumula -0,42% no mês e -6,21% no ano (fortalecimento do yuan frente ao dólar).",
+      dataStatus: "real"
+    },
+    {
+      id: "brent",
+      name: "Petróleo Brent",
+      icon: "🛢️",
+      value: 88.84,
+      unit: "US$/barril",
+      format: "currency-usd2",
+      change: 33.39,
+      changeLabel: "▲ 33,4% YTD",
+      changeDirection: "up",
+      period: "YTD 2026",
+      asOf: "17/08/2026",
+      source: "Trading Economics",
+      sourceUrl: "https://pt.tradingeconomics.com/commodity/crude-oil",
+      note: "Alta impulsionada pela crise no Estreito de Ormuz (ver Alertas Geopolíticos). Variação de 24h: +0,36%.",
+      dataStatus: "real"
+    },
+    {
+      id: "bdi",
+      name: "Baltic Dry Index",
+      icon: "🚢",
+      value: 2878,
+      unit: "pts",
+      format: "integer",
+      change: 42.33,
+      changeLabel: "▲ 42,3% no ano",
+      changeDirection: "up",
+      period: "YTD 2026",
+      asOf: "17/08/2026",
+      source: "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
+      sourceUrl: "https://tradingeconomics.com/commodity/baltic",
+      note: "Baltic Exchange (balticexchange.com) não publica o valor numérico gratuitamente — usado Trading Economics como fonte espelho, cruzado com notícias do setor (2.863 pts em 14/08 e 2.939 pts em 12/08 via Hellenic Shipping News).",
+      dataStatus: "real"
+    }
+  ],
+
+  // ---------------------------------------------------------------------
+  // QUÍMICOS
+  // Preços "SPOT" abaixo são os únicos com número público, datado e
+  // verificável nesta pesquisa (majoritariamente via SunSirs, China).
+  // "CONTRATO" e "CHINA FOB" como séries numericamente distintas do SPOT
+  // não têm fonte gratuita verificável (ICIS/Platts/ChemOrbis são pagos) —
+  // ver unavailableNotice em cada aba.
+  // ---------------------------------------------------------------------
+  chemicals: {
+    spot: [
+      {
+        product: "TDI (Tolueno Diisocianato)",
+        region: "NE Asia / China (benchmark)",
+        priceCny: 17633.33,
+        priceUsd: 17633.33 / 6.74089,
+        priceDate: "17/08/2026",
+        changePeriod: "Var. no dia (fonte)",
+        changeValue: 0.0,
+        monthNote: "Tendência jul/2026: faixa 16.400–16.800 CNY/ton no fim do mês vs. ~15.600 no início (+~7-8%), com Wanhua/Covestro elevando preços de tabela.",
+        trend: "ALTA",
+        source: "SunSirs (China Commodity Data Group)",
+        sourceUrl: "https://www.sunsirs.com/commodity-price/list-chemical.html"
+      },
+      {
+        product: "Poliol poliéter — flexível (grade DEP-5631D)",
+        region: "China",
+        priceCny: 8850, // ponto médio da faixa 8.650–9.050 CNY/ton
+        priceUsd: 8850 / 6.74089,
+        priceDate: "03/07/2026",
+        changePeriod: "Faixa reportada",
+        changeValue: null,
+        rangeCny: "8.650 – 9.050 CNY/ton",
+        monthNote: "Índice trimestral ChemAnalyst de poliol poliéster da China: +42,65% t/t (trimestre encerrado em jun/2026). Preço é fragmentado por grade — não existe um único 'preço do poliol' de mercado.",
+        trend: "ALTA",
+        source: "100ppi.com (China Chemical Price List) + ChemAnalyst",
+        sourceUrl: "https://chem.100ppi.com/price/plist-1223--2.html"
+      },
+      {
+        product: "TCPP (retardante de chama)",
+        region: "China",
+        priceCny: null,
+        priceUsd: null,
+        priceDate: null,
+        changePeriod: null,
+        changeValue: null,
+        trend: "N/D",
+        source: null,
+        sourceUrl: null,
+        unavailable: true,
+        unavailableReason: "Sem índice de mercado gratuito e datado localizado. SunSirs não cobre TCPP como commodity de referência. Fonte paga recomendada: ICIS Pricing, ChemAnalyst ou Mordor Intelligence."
+      },
+      {
+        product: "Cloreto de metileno (diclorometano)",
+        region: "China (Shandong)",
+        priceCny: 1895.00,
+        priceUsd: 1895.00 / 6.74089,
+        priceDate: "17/08/2026",
+        changePeriod: "Var. no dia (fonte)",
+        changeValue: -2.57,
+        monthNote: "Referência histórica: 1.860 CNY/ton em 06/02/2026 (+9,57% desde o início de 2026).",
+        trend: "BAIXA",
+        source: "SunSirs (China Commodity Data Group)",
+        sourceUrl: "https://www.sunsirs.com/commodity-price/list-chemical.html"
+      },
+      {
+        product: "Amina catalisadora (DABCO/TEDA)",
+        region: "—",
+        priceCny: null,
+        priceUsd: null,
+        priceDate: null,
+        changePeriod: null,
+        changeValue: null,
+        trend: "N/D",
+        source: null,
+        sourceUrl: null,
+        unavailable: true,
+        unavailableReason: "Não existe preço de commodity por tonelada em fonte gratuita — apenas listagens de varejo em pequenas embalagens (Alibaba/Made-in-China), sem valor de referência de mercado defensável. Fonte paga recomendada: ICIS, ChemOrbis."
+      },
+      {
+        product: "Estanho — LME",
+        region: "Londres (LME cash)",
+        priceCny: null,
+        priceUsd: 56194,
+        priceDate: "14/08/2026",
+        changePeriod: "Var. mensal",
+        changeValue: 6.47,
+        dailyChange: 0.61,
+        yearChange: 66.78,
+        monthNote: "Alta sustentada por disrupção contínua da mina Man Maw (Myanmar) e pausa temporária de exportação na Indonésia (International Tin Association).",
+        trend: "ALTA",
+        source: "Trading Economics (cruzado com Westmetall, mirror gratuito do LME)",
+        sourceUrl: "https://tradingeconomics.com/commodity/tin"
+      },
+      {
+        product: "Silicone — PDMS (surfactante para PU)",
+        region: "China",
+        priceCny: 13000,
+        priceUsd: 13000 / 6.74089,
+        priceDate: "17/08/2026",
+        changePeriod: "Var. no dia (fonte)",
+        changeValue: 0.0,
+        trend: "ESTÁVEL",
+        source: "SunSirs — Silicone DMC (proxy indireto)",
+        sourceUrl: "https://www.sunsirs.com/commodity-price/list-chemical.html",
+        proxyWarning: "DMC é a matéria-prima (monômero) do silicone, não o surfactante PDMS específico para espuma PU. Usado como proxy direcional na ausência de índice específico gratuito."
+      }
+    ],
+    contract: [], // sem fonte gratuita verificável — ver unavailableNotice
+    chinaFob: []  // sem fonte gratuita verificável — ver unavailableNotice
+  },
+  chemicalsUnavailableNotice: {
+    contract: "Preços contratuais (acordos de longo prazo entre fornecedor e comprador) não são publicados publicamente — são negociações privadas. Nenhuma fonte gratuita disponibiliza esse dado. Fonte paga recomendada: ICIS Pricing Services, Platts (S&P Global Commodity Insights).",
+    chinaFob: "Preços FOB China (porto de embarque) distintos do preço doméstico ex-works não foram localizados em fonte gratuita e datada para os químicos deste painel. Fonte paga recomendada: ICIS, ChemOrbis, Intratec."
+  },
+
+  // ---------------------------------------------------------------------
+  // FRETE MARÍTIMO
+  // ---------------------------------------------------------------------
+  freight: [
+    {
+      route: "Shanghai → Rotterdam",
+      feuUsd: 4425,
+      changeWeek: -5,
+      status: "ELEVADO",
+      date: "13/08/2026",
+      source: "Drewry World Container Index (WCI)",
+      sourceUrl: "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
+    },
+    {
+      route: "Shanghai → Los Angeles",
+      feuUsd: 6244,
+      changeWeek: 6,
+      status: "ELEVADO",
+      date: "13/08/2026",
+      source: "Drewry World Container Index (WCI)",
+      sourceUrl: "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
+    },
+    {
+      route: "Shanghai → New York",
+      feuUsd: 8706,
+      changeWeek: 10,
+      status: "ELEVADO",
+      date: "13/08/2026",
+      source: "Drewry World Container Index (WCI)",
+      sourceUrl: "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
+    },
+    {
+      route: "Shanghai → Genoa",
+      feuUsd: 5080,
+      changeWeek: -8,
+      status: "NORMAL",
+      date: "13/08/2026",
+      source: "Drewry World Container Index (WCI)",
+      sourceUrl: "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
+    },
+    {
+      route: "Drewry WCI — Composto Global",
+      feuUsd: 4339,
+      changeWeek: 1,
+      status: "ELEVADO",
+      date: "13/08/2026",
+      source: "Drewry World Container Index (WCI)",
+      sourceUrl: "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry"
+    },
+    {
+      route: "China/Leste Asiático → N. Europa",
+      feuUsd: 5000,
+      changeWeek: -8,
+      status: "NORMAL",
+      date: "11/08/2026",
+      source: "Freightos Weekly Update",
+      sourceUrl: "https://fbx.freightos.com/"
+    },
+    {
+      route: "China → EUA East Coast",
+      feuUsd: 9400,
+      changeWeek: null,
+      changeNote: "Novo recorde da temporada",
+      status: "ELEVADO",
+      date: "11/08/2026",
+      source: "Freightos Weekly Update",
+      sourceUrl: "https://fbx.freightos.com/"
+    },
+    {
+      route: "China → EUA West Coast",
+      feuUsd: 7400,
+      changeWeek: null,
+      changeNote: "+US$ 1.300 desde início do mês",
+      status: "ELEVADO",
+      date: "11/08/2026",
+      source: "Freightos Weekly Update",
+      sourceUrl: "https://fbx.freightos.com/"
+    },
+    {
+      route: "China → Brasil (Santos)",
+      feuUsd: null,
+      changeWeek: null,
+      status: "N/D",
+      date: null,
+      unavailable: true,
+      unavailableReason: "Nenhuma fonte gratuita publica esse lane específico com data verificável (Freightos FBX26 Europa→Costa Oeste da América do Sul exige login pago; SCFI/Drewry não detalham Brasil). Fonte paga recomendada: Xeneta, Freightos Enterprise.",
+      source: null,
+      sourceUrl: null
+    }
+  ],
+  freightFootnote: {
+    bdi: "Baltic Dry Index: 2.878 pts (17/08/2026, +42,3% no ano) — ver KPI acima.",
+    blankSailings: "Blank sailings: 49 saídas canceladas programadas para as semanas 34–38/2026 (17/08–20/09), taxa de cancelamento de 7% (93% das saídas mantidas). Transpacífico concentra ~59% dos cancelamentos, Ásia–N.Europa/Med ~27%, Transatlântico ~14%.",
+    source: "Drewry Cancelled Sailings Tracker, atualizado em 14/08/2026 — https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/cancelled-sailings-tracker"
+  },
+
+  // ---------------------------------------------------------------------
+  // ESTREITOS DE NAVEGAÇÃO
+  // ---------------------------------------------------------------------
+  straits: [
+    {
+      emoji: "🌊",
+      name: "Ormuz",
+      region: "Golfo Pérsico",
+      status: "CRISE ATIVA",
+      statusLevel: "crit",
+      indicator: "Fluxo médio no 2T/2026: 4,9 milhões b/d (vs. 21,6 milhões b/d no 4T/2025 pré-crise) — cerca de 20x abaixo da média em dias de pico de tensão",
+      date: "16/08/2026",
+      source: "CNN, EIA STEO, Wikipedia (2026 Strait of Hormuz crisis)",
+      sourceUrl: "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+      note: "Conflito militar EUA/Israel–Irã iniciado em fev/2026 levou o Irã a restringir efetivamente o estreito. ~84% do petróleo destinado à Ásia normalmente passa por aqui (EIA)."
+    },
+    {
+      emoji: "🌊",
+      name: "Bab el-Mandeb",
+      region: "Mar Vermelho",
+      status: "ATAQUES ATIVOS",
+      statusLevel: "crit",
+      indicator: "Ataque Houthi ao navio 'Tihamah' em 10/08/2026 matou 6 tripulantes — primeiras mortes em navio comercial desde o outono anterior",
+      date: "12/08/2026",
+      source: "UN News, UPI, Lloyd's List Intelligence",
+      sourceUrl: "https://news.un.org/en/story/2026/08/1168121",
+      note: "Maioria das linhas de contêiner permanece desviada via Cabo da Boa Esperança; rota Suez/Mar Vermelho normalmente representa 12–15% do comércio global (IMO)."
+    },
+    {
+      emoji: "🌊",
+      name: "Suez",
+      region: "Egito",
+      status: "TRÁFEGO REDUZIDO",
+      statusLevel: "warn",
+      indicator: "Abr/2026: 1.182 navios transitaram (+13,9% a/a); receita FY25-26 de US$ 4,67 bi (+23% a/a), ainda bem abaixo do recorde de US$ 9,4 bi (FY22-23)",
+      date: "abr-jul/2026 (dados mais recentes livres)",
+      source: "Maritime Executive, Logfret Insights, Suez Canal Authority (via imprensa)",
+      sourceUrl: "https://maritime-executive.com/article/cma-cgm-sends-ulcv-through-suez-canal-as-2026-traffic-return-is-predicted",
+      note: "Tráfego de contêineres ainda ~60% abaixo do nível de nov/2023; petroleiros VLCC retornando parcialmente via Suez/SUMED."
+    },
+    {
+      emoji: "🌊",
+      name: "Panamá",
+      region: "América Central",
+      status: "NORMAL (com ajustes)",
+      statusLevel: "warn",
+      indicator: "36 passagens/dia mantidas; calado máximo será reduzido para 48,0 pés a partir de 26/08/2026 e 47,5 pés a partir de 03/09/2026",
+      date: "12/08/2026",
+      source: "gCaptain, ACP (Autoridade do Canal do Panamá)",
+      sourceUrl: "https://gcaptain.com/panama-canal-to-tighten-draft-limits-again-as-water-levels-continue-to-fall/",
+      note: "Gatun Lake recuperou-se a 87,7 pés em jul/2026, mas ACP antecipa El Niño forte no 4T/2026 (91% de probabilidade, NOAA) e já ajusta calado preventivamente."
+    },
+    {
+      emoji: "🌊",
+      name: "Malaca",
+      region: "Sudeste Asiático",
+      status: "NORMAL",
+      statusLevel: "ok",
+      indicator: "~440 navios/dia — operação rotineira, sem bloqueios ou restrições",
+      date: "jul/2026",
+      source: "Bloomberg, The Diplomat, Japan Times",
+      sourceUrl: "https://www.bloomberg.com/news/articles/2026-07-02/strait-of-malacca-why-hormuz-disruption-has-put-asian-waterway-in-the-spotlight",
+      note: "Atenção estratégica elevada devido à crise de Ormuz (rota alternativa para energia da China), mas sem disrupção operacional real."
+    },
+    {
+      emoji: "🌊",
+      name: "Gibraltar",
+      region: "Mediterrâneo/Atlântico",
+      status: "NORMAL",
+      statusLevel: "ok",
+      indicator: "Sem eventos disruptivos relevantes identificados na pesquisa desta data",
+      date: "17/08/2026",
+      source: "Sem incidentes reportados nas fontes consultadas",
+      sourceUrl: null,
+      note: null
+    }
+  ],
+
+  // ---------------------------------------------------------------------
+  // FENÔMENOS NATURAIS
+  // ---------------------------------------------------------------------
+  naturalEvents: [
+    {
+      emoji: "🌀",
+      title: "Tufão Dolphin — categoria 5 (equivalente)",
+      region: "Costa leste da China (Xangai/Ningbo)",
+      indicator: "Ventos > 265 km/h · ~2,4 milhões de TEU de capacidade paralisados · +200 navios afetados",
+      description: "Terminais de Xangai e Ningbo suspenderam operações em 07–08/08; Ningbo retomou na tarde de 10/08, Xangai no início de 11/08. Chuvas torrenciais causaram inundações até Wuhan.",
+      period: "07 a 12 de agosto de 2026 (já em recuperação)",
+      updated: "13/08/2026",
+      source: "Bloomberg, Kuehne+Nagel, FOX Weather",
+      sourceUrl: "https://www.bloomberg.com/news/articles/2026-08-07/key-chinese-ports-near-shanghai-halt-operations-ahead-of-typhoon-dolphin",
+      riskLevel: "medio",
+      riskLabel: "RISCO MÉDIO (em recuperação)"
+    },
+    {
+      emoji: "🌊",
+      title: "Nível do Rio Yangtze — Estação de Hankou (Wuhan)",
+      region: "Wuhan / Nanjing",
+      indicator: "25,11 m — 0,11 m acima da marca de alerta (início de julho/2026)",
+      description: "Chuvas intensas elevaram o nível a poucos centímetros do alerta; mesmo sistema de chuvas alimentou as inundações associadas ao Tufão Dolphin em agosto. Sem leitura específica de agosto confirmada além disso — tratar como monitoramento, não crise confirmada.",
+      period: "Início de julho a meados de agosto de 2026",
+      updated: "09/07/2026 (última leitura numérica confirmada)",
+      source: "Xinhua",
+      sourceUrl: "https://english.news.cn/20260709/fb3a9c0ad30c4ee3af26dcd477236e22/c.html",
+      riskLevel: "monitor",
+      riskLabel: "MONITORAMENTO"
+    },
+    {
+      emoji: "🔥",
+      title: "Onda de calor e recorde de demanda energética — Vietnã",
+      region: "Norte do Vietnã (Hanói e 17 províncias)",
+      indicator: "393,09 GWh de demanda recorde em 04/08/2026 · temperaturas > 39°C",
+      description: "Recorde de consumo elétrico no norte do Vietnã em meio a calor extremo; onda mais severa ocorreu em mai-jun/2026 (~40°C, cortes rotativos em Hanói). Nenhum evento equivalente confirmado na Tailândia neste período.",
+      period: "04/08/2026 (pico mais recente) · mai-jun/2026 (onda mais severa)",
+      updated: "04/08/2026",
+      source: "Vietnam News, Argus Media",
+      sourceUrl: "https://vietnamnews.vn/economy/1783786/people-businesses-advised-to-save-electricity-in-upcoming-heatwave.html",
+      riskLevel: "medio",
+      riskLabel: "RISCO MÉDIO"
+    },
+    {
+      emoji: "🌪️",
+      title: "Temporada de furacões no Atlântico — sem sistemas ativos",
+      region: "Caribe / Panamá",
+      indicator: "0 furacões formados até a data (2 tempestades nomeadas: Arthur e Bertha) — temporada abaixo da média",
+      description: "Previsão do NHC de 16/08/2026: nenhuma formação de ciclone tropical esperada nos próximos 7 dias no Atlântico Norte, Caribe ou Golfo. NOAA mantém previsão de temporada abaixo da média (75% de probabilidade).",
+      period: "Temporada 2026 (jun–nov)",
+      updated: "16/08/2026",
+      source: "NOAA NHC — Tropical Weather Outlook",
+      sourceUrl: "https://www.nhc.noaa.gov/text/MIATWOAT.shtml",
+      riskLevel: "baixo",
+      riskLabel: "RISCO BAIXO"
+    },
+    {
+      emoji: "🌋",
+      title: "Terremoto M7,7 — Flores, Indonésia",
+      region: "Nusa Tenggara Oriental (Indonésia)",
+      indicator: "Magnitude 7,7 · profundidade 10 km · tsunami de até 1,61 m · 47–53 mortos, 135+ feridos, 230+ réplicas",
+      description: "Terremoto significativo próximo a Ende, Flores, em 15/08/2026. A região não está diretamente sobre a rota do Estreito de Malaca, mas está dentro do arquipélago indonésio — monitorar réplicas e risco logístico regional.",
+      period: "15/08/2026 (evento) — réplicas em curso",
+      updated: "16/08/2026",
+      source: "Al Jazeera, NBC News, USGS",
+      sourceUrl: "https://www.aljazeera.com/news/2026/8/15/at-least-two-killed-as-magnitude-7-7-quake-hits-indonesia",
+      riskLevel: "medio",
+      riskLabel: "MONITORAMENTO ATIVO"
+    },
+    {
+      emoji: "🏭",
+      title: "Explosão em terminal petrolífero — Porto de Roterdã",
+      region: "Roterdã, Holanda",
+      indicator: "1 morto, 6 feridos · explosão durante manutenção em instalação operada pela Gunvor",
+      description: "Explosão em 13/08/2026 causou queda temporária no envio de GNL do terminal Gate e falta de energia em parte do porto (refinaria da ExxonMobil afetada); sem indício de sabotagem. Grandes refinarias (Shell, BP, ExxonMobil) seguem operando normalmente. Greve nacional dos portos holandeses (FNV Havens) está marcada para 04/09/2026 — risco futuro a monitorar.",
+      period: "13/08/2026 (resolvido) · greve prevista para 04/09/2026",
+      updated: "13/08/2026",
+      source: "Reuters (via Euronews), Bloomberg, Splash247",
+      sourceUrl: "https://www.euronews.com/my-europe/2026/08/13/explosion-at-dutch-port-of-rotterdam-leaves-one-dead-and-several-injured-police-say",
+      riskLevel: "baixo",
+      riskLabel: "RISCO BAIXO (greve em 04/09 a monitorar)"
+    }
+  ],
+
+  // ---------------------------------------------------------------------
+  // ALERTAS GEOPOLÍTICOS
+  // ---------------------------------------------------------------------
+  geopoliticalAlerts: [
+    {
+      severity: "critico",
+      icon: "🔴",
+      title: "Guerra Irã / Estreito de Ormuz",
+      text: "Conflito militar entre EUA/Israel e Irã, iniciado em fevereiro de 2026, levou a restrições efetivas ao Estreito de Ormuz. Em dias de pico de tensão, o tráfego caiu a cerca de 1/20 da média pré-guerra; o fluxo médio de petróleo no 2º trimestre de 2026 foi de apenas 4,9 milhões de barris/dia, ante 21,6 milhões b/d no 4º trimestre de 2025. Cerca de 84% do petróleo destinado à Ásia normalmente transita por essa rota (EIA). O Brent já acumula alta de 33,4% no ano. Impacto direto no custo de TDI, poliol e silicone, cuja produção depende de nafta/derivados de petróleo.",
+      source: "CNN, EIA (Short-Term Energy Outlook), Wikipedia",
+      sourceUrl: "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+      published: "16/08/2026",
+      validity: "Até nova ordem — conflito em curso"
+    },
+    {
+      severity: "alta",
+      icon: "🟠",
+      title: "Ataque a navio no Bab el-Mandeb / Mar Vermelho",
+      text: "Forças Houthi atacaram o navio 'Tihamah' em 10/08/2026, matando 6 tripulantes — as primeiras mortes em navio comercial nessa rota desde o outono anterior — justamente quando armadores como Maersk e CMA CGM testavam cautelosamente o retorno à rota do Mar Vermelho. A maior parte da frota segue desviada via Cabo da Boa Esperança. Frete Xangai→Nova York subiu para US$ 8.706/FEU (+10% na semana) e Xangai→Roterdã caiu 8% no mesmo período — sinal de realocação de capacidade entre rotas.",
+      source: "UN News, UPI, Lloyd's List Intelligence",
+      sourceUrl: "https://news.un.org/en/story/2026/08/1168121",
+      published: "12/08/2026",
+      validity: "Até estabilização confirmada da rota"
+    },
+    {
+      severity: "alta",
+      icon: "🟠",
+      title: "Blank sailings elevados no Transpacífico",
+      text: "49 saídas de navios foram canceladas ('blank sailings') nas principais rotas Leste-Oeste para as semanas 34 a 38 de 2026 (17/08 a 20/09) — taxa de cancelamento de 7% do total programado. O Transpacífico concentra ~59% desses cancelamentos, seguido por Ásia–Norte da Europa/Mediterrâneo (~27%) e Transatlântico (~14%). Frete China→Costa Leste dos EUA atingiu novo recorde de US$ 9.400/FEU.",
+      source: "Drewry — Cancelled Sailings Tracker",
+      sourceUrl: "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/cancelled-sailings-tracker",
+      published: "14/08/2026",
+      validity: "Semanas 34–38/2026 (17/08–20/09/2026)"
+    },
+    {
+      severity: "media",
+      icon: "🟡",
+      title: "Novo código ambiental chinês entra em vigor",
+      text: "O 'Código Ecológico e Ambiental' da China, adotado em 12/03/2026, entrou em vigor em 15/08/2026, reforçando controles de poluentes na origem e exigências de registro de novas substâncias químicas (China REACH). Shandong (fev/2026) e Jiangsu (mar/2026) já publicaram listas suplementares de poluentes-chave sob monitoramento. Não há, até o momento, confirmação de corte de produção de TDI/poliol/isocianatos ligado a essas normas — tratar como risco regulatório em vigor, sem impacto de oferta confirmado ainda.",
+      source: "REACH24H, Enviliance ASIA",
+      sourceUrl: "https://en.reach24h.com/news/insights/chemical/china-ecological-environment-code",
+      published: "15/08/2026",
+      validity: "Estrutura regulatória permanente — monitorar impacto em produção"
+    },
+    {
+      severity: "media",
+      icon: "🟡",
+      title: "Estanho em alta — disrupção em Myanmar",
+      text: "O preço do estanho no LME está em torno de US$ 56.194/mt (14/08/2026), com alta de 6,47% no mês e 66,78% no ano. A International Tin Association aponta disrupção contínua na mina Man Maw (Myanmar, um dos maiores produtores mundiais) e uma pausa temporária de exportação na Indonésia como causas da oferta apertada. Impacto direto sobre catalisadores de estanho usados em espumas de poliuretano.",
+      source: "Trading Economics, Goldinvest, International Tin Association",
+      sourceUrl: "https://tradingeconomics.com/commodity/tin",
+      published: "14/08/2026",
+      validity: "Até normalização da produção em Myanmar/Indonésia"
+    },
+    {
+      severity: "info",
+      icon: "🔵",
+      title: "Canal do Panamá reduz calado preventivamente",
+      text: "A Autoridade do Canal do Panamá (ACP) anunciou novas reduções de calado máximo — para 48,0 pés a partir de 26/08/2026 e 47,5 pés a partir de 03/09/2026 — antecipando a possibilidade de um El Niño forte no 4º trimestre de 2026/início de 2027 (91% de probabilidade, segundo a NOAA). As 36 passagens diárias são mantidas; o impacto é sobre o peso máximo transportável por navio, não sobre a quantidade de passagens.",
+      source: "gCaptain, ACP",
+      sourceUrl: "https://gcaptain.com/panama-canal-to-tighten-draft-limits-again-as-water-levels-continue-to-fall/",
+      published: "12/08/2026",
+      validity: "A partir de 26/08/2026"
+    }
+  ]
+};
+
+/* =========================================================================
+   FUNÇÕES UTILITÁRIAS
+   ========================================================================= */
+
+function fmtNumber(value, decimals){
+  if(value === null || value === undefined || isNaN(value)) return "N/D";
+  return value.toLocaleString("pt-BR", {minimumFractionDigits:decimals, maximumFractionDigits:decimals});
+}
+
+function fmtUsd(value, decimals){
+  if(value === null || value === undefined || isNaN(value)) return "N/D";
+  return "US$ " + fmtNumber(value, decimals === undefined ? 0 : decimals);
+}
+
+function changeChipHtml(changeValue, changeLabel){
+  if(changeValue === null || changeValue === undefined || isNaN(changeValue)){
+    return '<span class="kpi-change flat">N/D</span>';
+  }
+  const dir = changeValue > 0 ? "up" : (changeValue < 0 ? "down" : "flat");
+  const arrow = changeValue > 0 ? "▲" : (changeValue < 0 ? "▼" : "→");
+  const label = changeLabel || (arrow + " " + fmtNumber(Math.abs(changeValue),2) + "%");
+  return '<span class="kpi-change ' + dir + '">' + label + '</span>';
+}
+
+function trendChipHtml(trend){
+  const map = {ALTA:"alta", BAIXA:"baixa", ESTAVEL:"estavel", "ESTÁVEL":"estavel", "N/D":"na"};
+  const cls = map[trend] || "na";
+  const label = trend === "N/D" ? "N/D" : trend;
+  const iconMap = {alta:"▲", baixa:"▼", estavel:"→", na:"—"};
+  return '<span class="trend-chip ' + cls + '">' + (iconMap[cls]||"") + ' ' + label + '</span>';
+}
+
+/* =========================================================================
+   RENDERIZAÇÃO — KPIs
+   ========================================================================= */
+
+function formatKpiValue(item){
+  if(item.format === "currency-brl") return "R$ " + fmtNumber(item.value, 4);
+  if(item.format === "currency-cny") return "¥ " + fmtNumber(item.value, 4);
+  if(item.format === "currency-usd2") return "US$ " + fmtNumber(item.value, 2);
+  if(item.format === "integer") return fmtNumber(Math.round(item.value), 0);
+  return fmtNumber(item.value, 2);
+}
+
+function renderKPIs(){
+  const grid = document.getElementById("kpiGrid");
+  grid.innerHTML = dashboardData.market.map(item => {
+    const badge = item.dataStatus === "real"
+      ? '<span class="badge real">Dado real</span>'
+      : '<span class="badge na">N/D</span>';
+    return `
+      <div class="kpi-card">
+        <div class="kpi-top">
+          <span class="kpi-name">${item.name}</span>
+          <span class="kpi-icon" aria-hidden="true">${item.icon}</span>
+        </div>
+        <div class="kpi-value">${formatKpiValue(item)}</div>
+        <div class="kpi-unit">${item.unit}</div>
+        ${changeChipHtml(item.change, item.changeLabel)}
+        <div class="kpi-period">${item.period} · dado de ${item.asOf}</div>
+        <div class="kpi-foot">
+          <a class="kpi-source-link" href="${item.sourceUrl}" target="_blank" rel="noopener">${item.source}</a>
+          ${badge}
+        </div>
+      </div>`;
+  }).join("");
+}
+
+/* =========================================================================
+   RENDERIZAÇÃO — TABELA DE QUÍMICOS (com abas)
+   ========================================================================= */
+
+function renderChemicalSpotTable(){
+  const rows = dashboardData.chemicals.spot.map(c => {
+    if(c.unavailable){
+      return `
+        <tr>
+          <td>${c.product}</td>
+          <td>${c.region}</td>
+          <td colspan="4" class="na-cell">Não disponível em fonte gratuita — ${c.unavailableReason}</td>
+        </tr>`;
+    }
+    const priceCell = c.priceCny
+      ? fmtNumber(c.priceCny,2) + " CNY/mt <span class=\"src-note\">(≈ " + fmtUsd(c.priceUsd,0) + "/mt)</span>"
+      : fmtUsd(c.priceUsd,0) + "/mt";
+    const changeCell = c.changeValue === null || c.changeValue === undefined
+      ? (c.rangeCny ? '<span class="src-note">' + c.rangeCny + '</span>' : '<span class="na-cell">N/D</span>')
+      : (c.changeValue > 0 ? "▲ " : c.changeValue < 0 ? "▼ " : "→ ") + fmtNumber(Math.abs(c.changeValue),2) + "%";
+    return `
+      <tr>
+        <td>${c.product}${c.proxyWarning ? '<div class="src-note">⚠ '+c.proxyWarning+'</div>' : ''}</td>
+        <td>${c.region}</td>
+        <td class="num">${priceCell}</td>
+        <td class="num">${changeCell}<div class="src-note">${c.changePeriod || ''}</div></td>
+        <td>${c.monthNote ? '<span class="src-note">'+c.monthNote+'</span>' : '<span class="na-cell">N/D</span>'}</td>
+        <td>${trendChipHtml(c.trend)}</td>
+      </tr>`;
+  }).join("");
+
+  return `
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Região</th>
+            <th class="num">Preço</th>
+            <th class="num">Variação</th>
+            <th>Contexto / Tendência de período</th>
+            <th>Tendência</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+    <div class="table-footnote">
+      <span>Data de referência: 17/08/2026 (preços na moeda e data originais de cada fonte — ver linha)</span>
+      <span>Fonte primária: SunSirs (China Commodity Data Group) · secundária: 100ppi.com, ChemAnalyst</span>
+    </div>`;
+}
+
+function renderChemicalUnavailablePanel(kind){
+  const notice = dashboardData.chemicalsUnavailableNotice[kind];
+  return `<div class="unavailable-box">
+    <b>Sem dado gratuito verificável para esta visão.</b><br>${notice}
+  </div>`;
+}
+
+function renderChemicalTables(){
+  document.getElementById("tabPanelSpot").innerHTML = renderChemicalSpotTable();
+  document.getElementById("tabPanelContract").innerHTML = renderChemicalUnavailablePanel("contract");
+  document.getElementById("tabPanelFob").innerHTML = renderChemicalUnavailablePanel("chinaFob");
+}
+
+function setupTabs(){
+  const buttons = document.querySelectorAll(".tab-btn");
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.setAttribute("aria-selected","false"));
+      document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
+      btn.setAttribute("aria-selected","true");
+      document.getElementById(btn.getAttribute("aria-controls")).classList.add("active");
+    });
+  });
+}
+
+/* =========================================================================
+   RENDERIZAÇÃO — FRETE
+   ========================================================================= */
+
+function renderFreight(){
+  const rows = dashboardData.freight.map(f => {
+    if(f.unavailable){
+      return `<tr>
+        <td>${f.route}</td>
+        <td colspan="3" class="na-cell">Não disponível em fonte gratuita — ${f.unavailableReason}</td>
+      </tr>`;
+    }
+    const changeCell = f.changeWeek === null
+      ? (f.changeNote ? '<span class="src-note">'+f.changeNote+'</span>' : '<span class="na-cell">N/D</span>')
+      : (f.changeWeek > 0 ? "▲ +" : f.changeWeek < 0 ? "▼ " : "→ ") + f.changeWeek + "%";
+    const statusCls = f.status === "ELEVADO" ? "alta" : f.status === "NORMAL" ? "estavel" : "na";
+    return `<tr>
+      <td>${f.route}<div class="src-note"><a href="${f.sourceUrl}" target="_blank" rel="noopener">${f.source}</a> · ${f.date}</div></td>
+      <td class="num">${fmtUsd(f.feuUsd,0)}</td>
+      <td class="num">${changeCell}</td>
+      <td><span class="trend-chip ${statusCls}">${f.status}</span></td>
+    </tr>`;
+  }).join("");
+
+  const table = document.getElementById("freightTable");
+  table.innerHTML = `
+    <thead><tr><th>Rota</th><th class="num">FEU USD</th><th class="num">Var. Semana</th><th>Status</th></tr></thead>
+    <tbody>${rows}</tbody>`;
+
+  document.getElementById("freightFootnote").innerHTML =
+    `<span>${dashboardData.freightFootnote.bdi}</span>
+     <span>${dashboardData.freightFootnote.blankSailings}</span>`;
+}
+
+/* =========================================================================
+   RENDERIZAÇÃO — ESTREITOS
+   ========================================================================= */
+
+function renderStraits(){
+  const grid = document.getElementById("straitsGrid");
+  grid.innerHTML = dashboardData.straits.map(s => `
+    <div class="strait-card">
+      <div class="strait-top">
+        <div>
+          <div class="strait-name">${s.emoji} ${s.name}</div>
+          <div class="strait-region">${s.region}</div>
+        </div>
+        <span class="strait-status ${s.statusLevel}">${s.status}</span>
+      </div>
+      <div class="strait-indicator">${s.indicator}</div>
+      ${s.note ? '<div class="strait-desc">'+s.note+'</div>' : ''}
+      <div class="strait-foot">
+        ${s.sourceUrl ? '<a href="'+s.sourceUrl+'" target="_blank" rel="noopener">'+s.source+'</a>' : s.source}
+        · ${s.date}
+      </div>
+    </div>
+  `).join("");
+}
+
+/* =========================================================================
+   RENDERIZAÇÃO — FENÔMENOS NATURAIS
+   ========================================================================= */
+
+function renderNaturalEvents(){
+  const grid = document.getElementById("eventsGrid");
+  grid.innerHTML = dashboardData.naturalEvents.map(e => `
+    <div class="event-card">
+      <span class="event-emoji" aria-hidden="true">${e.emoji}</span>
+      <div class="event-title">${e.title}</div>
+      <div class="event-region">${e.region}</div>
+      <div class="event-indicator">${e.indicator}</div>
+      <div class="event-desc">${e.description}</div>
+      <div class="event-period">📅 ${e.period}</div>
+      <div class="event-foot">
+        <span><a href="${e.sourceUrl}" target="_blank" rel="noopener">${e.source}</a> · atualizado ${e.updated}</span>
+        <span class="risk-pill ${e.riskLevel}">${e.riskLabel}</span>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* =========================================================================
+   RENDERIZAÇÃO — ALERTAS GEOPOLÍTICOS
+   ========================================================================= */
+
+function renderAlerts(){
+  const order = {critico:0, alta:1, media:2, info:3};
+  const sorted = [...dashboardData.geopoliticalAlerts].sort((a,b) => order[a.severity]-order[b.severity]);
+  const list = document.getElementById("alertsList");
+  list.innerHTML = sorted.map(a => `
+    <div class="alert-card ${a.severity}">
+      <div class="alert-head">
+        <div class="alert-title-wrap">
+          <span aria-hidden="true">${a.icon}</span>
+          <span class="alert-title">${a.title}</span>
+        </div>
+        <span class="sev-badge ${a.severity}">${a.severity}</span>
+      </div>
+      <div class="alert-text">${a.text}</div>
+      <div class="alert-meta">
+        <span>Fonte: <a href="${a.sourceUrl}" target="_blank" rel="noopener">${a.source}</a></span>
+        <span>Publicado: ${a.published}</span>
+        <span>Validade: ${a.validity}</span>
+      </div>
+    </div>
+  `).join("");
+}
+
+/* =========================================================================
+   ÍNDICE DE RISCO DA CADEIA INTERNACIONAL
+   -------------------------------------------------------------------------
+   FÓRMULA (v1 — simples, para futura substituição por modelo mais robusto):
+
+   O score final (0-100) é a média ponderada de 5 componentes, cada um
+   normalizado de 0 (sem risco) a 100 (risco máximo):
+
+     1) Geopolítico (peso 30%) — baseado na severidade dos alertas ativos:
+        cada alerta "crítico" soma 35 pts, "alta" soma 18 pts, "média" soma
+        8 pts, "info" soma 2 pts, limitado a 100.
+     2) Frete (peso 20%) — % de rotas com status "ELEVADO" no array
+        `freight`, multiplicado por 100.
+     3) Commodities (peso 20%) — média das variações YTD/mensais absolutas
+        de Brent, BDI e Estanho (normalizada, limitada a 100).
+     4) Clima (peso 15%) — baseado no riskLevel dos `naturalEvents`:
+        "alto"=100, "medio"=55, "monitor"=40, "baixo"=15 — média de todos.
+     5) Estreitos/gargalos (peso 15%) — baseado no statusLevel dos
+        `straits`: "crit"=100, "warn"=50, "ok"=10 — média de todos.
+
+   Isso é uma heurística de demonstração e deve ser substituída por um
+   modelo estatístico/ponderado por especialistas em produção.
+   ========================================================================= */
+
+function calculateRiskIndex(){
+  // 1) Geopolítico
+  const sevWeight = {critico:35, alta:18, media:8, info:2};
+  let geo = dashboardData.geopoliticalAlerts.reduce((sum,a) => sum + (sevWeight[a.severity]||0), 0);
+  geo = Math.min(geo, 100);
+
+  // 2) Frete
+  const validFreight = dashboardData.freight.filter(f => !f.unavailable);
+  const elevatedCount = validFreight.filter(f => f.status === "ELEVADO").length;
+  const freight = (elevatedCount / validFreight.length) * 100;
+
+  // 3) Commodities (Brent YTD, BDI YTD, Estanho mensal — normalizado por /50 * 100, limitado a 100)
+  const brentComp = Math.min(Math.abs(dashboardData.market.find(m=>m.id==="brent").change) / 50 * 100, 100);
+  const bdiComp = Math.min(Math.abs(dashboardData.market.find(m=>m.id==="bdi").change) / 50 * 100, 100);
+  const tinItem = dashboardData.chemicals.spot.find(c => c.product.includes("Estanho"));
+  const tinComp = tinItem ? Math.min(Math.abs(tinItem.yearChange) / 80 * 100, 100) : 0;
+  const commodities = (brentComp + bdiComp + tinComp) / 3;
+
+  // 4) Clima
+  const climateWeight = {alto:100, medio:55, monitor:40, baixo:15};
+  const climate = dashboardData.naturalEvents.reduce((sum,e) => sum + (climateWeight[e.riskLevel]||30), 0) / dashboardData.naturalEvents.length;
+
+  // 5) Estreitos
+  const straitWeight = {crit:100, warn:50, ok:10};
+  const straitsScore = dashboardData.straits.reduce((sum,s) => sum + (straitWeight[s.statusLevel]||30), 0) / dashboardData.straits.length;
+
+  const finalScore = Math.round(
+    geo * 0.30 +
+    freight * 0.20 +
+    commodities * 0.20 +
+    climate * 0.15 +
+    straitsScore * 0.15
+  );
+
+  return {
+    score: Math.min(finalScore, 100),
+    components: [
+      {label:"Geopolítico", value: Math.round(geo)},
+      {label:"Frete", value: Math.round(freight)},
+      {label:"Commodities", value: Math.round(commodities)},
+      {label:"Clima", value: Math.round(climate)},
+      {label:"Estreitos", value: Math.round(straitsScore)}
+    ]
+  };
+}
+
+function renderRiskIndex(){
+  const {score, components} = calculateRiskIndex();
+  let label, color, bg;
+  if(score >= 70){label="RISCO ELEVADO"; color="var(--red)"; bg="var(--red-bg)";}
+  else if(score >= 40){label="RISCO MODERADO"; color="var(--orange)"; bg="var(--orange-bg)";}
+  else {label="RISCO BAIXO"; color="var(--green)"; bg="var(--green-bg)";}
+
+  document.getElementById("riskPanel").innerHTML = `
+    <div class="risk-score-block">
+      <div class="risk-score" style="color:${color}">${score}<small>/100</small></div>
+      <span class="risk-label" style="color:${color};background:${bg}">${label}</span>
+    </div>
+    <div class="risk-bar-wrap">
+      <div class="risk-bar-track">
+        <div class="risk-bar-fill" style="width:${score}%;background:${color}"></div>
+      </div>
+      <div class="risk-bar-scale"><span>0 — Baixo</span><span>50 — Moderado</span><span>100 — Elevado</span></div>
+      <div class="risk-components">
+        ${components.map(c => `<span class="risk-chip">${c.label}: ${c.value}</span>`).join("")}
+      </div>
+    </div>
+  `;
+}
+
+/* =========================================================================
+   LEITURA EXECUTIVA (insights automáticos)
+   ========================================================================= */
+
+function generateExecutiveInsights(){
+  const insights = [];
+
+  const brent = dashboardData.market.find(m => m.id === "brent");
+  const hormuz = dashboardData.straits.find(s => s.name === "Ormuz");
+  insights.push({
+    tag: "🔴 Principal risco",
+    cls: "crit",
+    text: `<b>Ormuz em crise ativa + Brent em +${fmtNumber(brent.change,1)}% no ano:</b> pressão direta sobre custos de matérias-primas químicas dependentes de derivados de petróleo (TDI, poliol, silicone).`
+  });
+
+  const elevatedRoutes = dashboardData.freight.filter(f => f.status === "ELEVADO" && !f.unavailable);
+  if(elevatedRoutes.length){
+    const worst = elevatedRoutes.reduce((a,b) => (b.feuUsd||0) > (a.feuUsd||0) ? b : a);
+    insights.push({
+      tag: "🟠 Atenção logística",
+      cls: "high",
+      text: `<b>${worst.route} em ${fmtUsd(worst.feuUsd,0)}/FEU</b>, com ${elevatedRoutes.length} de ${dashboardData.freight.filter(f=>!f.unavailable).length} rotas monitoradas classificadas como ELEVADO.`
+    });
+  }
+
+  const tdi = dashboardData.chemicals.spot.find(c => c.product.includes("TDI"));
+  if(tdi){
+    insights.push({
+      tag: "🟠 Atenção a TDI",
+      cls: "high",
+      text: `<b>TDI a ${fmtNumber(tdi.priceCny,0)} CNY/ton (${tdi.priceDate}):</b> ${tdi.monthNote}`
+    });
+  }
+
+  const tin = dashboardData.chemicals.spot.find(c => c.product.includes("Estanho"));
+  if(tin){
+    insights.push({
+      tag: "🟡 Monitorar estanho",
+      cls: "med",
+      text: `<b>Estanho (LME) acumula +${fmtNumber(tin.yearChange,1)}% no ano</b> (+${fmtNumber(tin.changeValue,1)}% no mês), pressionado pela disrupção de oferta em Myanmar.`
+    });
+  }
+
+  const silicone = dashboardData.chemicals.spot.find(c => c.product.includes("Silicone"));
+  if(silicone && silicone.changeValue <= 0){
+    insights.push({
+      tag: "🟢 Oportunidade",
+      cls: "low",
+      text: `<b>Silicone (proxy DMC) estável/em queda:</b> variação de ${fmtNumber(silicone.changeValue,1)}% no dia — avaliar compra spot, considerando que é um proxy indireto do surfactante.`
+    });
+  }
+
+  const dcm = dashboardData.chemicals.spot.find(c => c.product.includes("Cloreto de metileno"));
+  if(dcm){
+    insights.push({
+      tag: "🔵 Volatilidade",
+      cls: "med",
+      text: `<b>Cloreto de metileno caiu ${fmtNumber(Math.abs(dcm.changeValue),1)}% no dia</b>, mas acumula alta de +9,57% desde o início de 2026 — monitorar tendência antes de decidir volume de compra.`
+    });
+  }
+
+  return insights;
+}
+
+function renderInsights(){
+  const grid = document.getElementById("insightsGrid");
+  grid.innerHTML = generateExecutiveInsights().map(i => `
+    <div class="insight-card ${i.cls}">
+      <span class="insight-tag">${i.tag}</span>
+      <span class="insight-text">${i.text}</span>
+    </div>
+  `).join("");
+}
+
+/* =========================================================================
+   RECOMENDAÇÕES DE COMPRA
+   -------------------------------------------------------------------------
+   Regra simples: cruza tendência (ALTA/BAIXA/ESTÁVEL) e magnitude da
+   variação disponível para classificar risco e sugerir uma ação. Itens
+   sem dado disponível recebem recomendação explícita de buscar fonte paga
+   em vez de uma sugestão especulativa.
+   ========================================================================= */
+
+function generatePurchaseRecommendations(){
+  return dashboardData.chemicals.spot.map(c => {
+    if(c.unavailable){
+      return {
+        product: c.product,
+        signal: "Sem dado",
+        risk: "na",
+        riskLabel: "N/D",
+        recommendation: "Sem dado público suficiente — consultar fonte paga (" + (c.unavailableReason.split("Fonte paga recomendada:")[1] || "ICIS/ChemAnalyst") + ")"
+      };
+    }
+    const magnitude = c.trend === "ALTA" ? Math.abs(c.yearChange || c.changeValue || 5) : Math.abs(c.changeValue || 0);
+    let risk = "baixo", riskLabel="Baixo", recommendation = "Monitorar";
+    if(c.trend === "ALTA"){
+      risk = magnitude > 5 ? "alto" : "medio";
+      riskLabel = magnitude > 5 ? "Alto" : "Médio";
+      recommendation = magnitude > 5 ? "Avaliar antecipação de compra" : "Monitorar de perto";
+    } else if(c.trend === "BAIXA"){
+      risk = "baixo"; riskLabel = "Baixo";
+      recommendation = "Avaliar oportunidade de compra spot";
+    } else {
+      risk = "medio"; riskLabel = "Médio";
+      recommendation = "Monitorar";
+    }
+    return {
+      product: c.product,
+      signal: c.trend,
+      risk, riskLabel,
+      recommendation
+    };
+  });
+}
+
+function renderRecommendations(){
+  const recs = generatePurchaseRecommendations();
+  const rows = recs.map(r => `
+    <tr>
+      <td>${r.product}</td>
+      <td class="rec-signal">${r.signal}</td>
+      <td><span class="rec-risk ${r.risk}">${r.riskLabel}</span></td>
+      <td>${r.recommendation}</td>
+    </tr>
+  `).join("");
+  document.getElementById("recTable").innerHTML = `
+    <thead><tr><th>Produto</th><th>Sinal</th><th>Risco</th><th>Recomendação</th></tr></thead>
+    <tbody>${rows}</tbody>`;
+}
+
+/* =========================================================================
+   RODAPÉ — FONTES
+   ========================================================================= */
+
+function renderFooterSources(){
+  const consulted = [
+    "Banco Central do Brasil (PTAX)", "Trading Economics", "InfoMoney",
+    "SunSirs", "100ppi.com", "ChemAnalyst", "Drewry", "Freightos (FBX)",
+    "Hellenic Shipping News", "Westmetall (LME mirror)",
+    "EIA (Short-Term Energy Outlook)", "CNN", "UN News", "UPI",
+    "Lloyd's List Intelligence", "Maritime Executive", "Logfret Insights",
+    "gCaptain", "Bloomberg", "The Diplomat", "Japan Times",
+    "NOAA NHC", "USGS", "Al Jazeera", "NBC News", "Xinhua",
+    "Vietnam News", "Argus Media", "Reuters/Euronews", "Splash247",
+    "REACH24H", "Enviliance ASIA", "Goldinvest", "International Tin Association",
+    "Wikipedia (verificação cruzada)"
+  ];
+  document.getElementById("sourceListConsulted").innerHTML =
+    consulted.map(s => `<span>${s}</span>`).join("");
+
+  const future = [
+    {name:"ICIS Polyurethanes", url:"https://www.icis.com/explore/commodities/chemicals/polyurethanes/"},
+    {name:"ICIS Pricing Services", url:"https://www.icis.com/explore/services/pricing/"},
+    {name:"Intratec — Methylene Chloride", url:"https://www.intratec.us/solutions/primary-commodity-prices/commodity/methylene-chloride-prices"},
+    {name:"IMARC Group — Dichloromethane", url:"https://www.imarcgroup.com/dichloromethane-pricing-report"},
+    {name:"ChemOrbis", url:"https://www.chemorbis.com/"},
+    {name:"Platts / S&P Global Commodity Insights", url:"https://www.spglobal.com/commodityinsights/"},
+    {name:"QuimiNet", url:"https://www.quiminet.com/"},
+    {name:"Bloomberg Línea — USD/BRL", url:"https://www.bloomberglinea.com.br/quote/USDBRL:CUR/"},
+    {name:"Federal Reserve H.10 (FX histórico)", url:"https://www.federalreserve.gov/releases/h10/hist/dat00_bz.htm"},
+    {name:"Investing.com — USD/CNY", url:"https://br.investing.com/currencies/usd-cny"},
+    {name:"PBoC — People's Bank of China", url:"http://www.pbc.gov.cn/"},
+    {name:"OANDA", url:"https://www.oanda.com/currency-converter/"},
+    {name:"Shanghai Containerized Freight Index (SCFI)", url:"https://en.sse.net.cn/indices/scfinew.jsp"},
+    {name:"Baltic Exchange (oficial, pago)", url:"https://www.balticexchange.com/"},
+    {name:"Xeneta", url:"https://www.xeneta.com/"},
+    {name:"Kpler", url:"https://www.kpler.com/"},
+    {name:"MarineTraffic", url:"https://www.marinetraffic.com/"},
+    {name:"Suez Canal Authority", url:"https://www.suezcanal.gov.eg/"},
+    {name:"Panama Canal Authority (ACP)", url:"https://www.pancanal.com/"},
+    {name:"OPEC", url:"https://www.opec.org/"},
+    {name:"CNN Brasil — Estreitos", url:"https://www.cnnbrasil.com.br/internacional/o-que-acontece-se-os-estreitos-de-ormuz-e-bab-el-mandeb-forem-fechados/"},
+    {name:"OPEB — Estreito de Ormuz", url:"https://opeb.org/2026/03/12/rotas-energeticas-e-disputas-geopoliticas-o-estreito-de-ormuz/"},
+    {name:"Institute for the Study of War (ISW)", url:"https://www.understandingwar.org/"},
+    {name:"ProfessorHOC", url:"https://www.instagram.com/professorhoc/"},
+    {name:"Caixin Global", url:"https://www.caixinglobal.com/"},
+    {name:"South China Morning Post", url:"https://www.scmp.com/"},
+    {name:"China Daily", url:"https://www.chinadaily.com.cn/"},
+    {name:"Chemical Week", url:"https://www.chemweek.com/"}
+  ];
+  document.getElementById("sourceListFuture").innerHTML =
+    future.map(f => `<a href="${f.url}" target="_blank" rel="noopener">${f.name}</a>`).join("");
+}
+
+/* =========================================================================
+   RELÓGIO / CONTAGEM REGRESSIVA / AUTO-REFRESH SIMULADO
+   ========================================================================= */
+
+let secondsRemaining = dashboardData.nextUpdateIntervalMinutes * 60;
+let clockTimerId = null;
+
+function formatCountdown(totalSeconds){
+  const m = Math.floor(totalSeconds/60);
+  const s = totalSeconds % 60;
+  return String(m).padStart(2,"0") + ":" + String(s).padStart(2,"0");
+}
+
+function computeNextUpdateText(){
+  return "17 de agosto de 2026 às 10:00 BRT (-03:00)";
+}
+
+function updateClock(){
+  document.getElementById("lastUpdateText").textContent = dashboardData.lastUpdate;
+  document.getElementById("nextUpdateText").textContent = computeNextUpdateText();
+  document.getElementById("countdownText").textContent = formatCountdown(secondsRemaining);
+}
+
+function refreshSimulation(){
+  // Não busca dados reais: apenas atualiza o relógio visual e reinicia a
+  // contagem, mantendo os dados carregados (conforme especificação: seção 16).
+  secondsRemaining = dashboardData.nextUpdateIntervalMinutes * 60;
+  updateClock();
+}
+
+function tickCountdown(){
+  secondsRemaining--;
+  if(secondsRemaining <= 0){
+    refreshSimulation();
+    return;
+  }
+  document.getElementById("countdownText").textContent = formatCountdown(secondsRemaining);
+}
+
+/* =========================================================================
+   AÇÕES DE UI (botões / modal / impressão)
+   ========================================================================= */
+
+function showUpdateMessage(){
+  document.getElementById("modalText").textContent =
+    "Este painel exibe dados reais coletados manualmente em 17/08/2026 (ver fontes por card/tabela). " +
+    "Para atualização automática em tempo real, este arquivo estático deverá ser conectado a um backend " +
+    "Node.js/Python que consulte as APIs reais (BCB, ICIS, Drewry, LME, EIA, NOAA, USGS etc.) e agende a " +
+    "atualização via CRON — a arquitetura de dados (objeto dashboardData) já está pronta para essa integração.";
+  document.getElementById("modalOverlay").classList.add("show");
+}
+
+function hideUpdateMessage(){
+  document.getElementById("modalOverlay").classList.remove("show");
+}
+
+function printDashboard(){
+  window.print();
+}
+
+function setupActions(){
+  document.getElementById("btnRefresh").addEventListener("click", showUpdateMessage);
+  document.getElementById("btnPrint").addEventListener("click", printDashboard);
+  document.getElementById("modalClose").addEventListener("click", hideUpdateMessage);
+  document.getElementById("modalOverlay").addEventListener("click", (e) => {
+    if(e.target.id === "modalOverlay") hideUpdateMessage();
+  });
+  document.addEventListener("keydown", (e) => {
+    if(e.key === "Escape") hideUpdateMessage();
+  });
+}
+
+/* =========================================================================
+   PONTE COM O BACKEND (opcional)
+   -------------------------------------------------------------------------
+   Este arquivo continua 100% funcional aberto localmente (file://), sem
+   nenhuma chamada de rede — os dados embutidos acima são usados como estão.
+
+   Quando este MESMO arquivo é publicado no backend Vercel (ver pasta
+   /backend), ele passa a rodar a partir de um domínio real, e esta função
+   tenta buscar /api/dashboard-data (atualizado pelo CRON do backend com
+   BCB/EIA/NOAA/USGS reais). Se a chamada falhar ou expirar — o que é
+   esperado e normal ao abrir o arquivo localmente — o painel simplesmente
+   mantém o snapshot estático já embutido, sem erro visível ao usuário.
+   ========================================================================= */
+
+async function loadLiveDataIfAvailable(){
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 4000);
+    const res = await fetch("/api/dashboard-data", { signal: controller.signal });
+    clearTimeout(timeoutId);
+    if(!res.ok) return;
+    const live = await res.json();
+    mergeLiveData(live);
+  } catch(err){
+    // Normal quando aberto localmente (file://) ou sem backend implantado.
+    console.info("[dashboard] Dados ao vivo indisponíveis — usando snapshot estático embutido.");
+  }
+}
+
+function mergeLiveData(live){
+  if(!live) return;
+  if(live.lastUpdate){
+    try {
+      dashboardData.lastUpdate = new Date(live.lastUpdate).toLocaleString("pt-BR", {
+        timeZone: "America/Sao_Paulo", dateStyle:"long", timeStyle:"short"
+      }) + " BRT (-03:00)";
+    } catch(e){ /* mantém o valor estático se a data vier inválida */ }
+  }
+  if(Array.isArray(live.market)){
+    live.market.forEach(liveItem => {
+      if(liveItem.unavailable) return;
+      const target = dashboardData.market.find(m => m.id === liveItem.id);
+      if(target && liveItem.value !== undefined && liveItem.value !== null){
+        Object.assign(target, liveItem, {dataStatus:"real"});
+      }
+    });
+  }
+  if(live.live){
+    dashboardData.liveExtras = live.live;
+  }
+}
+
+/* =========================================================================
+   INICIALIZAÇÃO
+   ========================================================================= */
+
+function initDashboard(){
+  renderKPIs();
+  renderRiskIndex();
+  renderInsights();
+  renderChemicalTables();
+  renderFreight();
+  renderStraits();
+  renderNaturalEvents();
+  renderAlerts();
+  renderRecommendations();
+  renderFooterSources();
+  setupTabs();
+  setupActions();
+  updateClock();
+  clockTimerId = setInterval(tickCountdown, 1000);
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadLiveDataIfAvailable();
+  initDashboard();
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "lastUpdate": "2026-08-17T09:30:00-03:00",
+  "nextUpdateIntervalMinutes": 30,
+  "fxUsdCny": 6.74089,
+  "market": [
+    {
+      "id": "usdbrl",
+      "name": "USD/BRL",
+      "value": 5.2236,
+      "unit": "R$",
+      "change": 0.727,
+      "asOf": "2026-08-14",
+      "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
+      "sourceUrl": "https://www.bcb.gov.br/conversao",
+      "dataStatus": "real"
+    },
+    {
+      "id": "usdcny",
+      "name": "USD/CNY",
+      "value": 6.74089,
+      "unit": "¥",
+      "change": -0.04,
+      "asOf": "2026-08-17",
+      "source": "Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/china/currency",
+      "dataStatus": "real"
+    },
+    {
+      "id": "brent",
+      "name": "Petróleo Brent",
+      "value": 88.84,
+      "unit": "US$/barril",
+      "change": 33.39,
+      "asOf": "2026-08-17",
+      "source": "Trading Economics",
+      "sourceUrl": "https://pt.tradingeconomics.com/commodity/crude-oil",
+      "dataStatus": "real"
+    },
+    {
+      "id": "bdi",
+      "name": "Baltic Dry Index",
+      "value": 2878,
+      "unit": "pts",
+      "change": 42.33,
+      "asOf": "2026-08-17",
+      "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
+      "dataStatus": "real"
+    }
+  ],
+  "note": "Este arquivo é o fallback usado pelo backend quando o Vercel KV ainda não tem dados persistidos (ex.: antes do primeiro cron rodar). É a mesma fotografia de dados de 17/08/2026 embutida no index.html standalone. Ver README do backend para o esquema completo."
+}
