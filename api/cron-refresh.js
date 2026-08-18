@@ -19,6 +19,25 @@ const { readDashboardData, writeDashboardData } = require("../lib/store");
 // que já estão embutidos no index.html entregue em 17/08/2026.
 const staticSnapshot = require("../data/static-snapshot.json");
 
+// Aplica os valores buscados agora (usdBrl, brent, ...) diretamente no
+// array `market` persistido — sem isso, os dados ficavam guardados só no
+// bucket `live` e os cards do painel nunca refletiam o valor novo.
+function mergeMarketData(baseMarket, freshItems) {
+  const market = (baseMarket || []).map((item) => ({ ...item }));
+  freshItems.forEach((fresh) => {
+    if (!fresh || fresh.unavailable) return;
+    const target = market.find((m) => m.id === fresh.id);
+    if (!target) return;
+    target.value = fresh.value;
+    target.change = fresh.change;
+    target.asOf = fresh.asOf;
+    target.source = fresh.source;
+    target.sourceUrl = fresh.sourceUrl;
+    target.dataStatus = "real";
+  });
+  return market;
+}
+
 async function safe(label, fn) {
   try {
     return await fn();
@@ -47,9 +66,11 @@ module.exports = async function handler(req, res) {
   ]);
 
   const current = await readDashboardData(staticSnapshot);
+  const updatedMarket = mergeMarketData(current.market || staticSnapshot.market, [usdBrl, brent]);
 
   const updated = {
     ...current,
+    market: updatedMarket,
     lastUpdate: new Date().toISOString(),
     live: {
       usdBrl,

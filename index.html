@@ -502,7 +502,7 @@
 
 <div class="modal-overlay no-print" id="modalOverlay">
   <div class="modal-box">
-    <h3>⟳ Atualização de dados</h3>
+    <h3 id="modalTitle">⟳ Atualização de dados</h3>
     <p id="modalText"></p>
     <button id="modalClose">Entendi</button>
   </div>
@@ -1575,20 +1575,45 @@ function renderFooterSources(){
 }
 
 /* =========================================================================
-   RELÓGIO / CONTAGEM REGRESSIVA / AUTO-REFRESH SIMULADO
+   RELÓGIO / CONTAGEM REGRESSIVA / AUTO-REFRESH
+   -------------------------------------------------------------------------
+   "Próxima atualização automática" aponta para a próxima ocorrência real
+   do horário do cron de dados (05:30 BRT — ver backend/vercel.json), não
+   para um valor fixo. Quando a contagem chega a zero, o painel tenta
+   buscar dados ao vivo de novo (loadLiveDataIfAvailable) — funciona de
+   verdade quando implantado com backend, e não faz nada visível quando
+   aberto localmente como arquivo.
    ========================================================================= */
 
-let secondsRemaining = dashboardData.nextUpdateIntervalMinutes * 60;
 let clockTimerId = null;
 
+function computeNextCronTime(hourBRT, minuteBRT){
+  // BRT é sempre UTC-3 (Brasil não usa mais horário de verão desde 2019).
+  const now = new Date();
+  const target = new Date(now);
+  target.setUTCHours(hourBRT + 3, minuteBRT, 0, 0);
+  if(target.getTime() <= now.getTime()){
+    target.setUTCDate(target.getUTCDate() + 1);
+  }
+  return target;
+}
+
+let nextUpdateTarget = computeNextCronTime(5, 30);
+let secondsRemaining = Math.max(0, Math.round((nextUpdateTarget.getTime() - Date.now()) / 1000));
+
 function formatCountdown(totalSeconds){
-  const m = Math.floor(totalSeconds/60);
-  const s = totalSeconds % 60;
+  const safe = Math.max(0, totalSeconds);
+  const h = Math.floor(safe / 3600);
+  const m = Math.floor((safe % 3600) / 60);
+  const s = safe % 60;
+  if(h > 0) return `${h}h ${String(m).padStart(2,"0")}m ${String(s).padStart(2,"0")}s`;
   return String(m).padStart(2,"0") + ":" + String(s).padStart(2,"0");
 }
 
 function computeNextUpdateText(){
-  return "17 de agosto de 2026 às 10:00 BRT (-03:00)";
+  return nextUpdateTarget.toLocaleString("pt-BR", {
+    timeZone: "America/Sao_Paulo", dateStyle: "long", timeStyle: "short"
+  }) + " BRT (-03:00)";
 }
 
 function updateClock(){
@@ -1597,10 +1622,11 @@ function updateClock(){
   document.getElementById("countdownText").textContent = formatCountdown(secondsRemaining);
 }
 
-function refreshSimulation(){
-  // Não busca dados reais: apenas atualiza o relógio visual e reinicia a
-  // contagem, mantendo os dados carregados (conforme especificação: seção 16).
-  secondsRemaining = dashboardData.nextUpdateIntervalMinutes * 60;
+async function refreshSimulation(){
+  await loadLiveDataIfAvailable(); // sem efeito visível se não houver backend acessível
+  renderAll();
+  nextUpdateTarget = computeNextCronTime(5, 30);
+  secondsRemaining = Math.max(0, Math.round((nextUpdateTarget.getTime() - Date.now()) / 1000));
   updateClock();
 }
 
@@ -1617,13 +1643,19 @@ function tickCountdown(){
    AÇÕES DE UI (botões / modal / impressão)
    ========================================================================= */
 
-function showUpdateMessage(){
-  document.getElementById("modalText").textContent =
-    "Este painel exibe dados reais coletados manualmente em 17/08/2026 (ver fontes por card/tabela). " +
-    "Para atualização automática em tempo real, este arquivo estático deverá ser conectado a um backend " +
-    "Node.js/Python que consulte as APIs reais (BCB, ICIS, Drewry, LME, EIA, NOAA, USGS etc.) e agende a " +
-    "atualização via CRON — a arquitetura de dados (objeto dashboardData) já está pronta para essa integração.";
+function showInfoModal(title, text){
+  document.getElementById("modalTitle").textContent = title;
+  document.getElementById("modalText").textContent = text;
   document.getElementById("modalOverlay").classList.add("show");
+}
+
+function showUpdateMessage(){
+  showInfoModal(
+    "⟳ Sem backend acessível agora",
+    "Este arquivo está aberto sem um backend disponível (ex.: localmente, como file://), então não há dados mais " +
+    "novos para buscar neste momento — os valores exibidos são o snapshot real coletado em 17/08/2026 (ver fontes " +
+    "por card/tabela). Quando publicado no backend (ver pasta /backend), este mesmo botão busca dados ao vivo de verdade."
+  );
 }
 
 function hideUpdateMessage(){
@@ -1634,8 +1666,25 @@ function printDashboard(){
   window.print();
 }
 
+async function handleRefreshClick(){
+  const btn = document.getElementById("btnRefresh");
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = "⟳ Atualizando...";
+  const gotLiveData = await loadLiveDataIfAvailable();
+  btn.disabled = false;
+  btn.textContent = originalLabel;
+  if(gotLiveData){
+    renderAll();
+    updateClock();
+    showInfoModal("✓ Dados atualizados", "Última atualização: " + dashboardData.lastUpdate + ". Cards e tabelas recarregados com os valores mais recentes disponíveis no backend.");
+  } else {
+    showUpdateMessage();
+  }
+}
+
 function setupActions(){
-  document.getElementById("btnRefresh").addEventListener("click", showUpdateMessage);
+  document.getElementById("btnRefresh").addEventListener("click", handleRefreshClick);
   document.getElementById("btnPrint").addEventListener("click", printDashboard);
   document.getElementById("modalClose").addEventListener("click", hideUpdateMessage);
   document.getElementById("modalOverlay").addEventListener("click", (e) => {
@@ -1664,14 +1713,16 @@ async function loadLiveDataIfAvailable(){
   try {
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 4000);
-    const res = await fetch("/api/dashboard-data", { signal: controller.signal });
+    const res = await fetch("/api/dashboard-data", { signal: controller.signal, cache: "no-store" });
     clearTimeout(timeoutId);
-    if(!res.ok) return;
+    if(!res.ok) return false;
     const live = await res.json();
     mergeLiveData(live);
+    return true;
   } catch(err){
     // Normal quando aberto localmente (file://) ou sem backend implantado.
     console.info("[dashboard] Dados ao vivo indisponíveis — usando snapshot estático embutido.");
+    return false;
   }
 }
 
@@ -1689,7 +1740,15 @@ function mergeLiveData(live){
       if(liveItem.unavailable) return;
       const target = dashboardData.market.find(m => m.id === liveItem.id);
       if(target && liveItem.value !== undefined && liveItem.value !== null){
-        Object.assign(target, liveItem, {dataStatus:"real"});
+        // changeLabel/period/note apagados de propósito: eram texto fixo do
+        // snapshot estático (ex.: "13/08 → 14/08/2026") e ficariam
+        // desatualizados/inconsistentes com o valor novo se mantidos.
+        Object.assign(target, liveItem, {
+          dataStatus: "real",
+          changeLabel: undefined,
+          period: "Atualização automática",
+          note: "Dado atualizado automaticamente pelo backend."
+        });
       }
     });
   }
@@ -1702,7 +1761,7 @@ function mergeLiveData(live){
    INICIALIZAÇÃO
    ========================================================================= */
 
-function initDashboard(){
+function renderAll(){
   renderKPIs();
   renderRiskIndex();
   renderInsights();
@@ -1713,6 +1772,10 @@ function initDashboard(){
   renderAlerts();
   renderRecommendations();
   renderFooterSources();
+}
+
+function initDashboard(){
+  renderAll();
   setupTabs();
   setupActions();
   updateClock();
