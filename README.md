@@ -72,11 +72,16 @@ No painel do Vercel → seu projeto → Settings → Git → conectar ao
 repositório do GitHub. Cada push na branch principal gera um novo deploy
 automaticamente.
 
-### 3. Habilitar o Vercel KV (armazenamento dos dados atualizados)
+### 3. Persistência dos dados (via GitHub, sem banco externo)
 
-No painel do projeto → aba **Storage** → **Create Database** → **KV**.
-Isso injeta automaticamente `KV_REST_API_URL` e `KV_REST_API_TOKEN` nas
-variáveis de ambiente do projeto — não precisa copiar nada manualmente.
+Em vez de Vercel KV (que agora exige instalar uma integração de marketplace
+com aceite manual de termos), os dados atualizados são gravados como um
+commit em `data/live-snapshot.json`, no próprio repositório. Vantagem
+colateral: você ganha um histórico versionado de cada atualização, de
+graça, direto no GitHub.
+
+Para isso funcionar, é preciso um token do GitHub com permissão de escrita
+no repositório — ver `GITHUB_TOKEN` no próximo passo.
 
 ### 4. Adicionar as demais variáveis de ambiente
 
@@ -88,8 +93,12 @@ Em Project Settings → Environment Variables, adicione (ver
 - `REPORT_EMAIL_FROM` — endereço verificado no SendGrid.
 - `REPORT_EMAIL_TO` — `compras4.polar@gmail.com` (já é o padrão no código).
 - `DASHBOARD_PUBLIC_URL` — a URL pública do projeto (ex.:
-  `https://compradores-polar.vercel.app`), preencha **depois** do primeiro
+  `https://polar-news.vercel.app`), preencha **depois** do primeiro
   deploy, quando essa URL existir.
+- `GITHUB_TOKEN` — token com permissão de escrita no repositório
+  `compras4polar-cpu/POLAR-NEWS` (usado para persistir os dados atualizados
+  como commits — ver seção 3 acima).
+- `GITHUB_REPO` — `compras4polar-cpu/POLAR-NEWS`.
 - `CRON_SECRET` — opcional, qualquer string aleatória, para os endpoints de
   cron rejeitarem chamadas externas não autorizadas.
 

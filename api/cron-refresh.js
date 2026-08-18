@@ -1,6 +1,7 @@
 /**
  * Endpoint acionado pelo Vercel Cron (ver vercel.json) para buscar dados
- * reais das fontes gratuitas e persistir no Vercel KV.
+ * reais das fontes gratuitas e persistir em data/live-snapshot.json no
+ * próprio repositório GitHub (ver lib/store.js).
  *
  * Protegido por CRON_SECRET: o Vercel já envia esse header automaticamente
  * em invocações de cron (https://vercel.com/docs/cron-jobs/manage-cron-jobs#securing-cron-jobs).

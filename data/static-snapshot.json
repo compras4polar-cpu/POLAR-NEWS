@@ -48,5 +48,5 @@
       "dataStatus": "real"
     }
   ],
-  "note": "Este arquivo é o fallback usado pelo backend quando o Vercel KV ainda não tem dados persistidos (ex.: antes do primeiro cron rodar). É a mesma fotografia de dados de 17/08/2026 embutida no index.html standalone. Ver README do backend para o esquema completo."
+  "note": "Este arquivo é o fallback usado pelo backend enquanto data/live-snapshot.json ainda não existe no repositório (ex.: antes do primeiro cron rodar). É a mesma fotografia de dados de 17/08/2026 embutida no index.html standalone. Ver README do backend para o esquema completo."
 }
