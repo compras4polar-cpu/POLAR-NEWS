@@ -21,19 +21,31 @@ instalados. Isso significa que:
 
 ## O que este backend automatiza de fato (dados 100% reais e gratuitos)
 
-| Fonte | O que traz | Precisa de conta/chave? |
-|---|---|---|
-| Banco Central do Brasil (PTAX) | USD/BRL | Não — API pública |
-| EIA (Energy Information Administration) | Petróleo Brent | Sim, **gratuita** — [registrar aqui](https://www.eia.gov/opendata/register.php) |
-| NOAA National Hurricane Center | Furacões/tempestades ativas no Atlântico | Não — feed público |
-| USGS | Terremotos significativos da semana | Não — feed público |
+| Fonte | O que traz | Precisa de conta/chave? | Como |
+|---|---|---|---|
+| Banco Central do Brasil (PTAX) | USD/BRL | Não — API pública | `lib/fetchers/bcb.js` |
+| EIA (Energy Information Administration) | Petróleo Brent | Sim, **gratuita** — [registrar aqui](https://www.eia.gov/opendata/register.php) | `lib/fetchers/eia.js` |
+| Trading Economics | USD/CNY, Baltic Dry Index | Não — scraping de HTML (sem anti-bot) | `lib/fetchers/tradingEconomics.js` |
+| SunSirs | TDI, cloreto de metileno, silicone DMC | Não — mas exige Puppeteer (ver abaixo) | `lib/fetchers/sunsirs.js` |
+| NOAA National Hurricane Center | Furacões/tempestades ativas no Atlântico | Não — feed público | `lib/fetchers/noaa.js` |
+| USGS | Terremotos significativos da semana | Não — feed público | `lib/fetchers/usgs.js` |
+
+**Sobre o SunSirs:** o site tem um desafio anti-bot em JavaScript que
+bloqueia `fetch()` simples — só passa com um navegador real. Por isso
+`sunsirs.js` reaproveita o mesmo Chromium headless (`@sparticuz/chromium` +
+`puppeteer-core`) já usado para gerar o PDF diário, tornando essa busca mais
+lenta (~10-15s) e mais frágil que as demais: se o SunSirs mudar o HTML da
+lista de preços, o parser passa a retornar `unavailable` para os três
+produtos — nunca um número inventado.
 
 ## O que continua manual/estático por enquanto (e por quê)
 
-USD/CNY, Baltic Dry Index, todos os preços químicos (TDI, poliol, TCPP,
-cloreto de metileno, amina, estanho, silicone) e todo o frete marítimo
-**não têm API gratuita real** — as fontes de referência (ICIS, Drewry,
-Xeneta, Baltic Exchange, LME oficial, Trading Economics) são serviços pagos.
+Poliol, TCPP, amina catalisadora, estanho (LME) e todo o frete marítimo
+**não têm fonte gratuita real e automatizável** — TCPP/amina não têm fonte
+gratuita alguma; poliol e estanho têm fonte gratuita (100ppi.com e Trading
+Economics respectivamente) mas exigiriam mais scraping/Puppeteer, não
+implementado ainda. As fontes de referência pagas (ICIS, Drewry, Xeneta,
+Baltic Exchange, LME oficial) continuam como opção para maior confiabilidade.
 Os conectores para ICIS, Drewry e LME já existem em
 `lib/fetchers/paidSources.js`, prontos para receber a chamada HTTP real no
 dia em que a Polar assinar algum desses serviços — hoje eles só verificam se
@@ -105,8 +117,12 @@ Em Project Settings → Environment Variables, adicione (ver
 ### 5. Confirmar o plano do Vercel e a frequência do cron
 
 `vercel.json` está configurado para:
-- `08:30 UTC` (05:30 BRT) — atualizar os dados (`/api/cron-refresh`)
-- `09:00 UTC` (06:00 BRT) — gerar e enviar o PDF (`/api/send-daily-report`)
+- `17:00 UTC` (14:00 BRT) — atualizar os dados (`/api/cron-refresh`)
+- `17:30 UTC` (14:30 BRT) — gerar e enviar o PDF (`/api/send-daily-report`)
+
+Esse horário (depois das 13h BRT, não de manhã) é de propósito: a PTAX
+oficial do BCB só é publicada por volta das 13h BRT — um cron mais cedo
+(ex.: 06h) pegaria sempre a cotação do dia anterior.
 
 Isso já respeita o limite do **plano Hobby** (gratuito) do Vercel, que
 permite no máximo 2 cron jobs, executados até 1x por dia cada. Se no futuro
