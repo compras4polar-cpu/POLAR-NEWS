@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-18T18:01:04.925Z",
+  "lastUpdate": "2026-08-18T18:16:33.770Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.74089,
+      "value": 6.747,
       "unit": "¥",
-      "change": -0.04,
-      "asOf": "2026-08-17",
+      "change": 0.06,
+      "asOf": "Aug/18",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2878,
+      "value": 2815,
       "unit": "pts",
-      "change": 42.33,
-      "asOf": "2026-08-17",
+      "change": -2.19,
+      "asOf": "Aug/18",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -69,6 +69,26 @@
       "asOf": "2026-08-11",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
+      "dataStatus": "real"
+    },
+    "usdCny": {
+      "id": "usdcny",
+      "value": 6.747,
+      "unit": "¥",
+      "change": 0.06,
+      "asOf": "Aug/18",
+      "source": "Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/china/currency",
+      "dataStatus": "real"
+    },
+    "bdi": {
+      "id": "bdi",
+      "value": 2815,
+      "unit": "pts",
+      "change": -2.19,
+      "asOf": "Aug/18",
+      "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
     },
     "atlanticStorms": {
