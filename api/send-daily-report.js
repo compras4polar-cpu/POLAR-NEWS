@@ -16,7 +16,9 @@
  *     é rejeitado.
  */
 
-const chromium = require("@sparticuz/chromium");
+// @sparticuz/chromium >=121 é distribuído como ES Module puro — não pode
+// ser carregado com require() a partir deste arquivo CommonJS, precisa de
+// import() dinâmico (funciona normalmente dentro de uma função async).
 const puppeteer = require("puppeteer-core");
 const sgMail = require("@sendgrid/mail");
 const { readDashboardData } = require("../lib/store");
@@ -55,6 +57,7 @@ module.exports = async function handler(req, res) {
 
   let browser;
   try {
+    const chromium = (await import("@sparticuz/chromium")).default;
     browser = await puppeteer.launch({
       args: chromium.args,
       executablePath: await chromium.executablePath(),
