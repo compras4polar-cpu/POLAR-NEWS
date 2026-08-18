@@ -1,0 +1,137 @@
+{
+  "lastUpdate": "2026-08-18T15:31:07.395Z",
+  "nextUpdateIntervalMinutes": 30,
+  "fxUsdCny": 6.74089,
+  "market": [
+    {
+      "id": "usdbrl",
+      "name": "USD/BRL",
+      "value": 5.2236,
+      "unit": "R$",
+      "change": 0.727,
+      "asOf": "2026-08-14",
+      "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
+      "sourceUrl": "https://www.bcb.gov.br/conversao",
+      "dataStatus": "real"
+    },
+    {
+      "id": "usdcny",
+      "name": "USD/CNY",
+      "value": 6.74089,
+      "unit": "¥",
+      "change": -0.04,
+      "asOf": "2026-08-17",
+      "source": "Trading Economics",
+      "sourceUrl": "https://tradingeconomics.com/china/currency",
+      "dataStatus": "real"
+    },
+    {
+      "id": "brent",
+      "name": "Petróleo Brent",
+      "value": 88.84,
+      "unit": "US$/barril",
+      "change": 33.39,
+      "asOf": "2026-08-17",
+      "source": "Trading Economics",
+      "sourceUrl": "https://pt.tradingeconomics.com/commodity/crude-oil",
+      "dataStatus": "real"
+    },
+    {
+      "id": "bdi",
+      "name": "Baltic Dry Index",
+      "value": 2878,
+      "unit": "pts",
+      "change": 42.33,
+      "asOf": "2026-08-17",
+      "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
+      "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
+      "dataStatus": "real"
+    }
+  ],
+  "note": "Este arquivo é o fallback usado pelo backend enquanto data/live-snapshot.json ainda não existe no repositório (ex.: antes do primeiro cron rodar). É a mesma fotografia de dados de 17/08/2026 embutida no index.html standalone. Ver README do backend para o esquema completo.",
+  "live": {
+    "usdBrl": {
+      "id": "usdbrl",
+      "value": 5.2014,
+      "unit": "R$",
+      "change": -0.4249942568343798,
+      "asOf": "2026-08-17 13:04:48.745527",
+      "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
+      "sourceUrl": "https://www.bcb.gov.br/conversao",
+      "dataStatus": "real"
+    },
+    "brent": {
+      "id": "brent",
+      "unavailable": true,
+      "unavailableReason": "EIA_API_KEY não configurada. Registre uma chave gratuita em https://www.eia.gov/opendata/register.php e adicione como variável de ambiente no Vercel."
+    },
+    "atlanticStorms": {
+      "id": "atlantic-storms",
+      "count": 1,
+      "storms": [
+        {
+          "name": "Lala",
+          "classification": "HU",
+          "intensity": "75",
+          "pressure": "981",
+          "lastUpdate": "2026-08-18T15:00:00.000Z"
+        }
+      ],
+      "source": "NOAA National Hurricane Center — CurrentStorms.json",
+      "sourceUrl": "https://www.nhc.noaa.gov/",
+      "dataStatus": "real"
+    },
+    "significantEarthquakes": {
+      "id": "significant-earthquakes",
+      "count": 4,
+      "events": [
+        {
+          "place": "15 km NNW of Pematangsiantar, Indonesia",
+          "magnitude": 6.9,
+          "time": "2026-08-15T10:54:51.796Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkyk"
+        },
+        {
+          "place": "1 km SW of Otura, Spain",
+          "magnitude": 5.2,
+          "time": "2026-08-14T23:04:40.797Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkv2"
+        },
+        {
+          "place": "68 km NNW of Ende, Indonesia",
+          "magnitude": 7.7,
+          "time": "2026-08-14T21:58:21.564Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2"
+        },
+        {
+          "place": "3 km N of San Leandro, CA",
+          "magnitude": 3.84,
+          "time": "2026-08-13T15:30:04.700Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75417557"
+        }
+      ],
+      "source": "USGS — Significant Earthquakes, Past Week",
+      "sourceUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+      "dataStatus": "real"
+    },
+    "icisChemicals": {
+      "id": "icis-chemicals",
+      "unavailable": true,
+      "unavailableReason": "ICIS_API_KEY não configurada. Requer contrato comercial com a ICIS (icis.com/explore/services/pricing). Sem isso, o painel continua usando os preços spot gratuitos (SunSirs/100ppi) já embutidos no snapshot estático."
+    },
+    "drewryFreight": {
+      "id": "drewry-freight",
+      "unavailable": true,
+      "unavailableReason": "DREWRY_API_KEY não configurada. Requer assinatura Drewry Supply Chain Advisors ou Xeneta. Sem isso, o painel usa os valores públicos do World Container Index publicados semanalmente (com atraso de dias)."
+    },
+    "lmeMetals": {
+      "id": "lme-metals",
+      "unavailable": true,
+      "unavailableReason": "LME_API_KEY não configurada. Requer assinatura LME.com ou terminal Bloomberg/Refinitiv. Sem isso, o painel usa a Trading Economics como espelho gratuito do estanho (com defasagem de 1-3 dias)."
+    }
+  }
+}
