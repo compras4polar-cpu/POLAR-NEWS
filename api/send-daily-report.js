@@ -61,6 +61,17 @@ module.exports = async function handler(req, res) {
       headless: chromium.headless
     });
     const page = await browser.newPage();
+    // O painel fica protegido pelo Vercel Deployment Protection; sem este
+    // header, o Puppeteer só conseguiria "imprimir" a tela de login do
+    // Vercel em vez do painel real. VERCEL_AUTOMATION_BYPASS_SECRET é o
+    // mesmo valor gerado em Settings > Deployment Protection > Protection
+    // Bypass for Automation.
+    if (process.env.VERCEL_AUTOMATION_BYPASS_SECRET) {
+      await page.setExtraHTTPHeaders({
+        "x-vercel-protection-bypass": process.env.VERCEL_AUTOMATION_BYPASS_SECRET,
+        "x-vercel-set-bypass-cookie": "true"
+      });
+    }
     await page.goto(REPORT_URL, { waitUntil: "networkidle0", timeout: 45000 });
     const pdfBuffer = await page.pdf({
       format: "A4",
