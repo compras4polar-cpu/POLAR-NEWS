@@ -16,10 +16,10 @@
  *     é rejeitado.
  */
 
-// @sparticuz/chromium >=121 é distribuído como ES Module puro — não pode
-// ser carregado com require() a partir deste arquivo CommonJS, precisa de
-// import() dinâmico (funciona normalmente dentro de uma função async).
-const puppeteer = require("puppeteer-core");
+// @sparticuz/chromium >=121 e puppeteer-core >=22 são distribuídos como ES
+// Module puro — não podem ser carregados com require() a partir deste
+// arquivo CommonJS, precisam de import() dinâmico (funciona normalmente
+// dentro de uma função async).
 const sgMail = require("@sendgrid/mail");
 const { readDashboardData } = require("../lib/store");
 const staticSnapshot = require("../data/static-snapshot.json");
@@ -58,6 +58,7 @@ module.exports = async function handler(req, res) {
   let browser;
   try {
     const chromium = (await import("@sparticuz/chromium")).default;
+    const puppeteer = (await import("puppeteer-core")).default;
     browser = await puppeteer.launch({
       args: chromium.args,
       executablePath: await chromium.executablePath(),
