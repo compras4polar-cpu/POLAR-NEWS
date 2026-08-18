@@ -10,6 +10,7 @@
 
 const { fetchUsdBrl } = require("../lib/fetchers/bcb");
 const { fetchBrent } = require("../lib/fetchers/eia");
+const { fetchUsdCny, fetchBdi } = require("../lib/fetchers/tradingEconomics");
 const { fetchActiveStorms } = require("../lib/fetchers/noaa");
 const { fetchSignificantEarthquakes } = require("../lib/fetchers/usgs");
 const { icisPrices, drewryFreight, lmeOfficial } = require("../lib/fetchers/paidSources");
@@ -55,9 +56,11 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  const [usdBrl, brent, storms, quakes, icis, drewry, lme] = await Promise.all([
+  const [usdBrl, brent, usdCny, bdi, storms, quakes, icis, drewry, lme] = await Promise.all([
     safe("usdbrl", fetchUsdBrl),
     safe("brent", fetchBrent),
+    safe("usdcny", fetchUsdCny),
+    safe("bdi", fetchBdi),
     safe("atlantic-storms", fetchActiveStorms),
     safe("significant-earthquakes", fetchSignificantEarthquakes),
     safe("icis-chemicals", async () => icisPrices()),
@@ -66,7 +69,7 @@ module.exports = async function handler(req, res) {
   ]);
 
   const current = await readDashboardData(staticSnapshot);
-  const updatedMarket = mergeMarketData(current.market || staticSnapshot.market, [usdBrl, brent]);
+  const updatedMarket = mergeMarketData(current.market || staticSnapshot.market, [usdBrl, brent, usdCny, bdi]);
 
   const updated = {
     ...current,
@@ -75,6 +78,8 @@ module.exports = async function handler(req, res) {
     live: {
       usdBrl,
       brent,
+      usdCny,
+      bdi,
       atlanticStorms: storms,
       significantEarthquakes: quakes,
       icisChemicals: icis,
@@ -89,6 +94,6 @@ module.exports = async function handler(req, res) {
     ok: true,
     persisted,
     updatedAt: updated.lastUpdate,
-    sources: { usdBrl, brent, storms, quakes, icis, drewry, lme }
+    sources: { usdBrl, brent, usdCny, bdi, storms, quakes, icis, drewry, lme }
   });
 };

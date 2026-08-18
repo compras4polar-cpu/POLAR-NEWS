@@ -1,10 +1,10 @@
 {
   "crons": [
-    { "path": "/api/cron-refresh", "schedule": "30 8 * * *" },
-    { "path": "/api/send-daily-report", "schedule": "0 9 * * *" }
+    { "path": "/api/cron-refresh", "schedule": "0 17 * * *" },
+    { "path": "/api/send-daily-report", "schedule": "30 17 * * *" }
   ],
   "functions": {
     "api/send-daily-report.js": { "maxDuration": 60 },
-    "api/cron-refresh.js": { "maxDuration": 30 }
+    "api/cron-refresh.js": { "maxDuration": 60 }
   }
 }

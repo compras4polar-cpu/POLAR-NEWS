@@ -209,7 +209,10 @@
   .insight-card.med{border-left-color:var(--yellow);}
   .insight-card.low{border-left-color:var(--green);}
   .insight-tag{font-size:0.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:var(--text-muted);display:block;margin-bottom:3px;}
-  .insight-text{font-size:0.86rem;}
+  .insight-text{font-size:0.86rem;display:block;}
+  .insight-source{font-size:0.7rem;color:var(--text-muted);margin-top:6px;}
+  .insight-source a{color:var(--text-muted);}
+  .insight-source a:hover{color:var(--blue);}
 
   /* ===== TABLES ===== */
   .table-scroll{overflow-x:auto;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);}
@@ -1401,7 +1404,10 @@ function generateExecutiveInsights(){
   insights.push({
     tag: "🔴 Principal risco",
     cls: "crit",
-    text: `<b>Ormuz em crise ativa + Brent em +${fmtNumber(brent.change,1)}% no ano:</b> pressão direta sobre custos de matérias-primas químicas dependentes de derivados de petróleo (TDI, poliol, silicone).`
+    text: `<b>Ormuz em crise ativa + Brent em +${fmtNumber(brent.change,1)}% no ano:</b> pressão direta sobre custos de matérias-primas químicas dependentes de derivados de petróleo (TDI, poliol, silicone).`,
+    date: hormuz ? hormuz.date : brent.asOf,
+    source: hormuz ? hormuz.source : brent.source,
+    sourceUrl: hormuz ? hormuz.sourceUrl : brent.sourceUrl
   });
 
   const elevatedRoutes = dashboardData.freight.filter(f => f.status === "ELEVADO" && !f.unavailable);
@@ -1410,7 +1416,10 @@ function generateExecutiveInsights(){
     insights.push({
       tag: "🟠 Atenção logística",
       cls: "high",
-      text: `<b>${worst.route} em ${fmtUsd(worst.feuUsd,0)}/FEU</b>, com ${elevatedRoutes.length} de ${dashboardData.freight.filter(f=>!f.unavailable).length} rotas monitoradas classificadas como ELEVADO.`
+      text: `<b>${worst.route} em ${fmtUsd(worst.feuUsd,0)}/FEU</b>, com ${elevatedRoutes.length} de ${dashboardData.freight.filter(f=>!f.unavailable).length} rotas monitoradas classificadas como ELEVADO.`,
+      date: worst.date,
+      source: worst.source,
+      sourceUrl: worst.sourceUrl
     });
   }
 
@@ -1419,7 +1428,10 @@ function generateExecutiveInsights(){
     insights.push({
       tag: "🟠 Atenção a TDI",
       cls: "high",
-      text: `<b>TDI a ${fmtNumber(tdi.priceCny,0)} CNY/ton (${tdi.priceDate}):</b> ${tdi.monthNote}`
+      text: `<b>TDI a ${fmtNumber(tdi.priceCny,0)} CNY/ton (${tdi.priceDate}):</b> ${tdi.monthNote}`,
+      date: tdi.priceDate,
+      source: tdi.source,
+      sourceUrl: tdi.sourceUrl
     });
   }
 
@@ -1428,7 +1440,10 @@ function generateExecutiveInsights(){
     insights.push({
       tag: "🟡 Monitorar estanho",
       cls: "med",
-      text: `<b>Estanho (LME) acumula +${fmtNumber(tin.yearChange,1)}% no ano</b> (+${fmtNumber(tin.changeValue,1)}% no mês), pressionado pela disrupção de oferta em Myanmar.`
+      text: `<b>Estanho (LME) acumula +${fmtNumber(tin.yearChange,1)}% no ano</b> (+${fmtNumber(tin.changeValue,1)}% no mês), pressionado pela disrupção de oferta em Myanmar.`,
+      date: tin.priceDate,
+      source: tin.source,
+      sourceUrl: tin.sourceUrl
     });
   }
 
@@ -1437,7 +1452,10 @@ function generateExecutiveInsights(){
     insights.push({
       tag: "🟢 Oportunidade",
       cls: "low",
-      text: `<b>Silicone (proxy DMC) estável/em queda:</b> variação de ${fmtNumber(silicone.changeValue,1)}% no dia — avaliar compra spot, considerando que é um proxy indireto do surfactante.`
+      text: `<b>Silicone (proxy DMC) estável/em queda:</b> variação de ${fmtNumber(silicone.changeValue,1)}% no dia — avaliar compra spot, considerando que é um proxy indireto do surfactante.`,
+      date: silicone.priceDate,
+      source: silicone.source,
+      sourceUrl: silicone.sourceUrl
     });
   }
 
@@ -1446,7 +1464,10 @@ function generateExecutiveInsights(){
     insights.push({
       tag: "🔵 Volatilidade",
       cls: "med",
-      text: `<b>Cloreto de metileno caiu ${fmtNumber(Math.abs(dcm.changeValue),1)}% no dia</b>, mas acumula alta de +9,57% desde o início de 2026 — monitorar tendência antes de decidir volume de compra.`
+      text: `<b>Cloreto de metileno caiu ${fmtNumber(Math.abs(dcm.changeValue),1)}% no dia</b>, mas acumula alta de +9,57% desde o início de 2026 — monitorar tendência antes de decidir volume de compra.`,
+      date: dcm.priceDate,
+      source: dcm.source,
+      sourceUrl: dcm.sourceUrl
     });
   }
 
@@ -1459,6 +1480,10 @@ function renderInsights(){
     <div class="insight-card ${i.cls}">
       <span class="insight-tag">${i.tag}</span>
       <span class="insight-text">${i.text}</span>
+      <div class="insight-source">
+        ${i.date ? '<span>' + i.date + '</span>' : ''}
+        ${i.sourceUrl ? ' · <a href="' + i.sourceUrl + '" target="_blank" rel="noopener">' + (i.source || "Fonte") + '</a>' : (i.source ? ' · ' + i.source : '')}
+      </div>
     </div>
   `).join("");
 }
