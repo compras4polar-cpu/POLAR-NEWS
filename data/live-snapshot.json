@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-18T18:16:33.770Z",
+  "lastUpdate": "2026-08-18T18:25:52.918Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,7 +17,7 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.747,
+      "value": 6.7468,
       "unit": "¥",
       "change": 0.06,
       "asOf": "Aug/18",
@@ -73,7 +73,7 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.747,
+      "value": 6.7468,
       "unit": "¥",
       "change": 0.06,
       "asOf": "Aug/18",
@@ -90,6 +90,41 @@
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
+    },
+    "chemicals": {
+      "tdi": {
+        "id": "tdi",
+        "priceCny": 17533.33,
+        "priceUsd": 2601.0408121182813,
+        "changeValue": -0.57,
+        "trend": "BAIXA",
+        "priceDate": "2026-08-18",
+        "source": "SunSirs (China Commodity Data Group)",
+        "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
+        "dataStatus": "real"
+      },
+      "dcm": {
+        "id": "dcm",
+        "priceCny": 1870,
+        "priceUsd": 277.4114397357026,
+        "changeValue": -1.32,
+        "trend": "BAIXA",
+        "priceDate": "2026-08-18",
+        "source": "SunSirs (China Commodity Data Group)",
+        "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
+        "dataStatus": "real"
+      },
+      "silicone": {
+        "id": "silicone",
+        "priceCny": 13200,
+        "priceUsd": 1958.1983981343708,
+        "changeValue": 1.54,
+        "trend": "ALTA",
+        "priceDate": "2026-08-18",
+        "source": "SunSirs (China Commodity Data Group)",
+        "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
+        "dataStatus": "real"
+      }
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
