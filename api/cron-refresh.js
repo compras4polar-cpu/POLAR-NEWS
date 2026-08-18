@@ -11,6 +11,7 @@
 const { fetchUsdBrl } = require("../lib/fetchers/bcb");
 const { fetchBrent } = require("../lib/fetchers/eia");
 const { fetchUsdCny, fetchBdi } = require("../lib/fetchers/tradingEconomics");
+const { fetchSunSirsChemicals } = require("../lib/fetchers/sunsirs");
 const { fetchActiveStorms } = require("../lib/fetchers/noaa");
 const { fetchSignificantEarthquakes } = require("../lib/fetchers/usgs");
 const { icisPrices, drewryFreight, lmeOfficial } = require("../lib/fetchers/paidSources");
@@ -56,11 +57,14 @@ module.exports = async function handler(req, res) {
     }
   }
 
-  const [usdBrl, brent, usdCny, bdi, storms, quakes, icis, drewry, lme] = await Promise.all([
+  const fxUsdCny = staticSnapshot.fxUsdCny;
+
+  const [usdBrl, brent, usdCny, bdi, sunsirs, storms, quakes, icis, drewry, lme] = await Promise.all([
     safe("usdbrl", fetchUsdBrl),
     safe("brent", fetchBrent),
     safe("usdcny", fetchUsdCny),
     safe("bdi", fetchBdi),
+    safe("sunsirs-chemicals", () => fetchSunSirsChemicals(fxUsdCny)),
     safe("atlantic-storms", fetchActiveStorms),
     safe("significant-earthquakes", fetchSignificantEarthquakes),
     safe("icis-chemicals", async () => icisPrices()),
@@ -80,6 +84,7 @@ module.exports = async function handler(req, res) {
       brent,
       usdCny,
       bdi,
+      chemicals: sunsirs, // { tdi, dcm, silicone } — mesclado no frontend em dashboardData.chemicals.spot
       atlanticStorms: storms,
       significantEarthquakes: quakes,
       icisChemicals: icis,
@@ -94,6 +99,6 @@ module.exports = async function handler(req, res) {
     ok: true,
     persisted,
     updatedAt: updated.lastUpdate,
-    sources: { usdBrl, brent, usdCny, bdi, storms, quakes, icis, drewry, lme }
+    sources: { usdBrl, brent, usdCny, bdi, sunsirs, storms, quakes, icis, drewry, lme }
   });
 };

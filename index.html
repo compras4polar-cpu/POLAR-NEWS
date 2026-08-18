@@ -615,6 +615,7 @@ const dashboardData = {
   chemicals: {
     spot: [
       {
+        id: "tdi",
         product: "TDI (Tolueno Diisocianato)",
         region: "NE Asia / China (benchmark)",
         priceCny: 17633.33,
@@ -628,6 +629,7 @@ const dashboardData = {
         sourceUrl: "https://www.sunsirs.com/commodity-price/list-chemical.html"
       },
       {
+        id: "poliol",
         product: "Poliol poliéter — flexível (grade DEP-5631D)",
         region: "China",
         priceCny: 8850, // ponto médio da faixa 8.650–9.050 CNY/ton
@@ -642,6 +644,7 @@ const dashboardData = {
         sourceUrl: "https://chem.100ppi.com/price/plist-1223--2.html"
       },
       {
+        id: "tcpp",
         product: "TCPP (retardante de chama)",
         region: "China",
         priceCny: null,
@@ -656,6 +659,7 @@ const dashboardData = {
         unavailableReason: "Sem índice de mercado gratuito e datado localizado. SunSirs não cobre TCPP como commodity de referência. Fonte paga recomendada: ICIS Pricing, ChemAnalyst ou Mordor Intelligence."
       },
       {
+        id: "dcm",
         product: "Cloreto de metileno (diclorometano)",
         region: "China (Shandong)",
         priceCny: 1895.00,
@@ -669,6 +673,7 @@ const dashboardData = {
         sourceUrl: "https://www.sunsirs.com/commodity-price/list-chemical.html"
       },
       {
+        id: "amina",
         product: "Amina catalisadora (DABCO/TEDA)",
         region: "—",
         priceCny: null,
@@ -683,6 +688,7 @@ const dashboardData = {
         unavailableReason: "Não existe preço de commodity por tonelada em fonte gratuita — apenas listagens de varejo em pequenas embalagens (Alibaba/Made-in-China), sem valor de referência de mercado defensável. Fonte paga recomendada: ICIS, ChemOrbis."
       },
       {
+        id: "estanho",
         product: "Estanho — LME",
         region: "Londres (LME cash)",
         priceCny: null,
@@ -698,6 +704,7 @@ const dashboardData = {
         sourceUrl: "https://tradingeconomics.com/commodity/tin"
       },
       {
+        id: "silicone",
         product: "Silicone — PDMS (surfactante para PU)",
         region: "China",
         priceCny: 13000,
@@ -1775,6 +1782,22 @@ function mergeLiveData(live){
           note: "Dado atualizado automaticamente pelo backend."
         });
       }
+    });
+  }
+  if(live.live && live.live.chemicals){
+    Object.values(live.live.chemicals).forEach(fresh => {
+      if(!fresh || fresh.unavailable) return;
+      const target = dashboardData.chemicals.spot.find(c => c.id === fresh.id);
+      if(!target) return;
+      target.priceCny = fresh.priceCny;
+      target.priceUsd = fresh.priceUsd;
+      target.changeValue = fresh.changeValue;
+      target.trend = fresh.trend;
+      target.priceDate = fresh.priceDate;
+      target.source = fresh.source;
+      target.sourceUrl = fresh.sourceUrl;
+      target.changePeriod = "Var. no dia (fonte, atualização automática)";
+      target.monthNote = undefined;
     });
   }
   if(live.live){

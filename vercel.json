@@ -4,7 +4,7 @@
     { "path": "/api/send-daily-report", "schedule": "30 17 * * *" }
   ],
   "functions": {
-    "api/send-daily-report.js": { "maxDuration": 60 },
-    "api/cron-refresh.js": { "maxDuration": 60 }
+    "api/send-daily-report.js": { "maxDuration": 60, "memory": 1024 },
+    "api/cron-refresh.js": { "maxDuration": 60, "memory": 1024 }
   }
 }
