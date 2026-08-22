@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-21T17:01:51.561Z",
+  "lastUpdate": "2026-08-22T17:30:13.619Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7204,
+      "value": 6.7202,
       "unit": "¥",
-      "change": -0.07,
+      "change": -0.08,
       "asOf": "Aug/21",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7204,
+      "value": 6.7202,
       "unit": "¥",
-      "change": -0.07,
+      "change": -0.08,
       "asOf": "Aug/21",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2561.4822375086965,
         "changeValue": -2.08,
         "trend": "BAIXA",
-        "priceDate": "2026-08-21",
+        "priceDate": "2026-08-22",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 302.6306615298573,
         "changeValue": 7.65,
         "trend": "ALTA",
-        "priceDate": "2026-08-21",
+        "priceDate": "2026-08-22",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 1958.1983981343708,
         "changeValue": 1.54,
         "trend": "ALTA",
-        "priceDate": "2026-08-21",
+        "priceDate": "2026-08-22",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,16 +133,16 @@
         {
           "name": "Lala",
           "classification": "HU",
-          "intensity": "85",
-          "pressure": "970",
-          "lastUpdate": "2026-08-21T15:00:00.000Z"
+          "intensity": "70",
+          "pressure": "979",
+          "lastUpdate": "2026-08-22T15:00:00.000Z"
         },
         {
-          "name": "Two-C",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1005",
-          "lastUpdate": "2026-08-21T15:00:00.000Z"
+          "name": "Moke",
+          "classification": "TS",
+          "intensity": "45",
+          "pressure": "994",
+          "lastUpdate": "2026-08-22T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -151,35 +151,21 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 4,
+      "count": 2,
       "events": [
+        {
+          "place": "1 km WSW of Hope, Alaska",
+          "magnitude": 3.9,
+          "time": "2026-08-22T07:42:40.939Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026qoynpe"
+        },
         {
           "place": "31 km NW of Aniso, Peru",
           "magnitude": 6.7,
           "time": "2026-08-20T18:00:18.626Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tm81"
-        },
-        {
-          "place": "15 km NNW of Pematangsiantar, Indonesia",
-          "magnitude": 6.9,
-          "time": "2026-08-15T10:54:51.796Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkyk"
-        },
-        {
-          "place": "1 km SW of Otura, Spain",
-          "magnitude": 5.2,
-          "time": "2026-08-14T23:04:40.797Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkv2"
-        },
-        {
-          "place": "68 km NNW of Ende, Indonesia",
-          "magnitude": 7.7,
-          "time": "2026-08-14T21:58:21.564Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
