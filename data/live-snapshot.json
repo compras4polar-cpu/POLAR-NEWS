@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-22T17:30:13.619Z",
+  "lastUpdate": "2026-08-23T17:31:35.711Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2561.4822375086965,
         "changeValue": -2.08,
         "trend": "BAIXA",
-        "priceDate": "2026-08-22",
+        "priceDate": "2026-08-23",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 302.6306615298573,
         "changeValue": 7.65,
         "trend": "ALTA",
-        "priceDate": "2026-08-22",
+        "priceDate": "2026-08-23",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 1958.1983981343708,
         "changeValue": 1.54,
         "trend": "ALTA",
-        "priceDate": "2026-08-22",
+        "priceDate": "2026-08-23",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,21 +128,28 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 2,
+      "count": 3,
       "storms": [
         {
+          "name": "Iselle",
+          "classification": "TS",
+          "intensity": "40",
+          "pressure": "1003",
+          "lastUpdate": "2026-08-23T15:00:00.000Z"
+        },
+        {
           "name": "Lala",
-          "classification": "HU",
-          "intensity": "70",
-          "pressure": "979",
-          "lastUpdate": "2026-08-22T15:00:00.000Z"
+          "classification": "TS",
+          "intensity": "55",
+          "pressure": "988",
+          "lastUpdate": "2026-08-23T15:00:00.000Z"
         },
         {
           "name": "Moke",
           "classification": "TS",
-          "intensity": "45",
-          "pressure": "994",
-          "lastUpdate": "2026-08-22T15:00:00.000Z"
+          "intensity": "40",
+          "pressure": "1002",
+          "lastUpdate": "2026-08-23T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
