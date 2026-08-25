@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-08-24T17:41:44.630Z",
+  "lastUpdate": "2026-08-25T17:45:33.531Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1512,
+      "value": 5.149,
       "unit": "R$",
-      "change": -0.2188861985472043,
-      "asOf": "2026-08-24 13:04:14.216099",
+      "change": -0.042708495107939934,
+      "asOf": "2026-08-25 13:04:44.743388",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7233,
+      "value": 6.7178,
       "unit": "¥",
-      "change": 0.05,
-      "asOf": "Aug/24",
+      "change": -0.06,
+      "asOf": "Aug/25",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2882,
+      "value": 2926,
       "unit": "pts",
-      "change": 1.44,
-      "asOf": "Aug/24",
+      "change": 1.53,
+      "asOf": "Aug/25",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1512,
+      "value": 5.149,
       "unit": "R$",
-      "change": -0.2188861985472043,
-      "asOf": "2026-08-24 13:04:14.216099",
+      "change": -0.042708495107939934,
+      "asOf": "2026-08-25 13:04:44.743388",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7233,
+      "value": 6.7178,
       "unit": "¥",
-      "change": 0.05,
-      "asOf": "Aug/24",
+      "change": -0.06,
+      "asOf": "Aug/25",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2882,
+      "value": 2926,
       "unit": "pts",
-      "change": 1.44,
-      "asOf": "Aug/24",
+      "change": 1.53,
+      "asOf": "Aug/25",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,20 +96,20 @@
         "id": "tdi",
         "priceCny": 17066.67,
         "priceUsd": 2531.812564809691,
-        "changeValue": -1.16,
-        "trend": "BAIXA",
-        "priceDate": "2026-08-24",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-08-25",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2395,
-        "priceUsd": 355.2943305705923,
-        "changeValue": 17.4,
+        "priceCny": 2402.5,
+        "priceUsd": 356.406943296805,
+        "changeValue": 0.31,
         "trend": "ALTA",
-        "priceDate": "2026-08-24",
+        "priceDate": "2026-08-25",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -118,9 +118,9 @@
         "id": "silicone",
         "priceCny": 13400,
         "priceUsd": 1987.8680708333766,
-        "changeValue": 1.52,
-        "trend": "ALTA",
-        "priceDate": "2026-08-24",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-08-25",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,23 +133,23 @@
         {
           "name": "Iselle",
           "classification": "TS",
-          "intensity": "55",
-          "pressure": "992",
-          "lastUpdate": "2026-08-24T15:00:00.000Z"
+          "intensity": "60",
+          "pressure": "988",
+          "lastUpdate": "2026-08-25T15:00:00.000Z"
+        },
+        {
+          "name": "Julio",
+          "classification": "TS",
+          "intensity": "45",
+          "pressure": "1001",
+          "lastUpdate": "2026-08-25T15:00:00.000Z"
         },
         {
           "name": "Lala",
           "classification": "TS",
-          "intensity": "55",
-          "pressure": "988",
-          "lastUpdate": "2026-08-24T15:00:00.000Z"
-        },
-        {
-          "name": "Moke",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1004",
-          "lastUpdate": "2026-08-24T15:00:00.000Z"
+          "intensity": "45",
+          "pressure": "994",
+          "lastUpdate": "2026-08-25T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -158,14 +158,21 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 2,
+      "count": 3,
       "events": [
         {
-          "place": "1 km WSW of Hope, Alaska",
-          "magnitude": 3.9,
-          "time": "2026-08-22T07:42:40.939Z",
+          "place": "4 km NNE of Jalālābād, Afghanistan",
+          "magnitude": 4.9,
+          "time": "2026-08-25T01:18:46.243Z",
           "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026qoynpe"
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tna9"
+        },
+        {
+          "place": "4 km N of Toride, Japan",
+          "magnitude": 5.8,
+          "time": "2026-08-22T17:00:39.472Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmta"
         },
         {
           "place": "31 km NW of Aniso, Peru",
