@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-08-27T17:55:53.636Z",
+  "lastUpdate": "2026-08-28T17:55:54.098Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1642,
+      "value": 5.2005,
       "unit": "R$",
-      "change": 0.07363770250368239,
-      "asOf": "2026-08-27 13:10:22.548239",
+      "change": 0.7029162309747836,
+      "asOf": "2026-08-28 13:11:19.963529",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7196,
+      "value": 6.7318,
       "unit": "¥",
-      "change": -0.04,
-      "asOf": "Aug/27",
+      "change": 0.18,
+      "asOf": "Aug/28",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3107,
+      "value": 3186,
       "unit": "pts",
-      "change": 1.67,
-      "asOf": "Aug/27",
+      "change": 2.54,
+      "asOf": "Aug/28",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1642,
+      "value": 5.2005,
       "unit": "R$",
-      "change": 0.07363770250368239,
-      "asOf": "2026-08-27 13:10:22.548239",
+      "change": 0.7029162309747836,
+      "asOf": "2026-08-28 13:11:19.963529",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7196,
+      "value": 6.7318,
       "unit": "¥",
-      "change": -0.04,
-      "asOf": "Aug/27",
+      "change": 0.18,
+      "asOf": "Aug/28",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3107,
+      "value": 3186,
       "unit": "pts",
-      "change": 1.67,
-      "asOf": "Aug/27",
+      "change": 2.54,
+      "asOf": "Aug/28",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,9 +96,9 @@
         "id": "tdi",
         "priceCny": 16600,
         "priceUsd": 2462.582834017466,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-08-27",
+        "changeValue": -2.73,
+        "trend": "BAIXA",
+        "priceDate": "2026-08-28",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -107,9 +107,9 @@
         "id": "dcm",
         "priceCny": 2372.5,
         "priceUsd": 351.95649239195416,
-        "changeValue": -1.25,
+        "changeValue": -0.94,
         "trend": "BAIXA",
-        "priceDate": "2026-08-27",
+        "priceDate": "2026-08-28",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -118,9 +118,9 @@
         "id": "silicone",
         "priceCny": 13500,
         "priceUsd": 2002.7029071828792,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-08-27",
+        "changeValue": 0.75,
+        "trend": "ALTA",
+        "priceDate": "2026-08-28",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,21 +128,28 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 2,
+      "count": 3,
       "storms": [
         {
           "name": "Dolly",
-          "classification": "TS",
+          "classification": "PTC",
           "intensity": "35",
-          "pressure": "1007",
-          "lastUpdate": "2026-08-27T15:00:00.000Z"
+          "pressure": "1008",
+          "lastUpdate": "2026-08-28T15:00:00.000Z"
         },
         {
-          "name": "Lala",
+          "name": "Karina",
+          "classification": "TS",
+          "intensity": "45",
+          "pressure": "999",
+          "lastUpdate": "2026-08-28T15:00:00.000Z"
+        },
+        {
+          "name": "Lowell",
           "classification": "TS",
           "intensity": "40",
-          "pressure": "999",
-          "lastUpdate": "2026-08-27T15:00:00.000Z"
+          "pressure": "1003",
+          "lastUpdate": "2026-08-28T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -151,7 +158,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 4,
+      "count": 3,
       "events": [
         {
           "place": "55 km NW of Kodāri̇̄, Nepal",
@@ -173,13 +180,6 @@
           "time": "2026-08-22T17:00:39.472Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmta"
-        },
-        {
-          "place": "31 km NW of Aniso, Peru",
-          "magnitude": 6.7,
-          "time": "2026-08-20T18:00:18.626Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tm81"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
