@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-28T17:55:54.098Z",
+  "lastUpdate": "2026-08-29T17:55:53.115Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7318,
+      "value": 6.7298,
       "unit": "¥",
-      "change": 0.18,
+      "change": 0.15,
       "asOf": "Aug/28",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7318,
+      "value": 6.7298,
       "unit": "¥",
-      "change": 0.18,
+      "change": 0.15,
       "asOf": "Aug/28",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2462.582834017466,
         "changeValue": -2.73,
         "trend": "BAIXA",
-        "priceDate": "2026-08-28",
+        "priceDate": "2026-08-29",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 351.95649239195416,
         "changeValue": -0.94,
         "trend": "BAIXA",
-        "priceDate": "2026-08-28",
+        "priceDate": "2026-08-29",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2002.7029071828792,
         "changeValue": 0.75,
         "trend": "ALTA",
-        "priceDate": "2026-08-28",
+        "priceDate": "2026-08-29",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,28 +128,21 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 3,
+      "count": 2,
       "storms": [
-        {
-          "name": "Dolly",
-          "classification": "PTC",
-          "intensity": "35",
-          "pressure": "1008",
-          "lastUpdate": "2026-08-28T15:00:00.000Z"
-        },
         {
           "name": "Karina",
           "classification": "TS",
-          "intensity": "45",
-          "pressure": "999",
-          "lastUpdate": "2026-08-28T15:00:00.000Z"
+          "intensity": "55",
+          "pressure": "989",
+          "lastUpdate": "2026-08-29T15:00:00.000Z"
         },
         {
           "name": "Lowell",
           "classification": "TS",
           "intensity": "40",
           "pressure": "1003",
-          "lastUpdate": "2026-08-28T15:00:00.000Z"
+          "lastUpdate": "2026-08-29T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -158,7 +151,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 3,
+      "count": 2,
       "events": [
         {
           "place": "55 km NW of Kodāri̇̄, Nepal",
@@ -173,13 +166,6 @@
           "time": "2026-08-25T01:18:46.243Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tna9"
-        },
-        {
-          "place": "4 km N of Toride, Japan",
-          "magnitude": 5.8,
-          "time": "2026-08-22T17:00:39.472Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tmta"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
