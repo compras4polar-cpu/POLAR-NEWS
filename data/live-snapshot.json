@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-29T17:55:53.115Z",
+  "lastUpdate": "2026-08-30T17:55:53.935Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2462.582834017466,
         "changeValue": -2.73,
         "trend": "BAIXA",
-        "priceDate": "2026-08-29",
+        "priceDate": "2026-08-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 351.95649239195416,
         "changeValue": -0.94,
         "trend": "BAIXA",
-        "priceDate": "2026-08-29",
+        "priceDate": "2026-08-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2002.7029071828792,
         "changeValue": 0.75,
         "trend": "ALTA",
-        "priceDate": "2026-08-29",
+        "priceDate": "2026-08-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -132,17 +132,17 @@
       "storms": [
         {
           "name": "Karina",
-          "classification": "TS",
-          "intensity": "55",
-          "pressure": "989",
-          "lastUpdate": "2026-08-29T15:00:00.000Z"
+          "classification": "HU",
+          "intensity": "70",
+          "pressure": "980",
+          "lastUpdate": "2026-08-30T15:00:00.000Z"
         },
         {
           "name": "Lowell",
           "classification": "TS",
-          "intensity": "40",
-          "pressure": "1003",
-          "lastUpdate": "2026-08-29T15:00:00.000Z"
+          "intensity": "45",
+          "pressure": "1000",
+          "lastUpdate": "2026-08-30T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
