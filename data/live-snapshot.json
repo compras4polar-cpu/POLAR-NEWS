@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-08-31T17:55:53.480Z",
+  "lastUpdate": "2026-09-01T15:09:07.672Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7186,
+      "value": 6.7211,
       "unit": "¥",
-      "change": -0.18,
-      "asOf": "Aug/31",
+      "change": 0.05,
+      "asOf": "Sep/01",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3186,
+      "value": 3157,
       "unit": "pts",
-      "change": 2.54,
-      "asOf": "Aug/28",
+      "change": -0.91,
+      "asOf": "Sep/01",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7186,
+      "value": 6.7211,
       "unit": "¥",
-      "change": -0.18,
-      "asOf": "Aug/31",
+      "change": 0.05,
+      "asOf": "Sep/01",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3186,
+      "value": 3157,
       "unit": "pts",
-      "change": 2.54,
-      "asOf": "Aug/28",
+      "change": -0.91,
+      "asOf": "Sep/01",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,20 +96,20 @@
         "id": "tdi",
         "priceCny": 16466.67,
         "priceUsd": 2442.8035467126742,
-        "changeValue": -0.8,
-        "trend": "BAIXA",
-        "priceDate": "2026-08-31",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-01",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2245,
-        "priceUsd": 333.0420760463381,
-        "changeValue": -5.37,
+        "priceCny": 2145,
+        "priceUsd": 318.20723969683525,
+        "changeValue": -4.45,
         "trend": "BAIXA",
-        "priceDate": "2026-08-31",
+        "priceDate": "2026-09-01",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -118,9 +118,9 @@
         "id": "silicone",
         "priceCny": 13600,
         "priceUsd": 2017.5377435323821,
-        "changeValue": 0.74,
-        "trend": "ALTA",
-        "priceDate": "2026-08-31",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-01",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,28 +128,35 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 3,
+      "count": 4,
       "storms": [
         {
-          "name": "Five",
-          "classification": "PC",
-          "intensity": "30",
-          "pressure": "1013",
-          "lastUpdate": "2026-08-31T15:00:00.000Z"
+          "name": "Edouard",
+          "classification": "TS",
+          "intensity": "45",
+          "pressure": "1000",
+          "lastUpdate": "2026-09-01T15:00:00.000Z"
         },
         {
           "name": "Karina",
           "classification": "HU",
           "intensity": "120",
-          "pressure": "950",
-          "lastUpdate": "2026-08-31T15:00:00.000Z"
+          "pressure": "945",
+          "lastUpdate": "2026-09-01T15:00:00.000Z"
+        },
+        {
+          "name": "Marie",
+          "classification": "TS",
+          "intensity": "40",
+          "pressure": "1002",
+          "lastUpdate": "2026-09-01T15:00:00.000Z"
         },
         {
           "name": "Lowell",
-          "classification": "TS",
-          "intensity": "55",
-          "pressure": "995",
-          "lastUpdate": "2026-08-31T15:00:00.000Z"
+          "classification": "HU",
+          "intensity": "70",
+          "pressure": "985",
+          "lastUpdate": "2026-09-01T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -158,7 +165,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 2,
+      "count": 1,
       "events": [
         {
           "place": "55 km NW of Kodāri̇̄, Nepal",
@@ -166,13 +173,6 @@
           "time": "2026-08-26T02:52:10.000Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbwb"
-        },
-        {
-          "place": "4 km NNE of Jalālābād, Afghanistan",
-          "magnitude": 4.9,
-          "time": "2026-08-25T01:18:46.243Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tna9"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
