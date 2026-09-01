@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-01T15:09:07.672Z",
+  "lastUpdate": "2026-09-01T17:55:53.565Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1816,
+      "value": 5.157,
       "unit": "R$",
-      "change": -0.3634265935967594,
-      "asOf": "2026-08-31 13:08:57.200562",
+      "change": -0.47475683186661255,
+      "asOf": "2026-09-01 13:06:03.857125",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7211,
+      "value": 6.7224,
       "unit": "¥",
-      "change": 0.05,
+      "change": 0.07,
       "asOf": "Sep/01",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1816,
+      "value": 5.157,
       "unit": "R$",
-      "change": -0.3634265935967594,
-      "asOf": "2026-08-31 13:08:57.200562",
+      "change": -0.47475683186661255,
+      "asOf": "2026-09-01 13:06:03.857125",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7211,
+      "value": 6.7224,
       "unit": "¥",
-      "change": 0.05,
+      "change": 0.07,
       "asOf": "Sep/01",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -135,7 +135,7 @@
           "classification": "TS",
           "intensity": "45",
           "pressure": "1000",
-          "lastUpdate": "2026-09-01T15:00:00.000Z"
+          "lastUpdate": "2026-09-01T18:00:00.000Z"
         },
         {
           "name": "Karina",
