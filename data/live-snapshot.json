@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-01T17:55:53.565Z",
+  "lastUpdate": "2026-09-02T17:55:54.039Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.157,
+      "value": 5.1273,
       "unit": "R$",
-      "change": -0.47475683186661255,
-      "asOf": "2026-09-01 13:06:03.857125",
+      "change": -0.5759162303664933,
+      "asOf": "2026-09-02 13:02:37.601302",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7224,
+      "value": 6.7178,
       "unit": "¥",
-      "change": 0.07,
-      "asOf": "Sep/01",
+      "change": -0.06,
+      "asOf": "Sep/02",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -28,10 +28,10 @@
     {
       "id": "brent",
       "name": "Petróleo Brent",
-      "value": 88.24,
+      "value": 96.02,
       "unit": "US$/barril",
-      "change": -4.821486355301477,
-      "asOf": "2026-08-25",
+      "change": 6.9860724233983245,
+      "asOf": "2026-09-01",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3157,
+      "value": 3331,
       "unit": "pts",
-      "change": -0.91,
-      "asOf": "Sep/01",
+      "change": 5.51,
+      "asOf": "Sep/02",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,41 +52,41 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.157,
+      "value": 5.1273,
       "unit": "R$",
-      "change": -0.47475683186661255,
-      "asOf": "2026-09-01 13:06:03.857125",
+      "change": -0.5759162303664933,
+      "asOf": "2026-09-02 13:02:37.601302",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
     },
     "brent": {
       "id": "brent",
-      "value": 88.24,
+      "value": 96.02,
       "unit": "US$/barril",
-      "change": -4.821486355301477,
+      "change": 6.9860724233983245,
       "changePeriod": "vs. dia anterior (dado diário EIA)",
-      "asOf": "2026-08-25",
+      "asOf": "2026-09-01",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7224,
+      "value": 6.7178,
       "unit": "¥",
-      "change": 0.07,
-      "asOf": "Sep/01",
+      "change": -0.06,
+      "asOf": "Sep/02",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3157,
+      "value": 3331,
       "unit": "pts",
-      "change": -0.91,
-      "asOf": "Sep/01",
+      "change": 5.51,
+      "asOf": "Sep/02",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,22 +94,22 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 16466.67,
-        "priceUsd": 2442.8035467126742,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-09-01",
+        "priceCny": 16733.33,
+        "priceUsd": 2482.3621213222586,
+        "changeValue": 1.62,
+        "trend": "ALTA",
+        "priceDate": "2026-09-02",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2145,
-        "priceUsd": 318.20723969683525,
-        "changeValue": -4.45,
-        "trend": "BAIXA",
-        "priceDate": "2026-09-01",
+        "priceCny": 2160,
+        "priceUsd": 320.4324651492607,
+        "changeValue": 0.7,
+        "trend": "ALTA",
+        "priceDate": "2026-09-02",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2017.5377435323821,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-01",
+        "priceDate": "2026-09-02",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -132,31 +132,31 @@
       "storms": [
         {
           "name": "Edouard",
-          "classification": "TS",
-          "intensity": "45",
-          "pressure": "1000",
-          "lastUpdate": "2026-09-01T18:00:00.000Z"
+          "classification": "TD",
+          "intensity": "30",
+          "pressure": "1004",
+          "lastUpdate": "2026-09-02T15:00:00.000Z"
         },
         {
           "name": "Karina",
           "classification": "HU",
-          "intensity": "120",
-          "pressure": "945",
-          "lastUpdate": "2026-09-01T15:00:00.000Z"
+          "intensity": "125",
+          "pressure": "940",
+          "lastUpdate": "2026-09-02T15:00:00.000Z"
         },
         {
           "name": "Marie",
           "classification": "TS",
-          "intensity": "40",
-          "pressure": "1002",
-          "lastUpdate": "2026-09-01T15:00:00.000Z"
+          "intensity": "60",
+          "pressure": "992",
+          "lastUpdate": "2026-09-02T15:00:00.000Z"
         },
         {
           "name": "Lowell",
           "classification": "HU",
-          "intensity": "70",
-          "pressure": "985",
-          "lastUpdate": "2026-09-01T15:00:00.000Z"
+          "intensity": "135",
+          "pressure": "932",
+          "lastUpdate": "2026-09-02T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -165,16 +165,8 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 1,
-      "events": [
-        {
-          "place": "55 km NW of Kodāri̇̄, Nepal",
-          "magnitude": 5.2,
-          "time": "2026-08-26T02:52:10.000Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tbwb"
-        }
-      ],
+      "count": 0,
+      "events": [],
       "source": "USGS — Significant Earthquakes, Past Week",
       "sourceUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
       "dataStatus": "real"
