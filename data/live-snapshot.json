@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-02T17:55:54.039Z",
+  "lastUpdate": "2026-09-03T17:55:54.099Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1273,
+      "value": 5.0962,
       "unit": "R$",
-      "change": -0.5759162303664933,
-      "asOf": "2026-09-02 13:02:37.601302",
+      "change": -0.6065570573206238,
+      "asOf": "2026-09-03 13:06:38.232974",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7178,
+      "value": 6.7175,
       "unit": "¥",
-      "change": -0.06,
-      "asOf": "Sep/02",
+      "change": -0.01,
+      "asOf": "Sep/03",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3331,
+      "value": 3488,
       "unit": "pts",
-      "change": 5.51,
-      "asOf": "Sep/02",
+      "change": 4.71,
+      "asOf": "Sep/03",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1273,
+      "value": 5.0962,
       "unit": "R$",
-      "change": -0.5759162303664933,
-      "asOf": "2026-09-02 13:02:37.601302",
+      "change": -0.6065570573206238,
+      "asOf": "2026-09-03 13:06:38.232974",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7178,
+      "value": 6.7175,
       "unit": "¥",
-      "change": -0.06,
-      "asOf": "Sep/02",
+      "change": -0.01,
+      "asOf": "Sep/03",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3331,
+      "value": 3488,
       "unit": "pts",
-      "change": 5.51,
-      "asOf": "Sep/02",
+      "change": 4.71,
+      "asOf": "Sep/03",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,20 +96,20 @@
         "id": "tdi",
         "priceCny": 16733.33,
         "priceUsd": 2482.3621213222586,
-        "changeValue": 1.62,
-        "trend": "ALTA",
-        "priceDate": "2026-09-02",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-03",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2160,
-        "priceUsd": 320.4324651492607,
-        "changeValue": 0.7,
+        "priceCny": 2245,
+        "priceUsd": 333.0420760463381,
+        "changeValue": 3.94,
         "trend": "ALTA",
-        "priceDate": "2026-09-02",
+        "priceDate": "2026-09-03",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2017.5377435323821,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-02",
+        "priceDate": "2026-09-03",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,35 +128,28 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 4,
+      "count": 3,
       "storms": [
-        {
-          "name": "Edouard",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1004",
-          "lastUpdate": "2026-09-02T15:00:00.000Z"
-        },
         {
           "name": "Karina",
           "classification": "HU",
-          "intensity": "125",
-          "pressure": "940",
-          "lastUpdate": "2026-09-02T15:00:00.000Z"
+          "intensity": "100",
+          "pressure": "961",
+          "lastUpdate": "2026-09-03T15:00:00.000Z"
         },
         {
           "name": "Marie",
-          "classification": "TS",
-          "intensity": "60",
-          "pressure": "992",
-          "lastUpdate": "2026-09-02T15:00:00.000Z"
+          "classification": "HU",
+          "intensity": "80",
+          "pressure": "976",
+          "lastUpdate": "2026-09-03T15:00:00.000Z"
         },
         {
           "name": "Lowell",
           "classification": "HU",
-          "intensity": "135",
-          "pressure": "932",
-          "lastUpdate": "2026-09-02T15:00:00.000Z"
+          "intensity": "120",
+          "pressure": "945",
+          "lastUpdate": "2026-09-03T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -165,8 +158,30 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 0,
-      "events": [],
+      "count": 3,
+      "events": [
+        {
+          "place": "3 km ESE of Larkfield-Wikiup, CA",
+          "magnitude": 3.54,
+          "time": "2026-09-03T17:33:27.360Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75429272"
+        },
+        {
+          "place": "21 km WNW of Jiangyou, China",
+          "magnitude": 5.4,
+          "time": "2026-09-03T11:39:41.981Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdw6"
+        },
+        {
+          "place": "84 km SSW of Nikolski, Alaska",
+          "magnitude": 6.3,
+          "time": "2026-09-03T11:17:24.056Z",
+          "tsunamiWarning": true,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdvt"
+        }
+      ],
       "source": "USGS — Significant Earthquakes, Past Week",
       "sourceUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
       "dataStatus": "real"
