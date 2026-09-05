@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-09-04T17:55:54.282Z",
+  "lastUpdate": "2026-09-05T17:55:53.348Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7083,
+      "value": 6.7078,
       "unit": "¥",
-      "change": -0.14,
+      "change": -0.15,
       "asOf": "Sep/04",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7083,
+      "value": 6.7078,
       "unit": "¥",
-      "change": -0.14,
+      "change": -0.15,
       "asOf": "Sep/04",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2502.1428921106854,
         "changeValue": 2.43,
         "trend": "ALTA",
-        "priceDate": "2026-09-04",
+        "priceDate": "2026-09-05",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 336.7507851337138,
         "changeValue": 1.11,
         "trend": "ALTA",
-        "priceDate": "2026-09-04",
+        "priceDate": "2026-09-05",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2047.2074162313877,
         "changeValue": 1.47,
         "trend": "ALTA",
-        "priceDate": "2026-09-04",
+        "priceDate": "2026-09-05",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -131,25 +131,25 @@
       "count": 3,
       "storms": [
         {
-          "name": "Karina",
-          "classification": "HU",
-          "intensity": "80",
-          "pressure": "973",
-          "lastUpdate": "2026-09-04T15:00:00.000Z"
-        },
-        {
           "name": "Marie",
           "classification": "HU",
-          "intensity": "85",
-          "pressure": "972",
-          "lastUpdate": "2026-09-04T15:00:00.000Z"
+          "intensity": "80",
+          "pressure": "970",
+          "lastUpdate": "2026-09-05T15:00:00.000Z"
         },
         {
           "name": "Lowell",
           "classification": "HU",
-          "intensity": "110",
-          "pressure": "947",
-          "lastUpdate": "2026-09-04T15:00:00.000Z"
+          "intensity": "130",
+          "pressure": "931",
+          "lastUpdate": "2026-09-05T15:00:00.000Z"
+        },
+        {
+          "name": "Karina",
+          "classification": "HU",
+          "intensity": "65",
+          "pressure": "985",
+          "lastUpdate": "2026-09-05T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
