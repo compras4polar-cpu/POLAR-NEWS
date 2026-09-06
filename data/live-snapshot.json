@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-09-05T17:55:53.348Z",
+  "lastUpdate": "2026-09-06T17:55:53.187Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2502.1428921106854,
         "changeValue": 2.43,
         "trend": "ALTA",
-        "priceDate": "2026-09-05",
+        "priceDate": "2026-09-06",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 336.7507851337138,
         "changeValue": 1.11,
         "trend": "ALTA",
-        "priceDate": "2026-09-05",
+        "priceDate": "2026-09-06",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2047.2074162313877,
         "changeValue": 1.47,
         "trend": "ALTA",
-        "priceDate": "2026-09-05",
+        "priceDate": "2026-09-06",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,23 +133,23 @@
         {
           "name": "Marie",
           "classification": "HU",
-          "intensity": "80",
-          "pressure": "970",
-          "lastUpdate": "2026-09-05T15:00:00.000Z"
+          "intensity": "70",
+          "pressure": "977",
+          "lastUpdate": "2026-09-06T15:00:00.000Z"
         },
         {
           "name": "Lowell",
           "classification": "HU",
-          "intensity": "130",
-          "pressure": "931",
-          "lastUpdate": "2026-09-05T15:00:00.000Z"
+          "intensity": "110",
+          "pressure": "943",
+          "lastUpdate": "2026-09-06T18:00:00.000Z"
         },
         {
           "name": "Karina",
-          "classification": "HU",
-          "intensity": "65",
-          "pressure": "985",
-          "lastUpdate": "2026-09-05T15:00:00.000Z"
+          "classification": "TS",
+          "intensity": "50",
+          "pressure": "992",
+          "lastUpdate": "2026-09-06T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -158,8 +158,15 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 2,
+      "count": 3,
       "events": [
+        {
+          "place": "20 km E of Castle Rock, Washington",
+          "magnitude": 3.73,
+          "time": "2026-09-05T11:09:28.280Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714095342"
+        },
         {
           "place": "21 km WNW of Jiangyou, China",
           "magnitude": 5.4,
