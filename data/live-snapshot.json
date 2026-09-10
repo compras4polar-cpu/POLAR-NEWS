@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-09T17:55:53.324Z",
+  "lastUpdate": "2026-09-10T17:55:54.329Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.0979,
+      "value": 5.1149,
       "unit": "R$",
-      "change": 0.24185936762623397,
-      "asOf": "2026-09-09 13:11:35.346979",
+      "change": 0.33347064477528904,
+      "asOf": "2026-09-10 13:09:28.70012",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7064,
+      "value": 6.7137,
       "unit": "¥",
-      "change": 0,
-      "asOf": "Sep/09",
+      "change": 0.11,
+      "asOf": "Sep/10",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3620,
+      "value": 3521,
       "unit": "pts",
-      "change": 1,
-      "asOf": "Sep/09",
+      "change": -2.73,
+      "asOf": "Sep/10",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.0979,
+      "value": 5.1149,
       "unit": "R$",
-      "change": 0.24185936762623397,
-      "asOf": "2026-09-09 13:11:35.346979",
+      "change": 0.33347064477528904,
+      "asOf": "2026-09-10 13:09:28.70012",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7064,
+      "value": 6.7137,
       "unit": "¥",
-      "change": 0,
-      "asOf": "Sep/09",
+      "change": 0.11,
+      "asOf": "Sep/10",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3620,
+      "value": 3521,
       "unit": "pts",
-      "change": 1,
-      "asOf": "Sep/09",
+      "change": -2.73,
+      "asOf": "Sep/10",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,33 +94,33 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 16766.67,
-        "priceUsd": 2487.3080557611825,
-        "changeValue": -0.59,
-        "trend": "BAIXA",
-        "priceDate": "2026-09-09",
+        "priceCny": 16966.67,
+        "priceUsd": 2516.9777284601882,
+        "changeValue": 1.19,
+        "trend": "ALTA",
+        "priceDate": "2026-09-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2170,
-        "priceUsd": 321.91594878421097,
-        "changeValue": 1.17,
+        "priceCny": 2345,
+        "priceUsd": 347.8769123958409,
+        "changeValue": 8.06,
         "trend": "ALTA",
-        "priceDate": "2026-09-09",
+        "priceDate": "2026-09-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "silicone": {
         "id": "silicone",
-        "priceCny": 14000,
-        "priceUsd": 2076.8770889303933,
-        "changeValue": 1.45,
+        "priceCny": 14500,
+        "priceUsd": 2151.0512706779073,
+        "changeValue": 3.57,
         "trend": "ALTA",
-        "priceDate": "2026-09-09",
+        "priceDate": "2026-09-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,14 +128,21 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 1,
+      "count": 2,
       "storms": [
+        {
+          "name": "Norbert",
+          "classification": "TS",
+          "intensity": "35",
+          "pressure": "1003",
+          "lastUpdate": "2026-09-10T15:00:00.000Z"
+        },
         {
           "name": "Lowell",
           "classification": "TS",
           "intensity": "50",
-          "pressure": "985",
-          "lastUpdate": "2026-09-09T15:00:00.000Z"
+          "pressure": "988",
+          "lastUpdate": "2026-09-10T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -144,28 +151,14 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 3,
+      "count": 1,
       "events": [
         {
           "place": "20 km E of Castle Rock, Washington",
-          "magnitude": 3.73,
-          "time": "2026-09-05T11:09:28.280Z",
+          "magnitude": 3.75,
+          "time": "2026-09-05T11:09:28.270Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714095342"
-        },
-        {
-          "place": "21 km WNW of Jiangyou, China",
-          "magnitude": 5.4,
-          "time": "2026-09-03T11:39:41.981Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdw6"
-        },
-        {
-          "place": "84 km SSW of Nikolski, Alaska",
-          "magnitude": 6.3,
-          "time": "2026-09-03T11:17:24.056Z",
-          "tsunamiWarning": true,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdvt"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
