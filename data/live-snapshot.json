@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-09-11T17:55:53.904Z",
+  "lastUpdate": "2026-09-12T17:55:53.088Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,7 +17,7 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.708,
+      "value": 6.7079,
       "unit": "¥",
       "change": -0.09,
       "asOf": "Sep/11",
@@ -73,7 +73,7 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.708,
+      "value": 6.7079,
       "unit": "¥",
       "change": -0.09,
       "asOf": "Sep/11",
@@ -98,7 +98,7 @@
         "priceUsd": 2576.3170738581994,
         "changeValue": 2.96,
         "trend": "ALTA",
-        "priceDate": "2026-09-11",
+        "priceDate": "2026-09-12",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 366.4204578327194,
         "changeValue": 8.81,
         "trend": "ALTA",
-        "priceDate": "2026-09-11",
+        "priceDate": "2026-09-12",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2180.720943376913,
         "changeValue": 6.52,
         "trend": "ALTA",
-        "priceDate": "2026-09-11",
+        "priceDate": "2026-09-12",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,9 +133,9 @@
         {
           "name": "Norbert",
           "classification": "TS",
-          "intensity": "55",
-          "pressure": "996",
-          "lastUpdate": "2026-09-11T15:00:00.000Z"
+          "intensity": "50",
+          "pressure": "999",
+          "lastUpdate": "2026-09-12T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -147,11 +147,11 @@
       "count": 1,
       "events": [
         {
-          "place": "20 km E of Castle Rock, Washington",
-          "magnitude": 3.75,
-          "time": "2026-09-05T11:09:28.270Z",
+          "place": "126 km NNE of Teluknaga, Indonesia",
+          "magnitude": 6.5,
+          "time": "2026-09-11T21:23:55.907Z",
           "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714095342"
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tgrk"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
