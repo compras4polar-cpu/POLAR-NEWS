@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-09-12T17:55:53.088Z",
+  "lastUpdate": "2026-09-13T17:55:54.627Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2576.3170738581994,
         "changeValue": 2.96,
         "trend": "ALTA",
-        "priceDate": "2026-09-12",
+        "priceDate": "2026-09-13",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 366.4204578327194,
         "changeValue": 8.81,
         "trend": "ALTA",
-        "priceDate": "2026-09-12",
+        "priceDate": "2026-09-13",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2180.720943376913,
         "changeValue": 6.52,
         "trend": "ALTA",
-        "priceDate": "2026-09-12",
+        "priceDate": "2026-09-13",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,9 +133,9 @@
         {
           "name": "Norbert",
           "classification": "TS",
-          "intensity": "50",
-          "pressure": "999",
-          "lastUpdate": "2026-09-12T15:00:00.000Z"
+          "intensity": "45",
+          "pressure": "1000",
+          "lastUpdate": "2026-09-13T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
