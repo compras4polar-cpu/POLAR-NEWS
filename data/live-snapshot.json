@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-14T17:55:53.620Z",
+  "lastUpdate": "2026-09-15T17:55:53.343Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1696,
+      "value": 5.149,
       "unit": "R$",
-      "change": 1.5279468950076567,
-      "asOf": "2026-09-14 13:10:08.144425",
+      "change": -0.3984834416589282,
+      "asOf": "2026-09-15 13:09:19.199664",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7089,
+      "value": 6.7122,
       "unit": "¥",
-      "change": 0.01,
-      "asOf": "Sep/14",
+      "change": 0.04,
+      "asOf": "Sep/15",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3507,
+      "value": 3360,
       "unit": "pts",
-      "change": -0.4,
-      "asOf": "Sep/11",
+      "change": -2.47,
+      "asOf": "Sep/15",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1696,
+      "value": 5.149,
       "unit": "R$",
-      "change": 1.5279468950076567,
-      "asOf": "2026-09-14 13:10:08.144425",
+      "change": -0.3984834416589282,
+      "asOf": "2026-09-15 13:09:19.199664",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7089,
+      "value": 6.7122,
       "unit": "¥",
-      "change": 0.01,
-      "asOf": "Sep/14",
+      "change": 0.04,
+      "asOf": "Sep/15",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3507,
+      "value": 3360,
       "unit": "pts",
-      "change": -0.4,
-      "asOf": "Sep/11",
+      "change": -2.47,
+      "asOf": "Sep/15",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,20 +96,20 @@
         "id": "tdi",
         "priceCny": 17766.67,
         "priceUsd": 2635.6564192562105,
-        "changeValue": 2.3,
-        "trend": "ALTA",
-        "priceDate": "2026-09-14",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-15",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2470,
-        "priceUsd": 366.4204578327194,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-09-14",
+        "priceCny": 2395,
+        "priceUsd": 355.2943305705923,
+        "changeValue": -3.04,
+        "trend": "BAIXA",
+        "priceDate": "2026-09-15",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2180.720943376913,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-14",
+        "priceDate": "2026-09-15",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -131,18 +131,18 @@
       "count": 2,
       "storms": [
         {
-          "name": "Norbert",
-          "classification": "TS",
-          "intensity": "35",
-          "pressure": "1005",
-          "lastUpdate": "2026-09-14T15:00:00.000Z"
-        },
-        {
           "name": "Fifteen-E",
           "classification": "TD",
           "intensity": "30",
-          "pressure": "1006",
-          "lastUpdate": "2026-09-14T15:00:00.000Z"
+          "pressure": "1005",
+          "lastUpdate": "2026-09-15T15:00:00.000Z"
+        },
+        {
+          "name": "Norbert",
+          "classification": "PTC",
+          "intensity": "30",
+          "pressure": "1007",
+          "lastUpdate": "2026-09-15T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
