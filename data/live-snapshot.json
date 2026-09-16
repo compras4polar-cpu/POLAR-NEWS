@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-15T17:55:53.343Z",
+  "lastUpdate": "2026-09-16T17:55:53.652Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.149,
+      "value": 5.1527,
       "unit": "R$",
-      "change": -0.3984834416589282,
-      "asOf": "2026-09-15 13:09:19.199664",
+      "change": 0.07185861332298037,
+      "asOf": "2026-09-16 13:05:30.35873",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7122,
+      "value": 6.7053,
       "unit": "¥",
-      "change": 0.04,
-      "asOf": "Sep/15",
+      "change": -0.1,
+      "asOf": "Sep/16",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -28,10 +28,10 @@
     {
       "id": "brent",
       "name": "Petróleo Brent",
-      "value": 109.51,
+      "value": 130.8,
       "unit": "US$/barril",
-      "change": 3.1944967960799096,
-      "asOf": "2026-09-09",
+      "change": 7.876288659793825,
+      "asOf": "2026-09-15",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3360,
+      "value": 3327,
       "unit": "pts",
-      "change": -2.47,
-      "asOf": "Sep/15",
+      "change": -0.98,
+      "asOf": "Sep/16",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,41 +52,41 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.149,
+      "value": 5.1527,
       "unit": "R$",
-      "change": -0.3984834416589282,
-      "asOf": "2026-09-15 13:09:19.199664",
+      "change": 0.07185861332298037,
+      "asOf": "2026-09-16 13:05:30.35873",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
     },
     "brent": {
       "id": "brent",
-      "value": 109.51,
+      "value": 130.8,
       "unit": "US$/barril",
-      "change": 3.1944967960799096,
+      "change": 7.876288659793825,
       "changePeriod": "vs. dia anterior (dado diário EIA)",
-      "asOf": "2026-09-09",
+      "asOf": "2026-09-15",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7122,
+      "value": 6.7053,
       "unit": "¥",
-      "change": 0.04,
-      "asOf": "Sep/15",
+      "change": -0.1,
+      "asOf": "Sep/16",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3360,
+      "value": 3327,
       "unit": "pts",
-      "change": -2.47,
-      "asOf": "Sep/15",
+      "change": -0.98,
+      "asOf": "Sep/16",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -98,18 +98,18 @@
         "priceUsd": 2635.6564192562105,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-15",
+        "priceDate": "2026-09-16",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2395,
-        "priceUsd": 355.2943305705923,
-        "changeValue": -3.04,
+        "priceCny": 2370,
+        "priceUsd": 351.5856214832166,
+        "changeValue": -1.04,
         "trend": "BAIXA",
-        "priceDate": "2026-09-15",
+        "priceDate": "2026-09-16",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2180.720943376913,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-15",
+        "priceDate": "2026-09-16",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,23 +128,8 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 2,
-      "storms": [
-        {
-          "name": "Fifteen-E",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1005",
-          "lastUpdate": "2026-09-15T15:00:00.000Z"
-        },
-        {
-          "name": "Norbert",
-          "classification": "PTC",
-          "intensity": "30",
-          "pressure": "1007",
-          "lastUpdate": "2026-09-15T15:00:00.000Z"
-        }
-      ],
+      "count": 0,
+      "storms": [],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
       "sourceUrl": "https://www.nhc.noaa.gov/",
       "dataStatus": "real"
