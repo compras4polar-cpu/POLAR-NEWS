@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-17T17:55:53.500Z",
+  "lastUpdate": "2026-09-18T17:55:53.446Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1521,
+      "value": 5.1575,
       "unit": "R$",
-      "change": -0.01164438061599507,
-      "asOf": "2026-09-17 13:03:21.858212",
+      "change": 0.10481163020903805,
+      "asOf": "2026-09-18 13:03:34.742036",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.704,
+      "value": 6.6958,
       "unit": "¥",
       "change": -0.12,
-      "asOf": "Sep/17",
+      "asOf": "Sep/18",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3336,
+      "value": 3370,
       "unit": "pts",
-      "change": 0.27,
-      "asOf": "Sep/17",
+      "change": 1.02,
+      "asOf": "Sep/18",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1521,
+      "value": 5.1575,
       "unit": "R$",
-      "change": -0.01164438061599507,
-      "asOf": "2026-09-17 13:03:21.858212",
+      "change": 0.10481163020903805,
+      "asOf": "2026-09-18 13:03:34.742036",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.704,
+      "value": 6.6958,
       "unit": "¥",
       "change": -0.12,
-      "asOf": "Sep/17",
+      "asOf": "Sep/18",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3336,
+      "value": 3370,
       "unit": "pts",
-      "change": 0.27,
-      "asOf": "Sep/17",
+      "change": 1.02,
+      "asOf": "Sep/18",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,11 +94,11 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 17466.67,
-        "priceUsd": 2591.1519102077023,
-        "changeValue": -1.69,
+        "priceCny": 17366.67,
+        "priceUsd": 2576.3170738581994,
+        "changeValue": -2.25,
         "trend": "BAIXA",
-        "priceDate": "2026-09-17",
+        "priceDate": "2026-09-18",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -107,9 +107,9 @@
         "id": "dcm",
         "priceCny": 2370,
         "priceUsd": 351.5856214832166,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-09-17",
+        "changeValue": -4.05,
+        "trend": "BAIXA",
+        "priceDate": "2026-09-18",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2180.720943376913,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-17",
+        "priceDate": "2026-09-18",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -139,9 +139,9 @@
       "count": 2,
       "events": [
         {
-          "place": "165 km W of Nikolski, Alaska",
+          "place": "169 km W of Nikolski, Alaska",
           "magnitude": 6.5,
-          "time": "2026-09-17T14:19:53.164Z",
+          "time": "2026-09-17T14:19:52.210Z",
           "tsunamiWarning": true,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti1p"
         },
