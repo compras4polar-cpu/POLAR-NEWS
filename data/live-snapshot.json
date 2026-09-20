@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-09-19T17:55:52.714Z",
+  "lastUpdate": "2026-09-20T17:55:53.402Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2576.3170738581994,
         "changeValue": -2.25,
         "trend": "BAIXA",
-        "priceDate": "2026-09-19",
+        "priceDate": "2026-09-20",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 351.5856214832166,
         "changeValue": -4.05,
         "trend": "BAIXA",
-        "priceDate": "2026-09-19",
+        "priceDate": "2026-09-20",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2180.720943376913,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-19",
+        "priceDate": "2026-09-20",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,14 +128,21 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 1,
+      "count": 2,
       "storms": [
         {
-          "name": "Six",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1009",
-          "lastUpdate": "2026-09-19T15:00:00.000Z"
+          "name": "Fay",
+          "classification": "TS",
+          "intensity": "50",
+          "pressure": "1004",
+          "lastUpdate": "2026-09-20T15:00:00.000Z"
+        },
+        {
+          "name": "Odalys",
+          "classification": "TS",
+          "intensity": "40",
+          "pressure": "1003",
+          "lastUpdate": "2026-09-20T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -144,8 +151,15 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 1,
+      "count": 2,
       "events": [
+        {
+          "place": "49 km NNE of Kainantu, Papua New Guinea",
+          "magnitude": 6.4,
+          "time": "2026-09-20T09:17:35.624Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiqc"
+        },
         {
           "place": "169 km W of Nikolski, Alaska",
           "magnitude": 6.5,
