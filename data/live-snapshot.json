@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-23T17:55:54.010Z",
+  "lastUpdate": "2026-09-24T17:55:53.376Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1414,
+      "value": 5.1795,
       "unit": "R$",
-      "change": 0.494517308105777,
-      "asOf": "2026-09-23 13:04:22.36175",
+      "change": 0.7410432956004205,
+      "asOf": "2026-09-24 13:03:18.656275",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7116,
+      "value": 6.7163,
       "unit": "¥",
-      "change": 0.19,
-      "asOf": "Sep/23",
+      "change": 0.07,
+      "asOf": "Sep/24",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3430,
+      "value": 3473,
       "unit": "pts",
-      "change": -0.06,
-      "asOf": "Sep/23",
+      "change": 1.25,
+      "asOf": "Sep/24",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1414,
+      "value": 5.1795,
       "unit": "R$",
-      "change": 0.494517308105777,
-      "asOf": "2026-09-23 13:04:22.36175",
+      "change": 0.7410432956004205,
+      "asOf": "2026-09-24 13:03:18.656275",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7116,
+      "value": 6.7163,
       "unit": "¥",
-      "change": 0.19,
-      "asOf": "Sep/23",
+      "change": 0.07,
+      "asOf": "Sep/24",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3430,
+      "value": 3473,
       "unit": "pts",
-      "change": -0.06,
-      "asOf": "Sep/23",
+      "change": 1.25,
+      "asOf": "Sep/24",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,11 +94,11 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 17066.67,
-        "priceUsd": 2531.812564809691,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-09-23",
+        "priceCny": 17533.33,
+        "priceUsd": 2601.0408121182813,
+        "changeValue": 2.73,
+        "trend": "ALTA",
+        "priceDate": "2026-09-24",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -107,9 +107,9 @@
         "id": "dcm",
         "priceCny": 2467.5,
         "priceUsd": 366.04958692398185,
-        "changeValue": 1.13,
-        "trend": "ALTA",
-        "priceDate": "2026-09-23",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-24",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2151.0512706779073,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-09-23",
+        "priceDate": "2026-09-24",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,28 +128,35 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 3,
+      "count": 4,
       "storms": [
+        {
+          "name": "Fay",
+          "classification": "TS",
+          "intensity": "45",
+          "pressure": "1005",
+          "lastUpdate": "2026-09-24T15:00:00.000Z"
+        },
         {
           "name": "Odalys",
           "classification": "HU",
-          "intensity": "65",
-          "pressure": "989",
-          "lastUpdate": "2026-09-23T15:00:00.000Z"
+          "intensity": "80",
+          "pressure": "976",
+          "lastUpdate": "2026-09-24T15:00:00.000Z"
         },
         {
           "name": "Polo",
           "classification": "HU",
-          "intensity": "125",
-          "pressure": "931",
-          "lastUpdate": "2026-09-23T18:00:00.000Z"
+          "intensity": "135",
+          "pressure": "928",
+          "lastUpdate": "2026-09-24T15:00:00.000Z"
         },
         {
-          "name": "Fifteen-E",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1004",
-          "lastUpdate": "2026-09-23T15:00:00.000Z"
+          "name": "Nolo",
+          "classification": "TS",
+          "intensity": "50",
+          "pressure": "997",
+          "lastUpdate": "2026-09-24T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -158,7 +165,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 2,
+      "count": 1,
       "events": [
         {
           "place": "49 km NNE of Kainantu, Papua New Guinea",
@@ -166,13 +173,6 @@
           "time": "2026-09-20T09:17:35.624Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tiqc"
-        },
-        {
-          "place": "169 km W of Nikolski, Alaska",
-          "magnitude": 6.5,
-          "time": "2026-09-17T14:19:52.210Z",
-          "tsunamiWarning": true,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ti1p"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
