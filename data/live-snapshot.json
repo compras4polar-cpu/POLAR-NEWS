@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-24T17:55:53.376Z",
+  "lastUpdate": "2026-09-25T17:55:53.050Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.1795,
+      "value": 5.1991,
       "unit": "R$",
-      "change": 0.7410432956004205,
-      "asOf": "2026-09-24 13:03:18.656275",
+      "change": 0.3784149049135943,
+      "asOf": "2026-09-25 13:10:17.447657",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7163,
+      "value": 6.7241,
       "unit": "¥",
-      "change": 0.07,
-      "asOf": "Sep/24",
+      "change": 0.12,
+      "asOf": "Sep/25",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3473,
+      "value": 3426,
       "unit": "pts",
-      "change": 1.25,
-      "asOf": "Sep/24",
+      "change": -1.35,
+      "asOf": "Sep/25",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.1795,
+      "value": 5.1991,
       "unit": "R$",
-      "change": 0.7410432956004205,
-      "asOf": "2026-09-24 13:03:18.656275",
+      "change": 0.3784149049135943,
+      "asOf": "2026-09-25 13:10:17.447657",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7163,
+      "value": 6.7241,
       "unit": "¥",
-      "change": 0.07,
-      "asOf": "Sep/24",
+      "change": 0.12,
+      "asOf": "Sep/25",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3473,
+      "value": 3426,
       "unit": "pts",
-      "change": 1.25,
-      "asOf": "Sep/24",
+      "change": -1.35,
+      "asOf": "Sep/25",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,20 +96,20 @@
         "id": "tdi",
         "priceCny": 17533.33,
         "priceUsd": 2601.0408121182813,
-        "changeValue": 2.73,
+        "changeValue": 2.14,
         "trend": "ALTA",
-        "priceDate": "2026-09-24",
+        "priceDate": "2026-09-25",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2467.5,
-        "priceUsd": 366.04958692398185,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-09-24",
+        "priceCny": 2652.5,
+        "priceUsd": 393.49403417056203,
+        "changeValue": 8.71,
+        "trend": "ALTA",
+        "priceDate": "2026-09-25",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -118,9 +118,9 @@
         "id": "silicone",
         "priceCny": 14500,
         "priceUsd": 2151.0512706779073,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-09-24",
+        "changeValue": -1.36,
+        "trend": "BAIXA",
+        "priceDate": "2026-09-25",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,35 +128,42 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 4,
+      "count": 5,
       "storms": [
         {
           "name": "Fay",
           "classification": "TS",
+          "intensity": "50",
+          "pressure": "1002",
+          "lastUpdate": "2026-09-25T15:00:00.000Z"
+        },
+        {
+          "name": "Gonzalo",
+          "classification": "TS",
           "intensity": "45",
-          "pressure": "1005",
-          "lastUpdate": "2026-09-24T15:00:00.000Z"
+          "pressure": "1000",
+          "lastUpdate": "2026-09-25T18:00:00.000Z"
         },
         {
           "name": "Odalys",
           "classification": "HU",
-          "intensity": "80",
-          "pressure": "976",
-          "lastUpdate": "2026-09-24T15:00:00.000Z"
+          "intensity": "115",
+          "pressure": "946",
+          "lastUpdate": "2026-09-25T15:00:00.000Z"
         },
         {
           "name": "Polo",
           "classification": "HU",
-          "intensity": "135",
-          "pressure": "928",
-          "lastUpdate": "2026-09-24T15:00:00.000Z"
+          "intensity": "155",
+          "pressure": "900",
+          "lastUpdate": "2026-09-25T15:00:00.000Z"
         },
         {
           "name": "Nolo",
-          "classification": "TS",
-          "intensity": "50",
-          "pressure": "997",
-          "lastUpdate": "2026-09-24T15:00:00.000Z"
+          "classification": "HU",
+          "intensity": "75",
+          "pressure": "980",
+          "lastUpdate": "2026-09-25T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
