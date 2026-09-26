@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-09-25T17:55:53.050Z",
+  "lastUpdate": "2026-09-26T17:55:52.714Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7241,
+      "value": 6.722,
       "unit": "¥",
-      "change": 0.12,
+      "change": 0.09,
       "asOf": "Sep/25",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7241,
+      "value": 6.722,
       "unit": "¥",
-      "change": 0.12,
+      "change": 0.09,
       "asOf": "Sep/25",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2601.0408121182813,
         "changeValue": 2.14,
         "trend": "ALTA",
-        "priceDate": "2026-09-25",
+        "priceDate": "2026-09-26",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 393.49403417056203,
         "changeValue": 8.71,
         "trend": "ALTA",
-        "priceDate": "2026-09-25",
+        "priceDate": "2026-09-26",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2151.0512706779073,
         "changeValue": -1.36,
         "trend": "BAIXA",
-        "priceDate": "2026-09-25",
+        "priceDate": "2026-09-26",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -132,38 +132,38 @@
       "storms": [
         {
           "name": "Fay",
-          "classification": "TS",
-          "intensity": "50",
-          "pressure": "1002",
-          "lastUpdate": "2026-09-25T15:00:00.000Z"
+          "classification": "TD",
+          "intensity": "30",
+          "pressure": "1009",
+          "lastUpdate": "2026-09-26T15:00:00.000Z"
         },
         {
           "name": "Gonzalo",
           "classification": "TS",
-          "intensity": "45",
-          "pressure": "1000",
-          "lastUpdate": "2026-09-25T18:00:00.000Z"
+          "intensity": "35",
+          "pressure": "1005",
+          "lastUpdate": "2026-09-26T15:00:00.000Z"
         },
         {
           "name": "Odalys",
           "classification": "HU",
-          "intensity": "115",
-          "pressure": "946",
-          "lastUpdate": "2026-09-25T15:00:00.000Z"
+          "intensity": "90",
+          "pressure": "965",
+          "lastUpdate": "2026-09-26T15:00:00.000Z"
         },
         {
           "name": "Polo",
           "classification": "HU",
-          "intensity": "155",
-          "pressure": "900",
-          "lastUpdate": "2026-09-25T15:00:00.000Z"
+          "intensity": "125",
+          "pressure": "936",
+          "lastUpdate": "2026-09-26T18:00:00.000Z"
         },
         {
           "name": "Nolo",
           "classification": "HU",
-          "intensity": "75",
-          "pressure": "980",
-          "lastUpdate": "2026-09-25T15:00:00.000Z"
+          "intensity": "90",
+          "pressure": "976",
+          "lastUpdate": "2026-09-26T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -172,8 +172,15 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 1,
+      "count": 2,
       "events": [
+        {
+          "place": "80 km ENE of Tadine, New Caledonia",
+          "magnitude": 6.6,
+          "time": "2026-09-25T21:23:03.309Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txpi"
+        },
         {
           "place": "49 km NNE of Kainantu, Papua New Guinea",
           "magnitude": 6.4,
