@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-09-29T17:55:53.893Z",
+  "lastUpdate": "2026-09-30T17:55:55.986Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.2204,
+      "value": 5.1809,
       "unit": "R$",
-      "change": 0.13811094912913557,
-      "asOf": "2026-09-29 13:06:06.446305",
+      "change": -0.7566470002298564,
+      "asOf": "2026-09-30 13:11:44.783262",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7106,
+      "value": 6.7093,
       "unit": "¥",
-      "change": -0.03,
-      "asOf": "Sep/29",
+      "change": 0.02,
+      "asOf": "Sep/30",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -28,10 +28,10 @@
     {
       "id": "brent",
       "name": "Petróleo Brent",
-      "value": 114.89,
+      "value": 113.96,
       "unit": "US$/barril",
-      "change": -1.084804132587176,
-      "asOf": "2026-09-22",
+      "change": -5.009585729765779,
+      "asOf": "2026-09-29",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3178,
+      "value": 3113,
       "unit": "pts",
-      "change": -2.75,
-      "asOf": "Sep/29",
+      "change": -2.05,
+      "asOf": "Sep/30",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,41 +52,41 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.2204,
+      "value": 5.1809,
       "unit": "R$",
-      "change": 0.13811094912913557,
-      "asOf": "2026-09-29 13:06:06.446305",
+      "change": -0.7566470002298564,
+      "asOf": "2026-09-30 13:11:44.783262",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
     },
     "brent": {
       "id": "brent",
-      "value": 114.89,
+      "value": 113.96,
       "unit": "US$/barril",
-      "change": -1.084804132587176,
+      "change": -5.009585729765779,
       "changePeriod": "vs. dia anterior (dado diário EIA)",
-      "asOf": "2026-09-22",
+      "asOf": "2026-09-29",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7106,
+      "value": 6.7093,
       "unit": "¥",
-      "change": -0.03,
-      "asOf": "Sep/29",
+      "change": 0.02,
+      "asOf": "Sep/30",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3178,
+      "value": 3113,
       "unit": "pts",
-      "change": -2.75,
-      "asOf": "Sep/29",
+      "change": -2.05,
+      "asOf": "Sep/30",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,9 +96,9 @@
         "id": "tdi",
         "priceCny": 17800,
         "priceUsd": 2640.6008702115,
-        "changeValue": 0.56,
-        "trend": "ALTA",
-        "priceDate": "2026-09-29",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -107,9 +107,9 @@
         "id": "dcm",
         "priceCny": 2927.5,
         "priceUsd": 434.28983413169476,
-        "changeValue": 1.04,
-        "trend": "ALTA",
-        "priceDate": "2026-09-29",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -118,9 +118,9 @@
         "id": "silicone",
         "priceCny": 14400,
         "priceUsd": 2136.216434328405,
-        "changeValue": -0.69,
-        "trend": "BAIXA",
-        "priceDate": "2026-09-29",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-09-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,49 +128,35 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 6,
+      "count": 4,
       "storms": [
         {
-          "name": "Fay",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1010",
-          "lastUpdate": "2026-09-29T15:00:00.000Z"
-        },
-        {
           "name": "Hanna",
-          "classification": "TS",
-          "intensity": "35",
-          "pressure": "1004",
-          "lastUpdate": "2026-09-29T15:00:00.000Z"
-        },
-        {
-          "name": "Polo",
-          "classification": "HU",
-          "intensity": "65",
-          "pressure": "984",
-          "lastUpdate": "2026-09-29T18:00:00.000Z"
+          "classification": "PTC",
+          "intensity": "30",
+          "pressure": "1008",
+          "lastUpdate": "2026-09-30T15:00:00.000Z"
         },
         {
           "name": "Rachel",
-          "classification": "TS",
-          "intensity": "55",
-          "pressure": "987",
-          "lastUpdate": "2026-09-29T18:00:00.000Z"
+          "classification": "HU",
+          "intensity": "75",
+          "pressure": "978",
+          "lastUpdate": "2026-09-30T15:00:00.000Z"
         },
         {
           "name": "Nineteen-E",
           "classification": "TD",
           "intensity": "30",
-          "pressure": "1004",
-          "lastUpdate": "2026-09-29T15:00:00.000Z"
+          "pressure": "1002",
+          "lastUpdate": "2026-09-30T15:00:00.000Z"
         },
         {
           "name": "Nolo",
-          "classification": "HU",
-          "intensity": "90",
-          "pressure": "968",
-          "lastUpdate": "2026-09-29T18:00:00.000Z"
+          "classification": "TS",
+          "intensity": "45",
+          "pressure": "996",
+          "lastUpdate": "2026-09-30T18:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -179,8 +165,15 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 1,
+      "count": 2,
       "events": [
+        {
+          "place": "6 km WNW of Wauna, Washington",
+          "magnitude": 4.15,
+          "time": "2026-09-29T21:05:56.370Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714111952"
+        },
         {
           "place": "80 km ENE of Tadine, New Caledonia",
           "magnitude": 6.6,
