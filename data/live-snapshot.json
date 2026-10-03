@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-02T17:55:54.067Z",
+  "lastUpdate": "2026-10-03T17:55:53.295Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7066,
+      "value": 6.7063,
       "unit": "¥",
-      "change": -0.11,
+      "change": -0.12,
       "asOf": "Oct/02",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7066,
+      "value": 6.7063,
       "unit": "¥",
-      "change": -0.11,
+      "change": -0.12,
       "asOf": "Oct/02",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2640.6008702115,
         "changeValue": 0.56,
         "trend": "ALTA",
-        "priceDate": "2026-10-02",
+        "priceDate": "2026-10-03",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 434.28983413169476,
         "changeValue": 1.04,
         "trend": "ALTA",
-        "priceDate": "2026-10-02",
+        "priceDate": "2026-10-03",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2136.216434328405,
         "changeValue": -0.69,
         "trend": "BAIXA",
-        "priceDate": "2026-10-02",
+        "priceDate": "2026-10-03",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,16 +133,16 @@
         {
           "name": "Rachel",
           "classification": "HU",
-          "intensity": "95",
-          "pressure": "959",
-          "lastUpdate": "2026-10-02T15:00:00.000Z"
+          "intensity": "75",
+          "pressure": "973",
+          "lastUpdate": "2026-10-03T15:00:00.000Z"
         },
         {
           "name": "Nolo",
-          "classification": "TS",
-          "intensity": "60",
-          "pressure": "987",
-          "lastUpdate": "2026-10-02T18:00:00.000Z"
+          "classification": "HU",
+          "intensity": "100",
+          "pressure": "959",
+          "lastUpdate": "2026-10-03T18:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -154,18 +154,18 @@
       "count": 2,
       "events": [
         {
+          "place": "5 km NNE of Korumburra, Australia",
+          "magnitude": 4.7,
+          "time": "2026-10-02T16:01:39.581Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz1y"
+        },
+        {
           "place": "6 km WNW of Wauna, Washington",
           "magnitude": 4.15,
           "time": "2026-09-29T21:05:56.370Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714111952"
-        },
-        {
-          "place": "80 km ENE of Tadine, New Caledonia",
-          "magnitude": 6.6,
-          "time": "2026-09-25T21:23:03.309Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000txpi"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
