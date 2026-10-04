@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-03T17:55:53.295Z",
+  "lastUpdate": "2026-10-04T17:55:53.760Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2640.6008702115,
         "changeValue": 0.56,
         "trend": "ALTA",
-        "priceDate": "2026-10-03",
+        "priceDate": "2026-10-04",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 434.28983413169476,
         "changeValue": 1.04,
         "trend": "ALTA",
-        "priceDate": "2026-10-03",
+        "priceDate": "2026-10-04",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2136.216434328405,
         "changeValue": -0.69,
         "trend": "BAIXA",
-        "priceDate": "2026-10-03",
+        "priceDate": "2026-10-04",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,16 +133,16 @@
         {
           "name": "Rachel",
           "classification": "HU",
-          "intensity": "75",
-          "pressure": "973",
-          "lastUpdate": "2026-10-03T15:00:00.000Z"
+          "intensity": "90",
+          "pressure": "965",
+          "lastUpdate": "2026-10-04T15:00:00.000Z"
         },
         {
           "name": "Nolo",
           "classification": "HU",
           "intensity": "100",
-          "pressure": "959",
-          "lastUpdate": "2026-10-03T18:00:00.000Z"
+          "pressure": "963",
+          "lastUpdate": "2026-10-04T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
