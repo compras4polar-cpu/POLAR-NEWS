@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-05T17:55:54.683Z",
+  "lastUpdate": "2026-10-06T17:55:53.373Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 4.9859,
+      "value": 4.9698,
       "unit": "R$",
-      "change": -4.55415597840652,
-      "asOf": "2026-10-05 13:07:36.558602",
+      "change": -0.322910607914314,
+      "asOf": "2026-10-06 13:03:21.267287",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7051,
+      "value": 6.7018,
       "unit": "¥",
-      "change": -0.02,
-      "asOf": "Oct/05",
+      "change": -0.03,
+      "asOf": "Oct/06",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3070,
+      "value": 3002,
       "unit": "pts",
-      "change": -2.48,
-      "asOf": "Oct/05",
+      "change": -2.22,
+      "asOf": "Oct/06",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 4.9859,
+      "value": 4.9698,
       "unit": "R$",
-      "change": -4.55415597840652,
-      "asOf": "2026-10-05 13:07:36.558602",
+      "change": -0.322910607914314,
+      "asOf": "2026-10-06 13:03:21.267287",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7051,
+      "value": 6.7018,
       "unit": "¥",
-      "change": -0.02,
-      "asOf": "Oct/05",
+      "change": -0.03,
+      "asOf": "Oct/06",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3070,
+      "value": 3002,
       "unit": "pts",
-      "change": -2.48,
-      "asOf": "Oct/05",
+      "change": -2.22,
+      "asOf": "Oct/06",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -98,7 +98,7 @@
         "priceUsd": 2640.6008702115,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-05",
+        "priceDate": "2026-10-06",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 434.28983413169476,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-05",
+        "priceDate": "2026-10-06",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2136.216434328405,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-05",
+        "priceDate": "2026-10-06",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -134,8 +134,8 @@
           "name": "Rachel",
           "classification": "HU",
           "intensity": "75",
-          "pressure": "976",
-          "lastUpdate": "2026-10-05T15:00:00.000Z"
+          "pressure": "977",
+          "lastUpdate": "2026-10-06T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
