@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-06T17:55:53.373Z",
+  "lastUpdate": "2026-10-07T17:55:54.497Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 4.9698,
+      "value": 4.9935,
       "unit": "R$",
-      "change": -0.322910607914314,
-      "asOf": "2026-10-06 13:03:21.267287",
+      "change": 0.47688035735844164,
+      "asOf": "2026-10-07 13:05:23.249063",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7018,
+      "value": 6.7022,
       "unit": "¥",
-      "change": -0.03,
-      "asOf": "Oct/06",
+      "change": 0.01,
+      "asOf": "Oct/07",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -28,10 +28,10 @@
     {
       "id": "brent",
       "name": "Petróleo Brent",
-      "value": 113.96,
+      "value": 125.44,
       "unit": "US$/barril",
-      "change": -5.009585729765779,
-      "asOf": "2026-09-29",
+      "change": -0.05577244841049111,
+      "asOf": "2026-10-06",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 3002,
+      "value": 2994,
       "unit": "pts",
-      "change": -2.22,
-      "asOf": "Oct/06",
+      "change": -0.27,
+      "asOf": "Oct/07",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,41 +52,41 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 4.9698,
+      "value": 4.9935,
       "unit": "R$",
-      "change": -0.322910607914314,
-      "asOf": "2026-10-06 13:03:21.267287",
+      "change": 0.47688035735844164,
+      "asOf": "2026-10-07 13:05:23.249063",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
     },
     "brent": {
       "id": "brent",
-      "value": 113.96,
+      "value": 125.44,
       "unit": "US$/barril",
-      "change": -5.009585729765779,
+      "change": -0.05577244841049111,
       "changePeriod": "vs. dia anterior (dado diário EIA)",
-      "asOf": "2026-09-29",
+      "asOf": "2026-10-06",
       "source": "EIA — U.S. Energy Information Administration (série RBRTE, Brent spot FOB)",
       "sourceUrl": "https://www.eia.gov/todayinenergy/prices.php",
       "dataStatus": "real"
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7018,
+      "value": 6.7022,
       "unit": "¥",
-      "change": -0.03,
-      "asOf": "Oct/06",
+      "change": 0.01,
+      "asOf": "Oct/07",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 3002,
+      "value": 2994,
       "unit": "pts",
-      "change": -2.22,
-      "asOf": "Oct/06",
+      "change": -0.27,
+      "asOf": "Oct/07",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -98,7 +98,7 @@
         "priceUsd": 2640.6008702115,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-06",
+        "priceDate": "2026-10-07",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 434.28983413169476,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-06",
+        "priceDate": "2026-10-07",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2136.216434328405,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-06",
+        "priceDate": "2026-10-07",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,14 +128,28 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 1,
+      "count": 3,
       "storms": [
+        {
+          "name": "Isaias",
+          "classification": "TS",
+          "intensity": "45",
+          "pressure": "997",
+          "lastUpdate": "2026-10-07T18:00:00.000Z"
+        },
         {
           "name": "Rachel",
           "classification": "HU",
-          "intensity": "75",
-          "pressure": "977",
-          "lastUpdate": "2026-10-06T15:00:00.000Z"
+          "intensity": "70",
+          "pressure": "979",
+          "lastUpdate": "2026-10-07T15:00:00.000Z"
+        },
+        {
+          "name": "Twenty-E",
+          "classification": "TD",
+          "intensity": "30",
+          "pressure": "1006",
+          "lastUpdate": "2026-10-07T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -147,18 +161,18 @@
       "count": 2,
       "events": [
         {
+          "place": "92 km NNW of Aleneva, Alaska",
+          "magnitude": 5.5,
+          "time": "2026-10-06T18:34:31.760Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tuxgky"
+        },
+        {
           "place": "5 km NNE of Korumburra, Australia",
           "magnitude": 4.7,
           "time": "2026-10-02T16:01:39.581Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz1y"
-        },
-        {
-          "place": "6 km WNW of Wauna, Washington",
-          "magnitude": 4.15,
-          "time": "2026-09-29T21:05:56.370Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714111952"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
