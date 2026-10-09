@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-08T17:55:53.740Z",
+  "lastUpdate": "2026-10-09T17:55:53.558Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.0119,
+      "value": 4.9892,
       "unit": "R$",
-      "change": 0.3684790227295434,
-      "asOf": "2026-10-08 13:08:16.814037",
+      "change": -0.4529220455316247,
+      "asOf": "2026-10-09 13:07:30.746597",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.7036,
+      "value": 6.6935,
       "unit": "¥",
-      "change": 0.01,
-      "asOf": "Oct/08",
+      "change": -0.15,
+      "asOf": "Oct/09",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2973,
+      "value": 2917,
       "unit": "pts",
-      "change": -0.7,
-      "asOf": "Oct/08",
+      "change": -1.88,
+      "asOf": "Oct/09",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.0119,
+      "value": 4.9892,
       "unit": "R$",
-      "change": 0.3684790227295434,
-      "asOf": "2026-10-08 13:08:16.814037",
+      "change": -0.4529220455316247,
+      "asOf": "2026-10-09 13:07:30.746597",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.7036,
+      "value": 6.6935,
       "unit": "¥",
-      "change": 0.01,
-      "asOf": "Oct/08",
+      "change": -0.15,
+      "asOf": "Oct/09",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2973,
+      "value": 2917,
       "unit": "pts",
-      "change": -0.7,
-      "asOf": "Oct/08",
+      "change": -1.88,
+      "asOf": "Oct/09",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,11 +94,11 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 17800,
-        "priceUsd": 2640.6008702115,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-10-08",
+        "priceCny": 17900,
+        "priceUsd": 2655.435706561003,
+        "changeValue": 0.56,
+        "trend": "ALTA",
+        "priceDate": "2026-10-09",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 440.965510488971,
         "changeValue": 1.54,
         "trend": "ALTA",
-        "priceDate": "2026-10-08",
+        "priceDate": "2026-10-09",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2136.216434328405,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-08",
+        "priceDate": "2026-10-09",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,23 +133,23 @@
         {
           "name": "Isaias",
           "classification": "HU",
-          "intensity": "75",
-          "pressure": "975",
-          "lastUpdate": "2026-10-08T15:00:00.000Z"
+          "intensity": "105",
+          "pressure": "959",
+          "lastUpdate": "2026-10-09T17:00:00.000Z"
         },
         {
           "name": "Rachel",
           "classification": "TS",
-          "intensity": "60",
-          "pressure": "985",
-          "lastUpdate": "2026-10-08T15:00:00.000Z"
+          "intensity": "45",
+          "pressure": "994",
+          "lastUpdate": "2026-10-09T18:00:00.000Z"
         },
         {
           "name": "Simon",
-          "classification": "TS",
-          "intensity": "55",
-          "pressure": "995",
-          "lastUpdate": "2026-10-08T18:00:00.000Z"
+          "classification": "HU",
+          "intensity": "85",
+          "pressure": "973",
+          "lastUpdate": "2026-10-09T18:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -158,7 +158,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 3,
+      "count": 2,
       "events": [
         {
           "place": "102 km NE of Norsup, Vanuatu",
@@ -173,13 +173,6 @@
           "time": "2026-10-06T18:34:31.760Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tuxgky"
-        },
-        {
-          "place": "5 km NNE of Korumburra, Australia",
-          "magnitude": 4.7,
-          "time": "2026-10-02T16:01:39.581Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tz1y"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
