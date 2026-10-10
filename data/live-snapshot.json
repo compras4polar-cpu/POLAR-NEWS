@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-09T17:55:53.558Z",
+  "lastUpdate": "2026-10-10T17:55:53.406Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6935,
+      "value": 6.6926,
       "unit": "¥",
-      "change": -0.15,
+      "change": -0.16,
       "asOf": "Oct/09",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -41,7 +41,7 @@
       "name": "Baltic Dry Index",
       "value": 2917,
       "unit": "pts",
-      "change": -1.88,
+      "change": 0,
       "asOf": "Oct/09",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6935,
+      "value": 6.6926,
       "unit": "¥",
-      "change": -0.15,
+      "change": -0.16,
       "asOf": "Oct/09",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -85,7 +85,7 @@
       "id": "bdi",
       "value": 2917,
       "unit": "pts",
-      "change": -1.88,
+      "change": 0,
       "asOf": "Oct/09",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
@@ -98,7 +98,7 @@
         "priceUsd": 2655.435706561003,
         "changeValue": 0.56,
         "trend": "ALTA",
-        "priceDate": "2026-10-09",
+        "priceDate": "2026-10-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 440.965510488971,
         "changeValue": 1.54,
         "trend": "ALTA",
-        "priceDate": "2026-10-09",
+        "priceDate": "2026-10-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2136.216434328405,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-09",
+        "priceDate": "2026-10-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -132,24 +132,24 @@
       "storms": [
         {
           "name": "Isaias",
-          "classification": "HU",
-          "intensity": "105",
-          "pressure": "959",
-          "lastUpdate": "2026-10-09T17:00:00.000Z"
+          "classification": "PTC",
+          "intensity": "30",
+          "pressure": "1006",
+          "lastUpdate": "2026-10-10T15:00:00.000Z"
         },
         {
           "name": "Rachel",
           "classification": "TS",
-          "intensity": "45",
-          "pressure": "994",
-          "lastUpdate": "2026-10-09T18:00:00.000Z"
+          "intensity": "50",
+          "pressure": "992",
+          "lastUpdate": "2026-10-10T18:00:00.000Z"
         },
         {
           "name": "Simon",
           "classification": "HU",
-          "intensity": "85",
-          "pressure": "973",
-          "lastUpdate": "2026-10-09T18:00:00.000Z"
+          "intensity": "130",
+          "pressure": "938",
+          "lastUpdate": "2026-10-10T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -158,8 +158,36 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 2,
+      "count": 6,
       "events": [
+        {
+          "place": "7 km N of La Tronosa, Panama",
+          "magnitude": 6,
+          "time": "2026-10-10T04:14:01.786Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1cf"
+        },
+        {
+          "place": "14 km W of Río Grande, Panama",
+          "magnitude": 6.6,
+          "time": "2026-10-09T20:25:39.080Z",
+          "tsunamiWarning": true,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u19w"
+        },
+        {
+          "place": "1 km S of El Cacao, Panama",
+          "magnitude": 5.8,
+          "time": "2026-10-09T18:37:46.146Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18x"
+        },
+        {
+          "place": "12 km WSW of Pitaloza Arriba, Panama",
+          "magnitude": 7.7,
+          "time": "2026-10-09T17:56:06.036Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18k"
+        },
         {
           "place": "102 km NE of Norsup, Vanuatu",
           "magnitude": 6.3,
