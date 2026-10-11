@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-10T17:55:53.406Z",
+  "lastUpdate": "2026-10-11T17:55:53.174Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2655.435706561003,
         "changeValue": 0.56,
         "trend": "ALTA",
-        "priceDate": "2026-10-10",
+        "priceDate": "2026-10-11",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 440.965510488971,
         "changeValue": 1.54,
         "trend": "ALTA",
-        "priceDate": "2026-10-10",
+        "priceDate": "2026-10-11",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2136.216434328405,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-10",
+        "priceDate": "2026-10-11",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,23 +133,23 @@
         {
           "name": "Isaias",
           "classification": "PTC",
-          "intensity": "30",
-          "pressure": "1006",
-          "lastUpdate": "2026-10-10T15:00:00.000Z"
+          "intensity": "20",
+          "pressure": "1010",
+          "lastUpdate": "2026-10-11T15:00:00.000Z"
         },
         {
           "name": "Rachel",
-          "classification": "TS",
-          "intensity": "50",
-          "pressure": "992",
-          "lastUpdate": "2026-10-10T18:00:00.000Z"
+          "classification": "PTC",
+          "intensity": "30",
+          "pressure": "994",
+          "lastUpdate": "2026-10-11T15:00:00.000Z"
         },
         {
           "name": "Simon",
           "classification": "HU",
-          "intensity": "130",
-          "pressure": "938",
-          "lastUpdate": "2026-10-10T15:00:00.000Z"
+          "intensity": "120",
+          "pressure": "940",
+          "lastUpdate": "2026-10-11T18:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
