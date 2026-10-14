@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-13T17:55:53.517Z",
+  "lastUpdate": "2026-10-14T17:55:53.724Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.0096,
+      "value": 5.0441,
       "unit": "R$",
-      "change": 0.408883187685391,
-      "asOf": "2026-10-13 13:04:26.866133",
+      "change": 0.6886777387416245,
+      "asOf": "2026-10-14 13:05:17.833426",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6936,
+      "value": 6.6973,
       "unit": "¥",
-      "change": -0.02,
-      "asOf": "Oct/13",
+      "change": 0.07,
+      "asOf": "Oct/14",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2801,
+      "value": 2667,
       "unit": "pts",
-      "change": -1.79,
-      "asOf": "Oct/13",
+      "change": -4.78,
+      "asOf": "Oct/14",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.0096,
+      "value": 5.0441,
       "unit": "R$",
-      "change": 0.408883187685391,
-      "asOf": "2026-10-13 13:04:26.866133",
+      "change": 0.6886777387416245,
+      "asOf": "2026-10-14 13:05:17.833426",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6936,
+      "value": 6.6973,
       "unit": "¥",
-      "change": -0.02,
-      "asOf": "Oct/13",
+      "change": 0.07,
+      "asOf": "Oct/14",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2801,
+      "value": 2667,
       "unit": "pts",
-      "change": -1.79,
-      "asOf": "Oct/13",
+      "change": -4.78,
+      "asOf": "Oct/14",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -98,7 +98,7 @@
         "priceUsd": 2685.1053792600087,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-13",
+        "priceDate": "2026-10-14",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 488.8078577161176,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-13",
+        "priceDate": "2026-10-14",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2151.0512706779073,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-13",
+        "priceDate": "2026-10-14",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -131,18 +131,18 @@
       "count": 2,
       "storms": [
         {
-          "name": "Twenty-One-E",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1006",
-          "lastUpdate": "2026-10-13T15:00:00.000Z"
+          "name": "Trudy",
+          "classification": "TS",
+          "intensity": "50",
+          "pressure": "998",
+          "lastUpdate": "2026-10-14T15:00:00.000Z"
         },
         {
           "name": "Simon",
           "classification": "HU",
           "intensity": "80",
-          "pressure": "977",
-          "lastUpdate": "2026-10-13T18:00:00.000Z"
+          "pressure": "975",
+          "lastUpdate": "2026-10-14T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -151,7 +151,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 9,
+      "count": 8,
       "events": [
         {
           "place": "central Mid-Atlantic Ridge",
@@ -182,9 +182,9 @@
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1cf"
         },
         {
-          "place": "14 km W of Río Grande, Panama",
+          "place": "12 km W of Río Grande, Panama",
           "magnitude": 6.6,
-          "time": "2026-10-09T20:25:39.080Z",
+          "time": "2026-10-09T20:25:40.656Z",
           "tsunamiWarning": true,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u19w"
         },
@@ -208,13 +208,6 @@
           "time": "2026-10-08T09:00:07.768Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u0xi"
-        },
-        {
-          "place": "92 km NNW of Aleneva, Alaska",
-          "magnitude": 5.5,
-          "time": "2026-10-06T18:34:31.760Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026tuxgky"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
