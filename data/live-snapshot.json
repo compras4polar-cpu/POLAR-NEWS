@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-16T17:55:53.539Z",
+  "lastUpdate": "2026-10-18T17:55:59.486Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,7 +17,7 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6862,
+      "value": 6.6863,
       "unit": "¥",
       "change": -0.05,
       "asOf": "Oct/16",
@@ -73,7 +73,7 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6862,
+      "value": 6.6863,
       "unit": "¥",
       "change": -0.05,
       "asOf": "Oct/16",
@@ -98,7 +98,7 @@
         "priceUsd": 2655.435706561003,
         "changeValue": -1.1,
         "trend": "BAIXA",
-        "priceDate": "2026-10-16",
+        "priceDate": "2026-10-18",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 488.8078577161176,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-16",
+        "priceDate": "2026-10-18",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2151.0512706779073,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-16",
+        "priceDate": "2026-10-18",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,21 +128,14 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 2,
+      "count": 1,
       "storms": [
         {
           "name": "Trudy",
           "classification": "HU",
-          "intensity": "95",
-          "pressure": "963",
-          "lastUpdate": "2026-10-16T18:00:00.000Z"
-        },
-        {
-          "name": "Simon",
-          "classification": "TS",
-          "intensity": "35",
-          "pressure": "1002",
-          "lastUpdate": "2026-10-16T15:00:00.000Z"
+          "intensity": "90",
+          "pressure": "970",
+          "lastUpdate": "2026-10-18T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -151,8 +144,15 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 8,
+      "count": 5,
       "events": [
+        {
+          "place": "48 km WNW of Khuzdar, Pakistan",
+          "magnitude": 5.7,
+          "time": "2026-10-17T05:06:57.657Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1"
+        },
         {
           "place": "76 km NE of Ozernovskiy, Russia",
           "magnitude": 6.9,
@@ -180,34 +180,6 @@
           "time": "2026-10-12T23:20:36.003Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1wn"
-        },
-        {
-          "place": "7 km N of La Tronosa, Panama",
-          "magnitude": 6,
-          "time": "2026-10-10T04:14:01.786Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1cf"
-        },
-        {
-          "place": "12 km W of Río Grande, Panama",
-          "magnitude": 6.6,
-          "time": "2026-10-09T20:25:40.656Z",
-          "tsunamiWarning": true,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u19w"
-        },
-        {
-          "place": "1 km S of El Cacao, Panama",
-          "magnitude": 5.8,
-          "time": "2026-10-09T18:37:46.146Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18x"
-        },
-        {
-          "place": "12 km WSW of Pitaloza Arriba, Panama",
-          "magnitude": 7.7,
-          "time": "2026-10-09T17:56:06.036Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u18k"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
