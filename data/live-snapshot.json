@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-18T17:55:59.486Z",
+  "lastUpdate": "2026-10-19T17:55:55.170Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.0826,
+      "value": 5.0564,
       "unit": "R$",
-      "change": 0.6037093485877154,
-      "asOf": "2026-10-16 13:04:14.548156",
+      "change": -0.5154842009994929,
+      "asOf": "2026-10-19 13:05:47.20983",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6863,
+      "value": 6.6823,
       "unit": "¥",
-      "change": -0.05,
-      "asOf": "Oct/16",
+      "change": -0.06,
+      "asOf": "Oct/19",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2511,
+      "value": 2546,
       "unit": "pts",
-      "change": -1.34,
-      "asOf": "Oct/16",
+      "change": 1.39,
+      "asOf": "Oct/19",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.0826,
+      "value": 5.0564,
       "unit": "R$",
-      "change": 0.6037093485877154,
-      "asOf": "2026-10-16 13:04:14.548156",
+      "change": -0.5154842009994929,
+      "asOf": "2026-10-19 13:05:47.20983",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6863,
+      "value": 6.6823,
       "unit": "¥",
-      "change": -0.05,
-      "asOf": "Oct/16",
+      "change": -0.06,
+      "asOf": "Oct/19",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2511,
+      "value": 2546,
       "unit": "pts",
-      "change": -1.34,
-      "asOf": "Oct/16",
+      "change": 1.39,
+      "asOf": "Oct/19",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,22 +94,22 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 17900,
-        "priceUsd": 2655.435706561003,
-        "changeValue": -1.1,
+        "priceCny": 17600,
+        "priceUsd": 2610.9311975124947,
+        "changeValue": -1.68,
         "trend": "BAIXA",
-        "priceDate": "2026-10-18",
+        "priceDate": "2026-10-19",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 3295,
-        "priceUsd": 488.8078577161176,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-10-18",
+        "priceCny": 3287.5,
+        "priceUsd": 487.6952449899049,
+        "changeValue": -0.23,
+        "trend": "BAIXA",
+        "priceDate": "2026-10-19",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2151.0512706779073,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-18",
+        "priceDate": "2026-10-19",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -132,10 +132,10 @@
       "storms": [
         {
           "name": "Trudy",
-          "classification": "HU",
-          "intensity": "90",
-          "pressure": "970",
-          "lastUpdate": "2026-10-18T15:00:00.000Z"
+          "classification": "TS",
+          "intensity": "50",
+          "pressure": "999",
+          "lastUpdate": "2026-10-19T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
