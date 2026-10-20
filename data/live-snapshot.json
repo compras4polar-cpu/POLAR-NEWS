@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-19T17:55:55.170Z",
+  "lastUpdate": "2026-10-20T17:56:03.223Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.0564,
+      "value": 5.014,
       "unit": "R$",
-      "change": -0.5154842009994929,
-      "asOf": "2026-10-19 13:05:47.20983",
+      "change": -0.8385412546475709,
+      "asOf": "2026-10-20 13:09:36.250006",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6823,
+      "value": 6.675,
       "unit": "¥",
-      "change": -0.06,
-      "asOf": "Oct/19",
+      "change": -0.11,
+      "asOf": "Oct/20",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2546,
+      "value": 2593,
       "unit": "pts",
-      "change": 1.39,
-      "asOf": "Oct/19",
+      "change": 1.85,
+      "asOf": "Oct/20",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.0564,
+      "value": 5.014,
       "unit": "R$",
-      "change": -0.5154842009994929,
-      "asOf": "2026-10-19 13:05:47.20983",
+      "change": -0.8385412546475709,
+      "asOf": "2026-10-20 13:09:36.250006",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6823,
+      "value": 6.675,
       "unit": "¥",
-      "change": -0.06,
-      "asOf": "Oct/19",
+      "change": -0.11,
+      "asOf": "Oct/20",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2546,
+      "value": 2593,
       "unit": "pts",
-      "change": 1.39,
-      "asOf": "Oct/19",
+      "change": 1.85,
+      "asOf": "Oct/20",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,31 +96,31 @@
         "id": "tdi",
         "priceCny": 17600,
         "priceUsd": 2610.9311975124947,
-        "changeValue": -1.68,
-        "trend": "BAIXA",
-        "priceDate": "2026-10-19",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-10-20",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 3287.5,
-        "priceUsd": 487.6952449899049,
-        "changeValue": -0.23,
+        "priceCny": 3020,
+        "priceUsd": 448.0120577549849,
+        "changeValue": -8.14,
         "trend": "BAIXA",
-        "priceDate": "2026-10-19",
+        "priceDate": "2026-10-20",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "silicone": {
         "id": "silicone",
-        "priceCny": 14500,
-        "priceUsd": 2151.0512706779073,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-10-19",
+        "priceCny": 14600,
+        "priceUsd": 2165.88610702741,
+        "changeValue": 0.69,
+        "trend": "ALTA",
+        "priceDate": "2026-10-20",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,24 +128,23 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 1,
-      "storms": [
-        {
-          "name": "Trudy",
-          "classification": "TS",
-          "intensity": "50",
-          "pressure": "999",
-          "lastUpdate": "2026-10-19T15:00:00.000Z"
-        }
-      ],
+      "count": 0,
+      "storms": [],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
       "sourceUrl": "https://www.nhc.noaa.gov/",
       "dataStatus": "real"
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 5,
+      "count": 3,
       "events": [
+        {
+          "place": "197 km NW of Port-Olry, Vanuatu",
+          "magnitude": 6.3,
+          "time": "2026-10-20T04:20:38.737Z",
+          "tsunamiWarning": true,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3jl"
+        },
         {
           "place": "48 km WNW of Khuzdar, Pakistan",
           "magnitude": 5.7,
@@ -159,27 +158,6 @@
           "time": "2026-10-16T03:35:31.925Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2mq"
-        },
-        {
-          "place": "central Mid-Atlantic Ridge",
-          "magnitude": 6.8,
-          "time": "2026-10-13T12:23:07.248Z",
-          "tsunamiWarning": true,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u214"
-        },
-        {
-          "place": "central Mid-Atlantic Ridge",
-          "magnitude": 6.7,
-          "time": "2026-10-13T05:44:46.919Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1z5"
-        },
-        {
-          "place": "17 km W of Río Grande, Panama",
-          "magnitude": 6.1,
-          "time": "2026-10-12T23:20:36.003Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u1wn"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
