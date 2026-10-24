@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-23T17:55:53.587Z",
+  "lastUpdate": "2026-10-24T17:55:54.892Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6701,
+      "value": 6.6695,
       "unit": "¥",
-      "change": -0.04,
+      "change": -0.05,
       "asOf": "Oct/23",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6701,
+      "value": 6.6695,
       "unit": "¥",
-      "change": -0.04,
+      "change": -0.05,
       "asOf": "Oct/23",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2571.3711394192756,
         "changeValue": -1.52,
         "trend": "BAIXA",
-        "priceDate": "2026-10-23",
+        "priceDate": "2026-10-24",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 422.05109414335493,
         "changeValue": -13.46,
         "trend": "BAIXA",
-        "priceDate": "2026-10-23",
+        "priceDate": "2026-10-24",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0.69,
         "trend": "ALTA",
-        "priceDate": "2026-10-23",
+        "priceDate": "2026-10-24",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,9 +133,9 @@
         {
           "name": "Vance",
           "classification": "HU",
-          "intensity": "80",
-          "pressure": "979",
-          "lastUpdate": "2026-10-23T15:00:00.000Z"
+          "intensity": "90",
+          "pressure": "970",
+          "lastUpdate": "2026-10-24T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -144,8 +144,22 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 3,
+      "count": 4,
       "events": [
+        {
+          "place": "170 km NW of Port-Olry, Vanuatu",
+          "magnitude": 6.3,
+          "time": "2026-10-24T02:35:57.362Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jb"
+        },
+        {
+          "place": "197 km WNW of Port-Olry, Vanuatu",
+          "magnitude": 6.9,
+          "time": "2026-10-24T02:31:28.641Z",
+          "tsunamiWarning": true,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4j2"
+        },
         {
           "place": "191 km ENE of Nagqu, China",
           "magnitude": 7,
@@ -159,13 +173,6 @@
           "time": "2026-10-20T04:20:38.737Z",
           "tsunamiWarning": true,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3jl"
-        },
-        {
-          "place": "48 km WNW of Khuzdar, Pakistan",
-          "magnitude": 5.7,
-          "time": "2026-10-17T05:06:57.657Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2y1"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
