@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-26T17:55:52.292Z",
+  "lastUpdate": "2026-10-27T17:55:53.127Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.5007,
+      "value": 5.3346,
       "unit": "R$",
-      "change": 9.190702106119858,
-      "asOf": "2026-10-26 13:09:51.106105",
+      "change": -3.0196156852764218,
+      "asOf": "2026-10-27 13:05:26.521898",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6677,
+      "value": 6.6641,
       "unit": "¥",
-      "change": -0.03,
-      "asOf": "Oct/26",
+      "change": -0.05,
+      "asOf": "Oct/27",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2628,
+      "value": 2603,
       "unit": "pts",
-      "change": -1.2,
-      "asOf": "Oct/26",
+      "change": -0.95,
+      "asOf": "Oct/27",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.5007,
+      "value": 5.3346,
       "unit": "R$",
-      "change": 9.190702106119858,
-      "asOf": "2026-10-26 13:09:51.106105",
+      "change": -3.0196156852764218,
+      "asOf": "2026-10-27 13:05:26.521898",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6677,
+      "value": 6.6641,
       "unit": "¥",
-      "change": -0.03,
-      "asOf": "Oct/26",
+      "change": -0.05,
+      "asOf": "Oct/27",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2628,
+      "value": 2603,
       "unit": "pts",
-      "change": -1.2,
-      "asOf": "Oct/26",
+      "change": -0.95,
+      "asOf": "Oct/27",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,33 +94,33 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 17800,
-        "priceUsd": 2640.6008702115,
-        "changeValue": 15.09,
-        "trend": "ALTA",
-        "priceDate": "2026-10-26",
+        "priceCny": 17300,
+        "priceUsd": 2566.426688463986,
+        "changeValue": -0.19,
+        "trend": "BAIXA",
+        "priceDate": "2026-10-27",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 2927.5,
-        "priceUsd": 434.28983413169476,
-        "changeValue": 49.94,
+        "priceCny": 3045,
+        "priceUsd": 451.72076684236055,
+        "changeValue": 2.53,
         "trend": "ALTA",
-        "priceDate": "2026-10-26",
+        "priceDate": "2026-10-27",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "silicone": {
         "id": "silicone",
-        "priceCny": 14400,
-        "priceUsd": 2136.216434328405,
-        "changeValue": -2.04,
-        "trend": "BAIXA",
-        "priceDate": "2026-10-26",
+        "priceCny": 14600,
+        "priceUsd": 2165.88610702741,
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-10-27",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,21 +128,14 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 2,
+      "count": 1,
       "storms": [
         {
           "name": "Vance",
           "classification": "TS",
-          "intensity": "55",
-          "pressure": "997",
-          "lastUpdate": "2026-10-26T15:00:00.000Z"
-        },
-        {
-          "name": "Olana",
-          "classification": "TD",
-          "intensity": "30",
-          "pressure": "1005",
-          "lastUpdate": "2026-10-26T15:00:00.000Z"
+          "intensity": "35",
+          "pressure": "1003",
+          "lastUpdate": "2026-10-27T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -151,7 +144,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 5,
+      "count": 4,
       "events": [
         {
           "place": "Bonin Islands, Japan region",
@@ -180,13 +173,6 @@
           "time": "2026-10-22T14:33:40.353Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u43g"
-        },
-        {
-          "place": "197 km NW of Port-Olry, Vanuatu",
-          "magnitude": 6.3,
-          "time": "2026-10-20T04:20:38.737Z",
-          "tsunamiWarning": true,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3jl"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
