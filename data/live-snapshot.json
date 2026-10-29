@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-28T17:55:52.813Z",
+  "lastUpdate": "2026-10-29T17:55:54.056Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.342,
+      "value": 5.3744,
       "unit": "R$",
-      "change": 0.13871705469950193,
-      "asOf": "2026-10-28 13:05:31.600448",
+      "change": 0.6065144140771245,
+      "asOf": "2026-10-29 13:11:53.555689",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6645,
+      "value": 6.6566,
       "unit": "¥",
-      "change": 0,
-      "asOf": "Oct/28",
+      "change": -0.08,
+      "asOf": "Oct/29",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2652,
+      "value": 2712,
       "unit": "pts",
-      "change": 1.88,
-      "asOf": "Oct/28",
+      "change": 2.26,
+      "asOf": "Oct/29",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.342,
+      "value": 5.3744,
       "unit": "R$",
-      "change": 0.13871705469950193,
-      "asOf": "2026-10-28 13:05:31.600448",
+      "change": 0.6065144140771245,
+      "asOf": "2026-10-29 13:11:53.555689",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6645,
+      "value": 6.6566,
       "unit": "¥",
-      "change": 0,
-      "asOf": "Oct/28",
+      "change": -0.08,
+      "asOf": "Oct/29",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2652,
+      "value": 2712,
       "unit": "pts",
-      "change": 1.88,
-      "asOf": "Oct/28",
+      "change": 2.26,
+      "asOf": "Oct/29",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -98,7 +98,7 @@
         "priceUsd": 2566.426688463986,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-28",
+        "priceDate": "2026-10-29",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -107,9 +107,9 @@
         "id": "dcm",
         "priceCny": 3145,
         "priceUsd": 466.5556031918634,
-        "changeValue": 3.28,
-        "trend": "ALTA",
-        "priceDate": "2026-10-28",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-10-29",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-28",
+        "priceDate": "2026-10-29",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -135,7 +135,7 @@
           "classification": "TS",
           "intensity": "35",
           "pressure": "1004",
-          "lastUpdate": "2026-10-28T15:00:00.000Z"
+          "lastUpdate": "2026-10-29T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -146,6 +146,13 @@
       "id": "significant-earthquakes",
       "count": 4,
       "events": [
+        {
+          "place": "southeast of Easter Island",
+          "magnitude": 6.4,
+          "time": "2026-10-29T07:49:50.928Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttxz"
+        },
         {
           "place": "Bonin Islands, Japan region",
           "magnitude": 6.5,
@@ -166,13 +173,6 @@
           "time": "2026-10-24T02:31:28.641Z",
           "tsunamiWarning": true,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4j2"
-        },
-        {
-          "place": "191 km ENE of Nagqu, China",
-          "magnitude": 7,
-          "time": "2026-10-22T14:33:40.353Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u43g"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
