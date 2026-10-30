@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-10-29T17:55:54.056Z",
+  "lastUpdate": "2026-10-30T17:55:53.636Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.3744,
+      "value": 5.4212,
       "unit": "R$",
-      "change": 0.6065144140771245,
-      "asOf": "2026-10-29 13:11:53.555689",
+      "change": 0.8707948794284046,
+      "asOf": "2026-10-30 13:04:18.706316",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6566,
+      "value": 6.6541,
       "unit": "¥",
-      "change": -0.08,
-      "asOf": "Oct/29",
+      "change": -0.04,
+      "asOf": "Oct/30",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2712,
+      "value": 2714,
       "unit": "pts",
-      "change": 2.26,
-      "asOf": "Oct/29",
+      "change": 0.07,
+      "asOf": "Oct/30",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.3744,
+      "value": 5.4212,
       "unit": "R$",
-      "change": 0.6065144140771245,
-      "asOf": "2026-10-29 13:11:53.555689",
+      "change": 0.8707948794284046,
+      "asOf": "2026-10-30 13:04:18.706316",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6566,
+      "value": 6.6541,
       "unit": "¥",
-      "change": -0.08,
-      "asOf": "Oct/29",
+      "change": -0.04,
+      "asOf": "Oct/30",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2712,
+      "value": 2714,
       "unit": "pts",
-      "change": 2.26,
-      "asOf": "Oct/29",
+      "change": 0.07,
+      "asOf": "Oct/30",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -94,11 +94,11 @@
     "chemicals": {
       "tdi": {
         "id": "tdi",
-        "priceCny": 17300,
-        "priceUsd": 2566.426688463986,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-10-29",
+        "priceCny": 17133.33,
+        "priceUsd": 2541.70146672027,
+        "changeValue": -1.15,
+        "trend": "BAIXA",
+        "priceDate": "2026-10-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -107,9 +107,9 @@
         "id": "dcm",
         "priceCny": 3145,
         "priceUsd": 466.5556031918634,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-10-29",
+        "changeValue": 5.89,
+        "trend": "ALTA",
+        "priceDate": "2026-10-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-29",
+        "priceDate": "2026-10-30",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -128,16 +128,8 @@
     },
     "atlanticStorms": {
       "id": "atlantic-storms",
-      "count": 1,
-      "storms": [
-        {
-          "name": "Vance",
-          "classification": "TS",
-          "intensity": "35",
-          "pressure": "1004",
-          "lastUpdate": "2026-10-29T15:00:00.000Z"
-        }
-      ],
+      "count": 0,
+      "storms": [],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
       "sourceUrl": "https://www.nhc.noaa.gov/",
       "dataStatus": "real"
