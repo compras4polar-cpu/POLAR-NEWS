@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-30T17:55:53.636Z",
+  "lastUpdate": "2026-10-31T17:55:52.165Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6541,
+      "value": 6.6523,
       "unit": "¥",
-      "change": -0.04,
+      "change": -0.07,
       "asOf": "Oct/30",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6541,
+      "value": 6.6523,
       "unit": "¥",
-      "change": -0.04,
+      "change": -0.07,
       "asOf": "Oct/30",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2541.70146672027,
         "changeValue": -1.15,
         "trend": "BAIXA",
-        "priceDate": "2026-10-30",
+        "priceDate": "2026-10-31",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 466.5556031918634,
         "changeValue": 5.89,
         "trend": "ALTA",
-        "priceDate": "2026-10-30",
+        "priceDate": "2026-10-31",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-30",
+        "priceDate": "2026-10-31",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -136,7 +136,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 4,
+      "count": 2,
       "events": [
         {
           "place": "southeast of Easter Island",
@@ -151,20 +151,6 @@
           "time": "2026-10-25T02:09:23.818Z",
           "tsunamiWarning": true,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4r9"
-        },
-        {
-          "place": "170 km NW of Port-Olry, Vanuatu",
-          "magnitude": 6.3,
-          "time": "2026-10-24T02:35:57.362Z",
-          "tsunamiWarning": false,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4jb"
-        },
-        {
-          "place": "197 km WNW of Port-Olry, Vanuatu",
-          "magnitude": 6.9,
-          "time": "2026-10-24T02:31:28.641Z",
-          "tsunamiWarning": true,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4j2"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
