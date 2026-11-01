@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-10-31T17:55:52.165Z",
+  "lastUpdate": "2026-11-01T17:55:53.302Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2541.70146672027,
         "changeValue": -1.15,
         "trend": "BAIXA",
-        "priceDate": "2026-10-31",
+        "priceDate": "2026-11-01",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 466.5556031918634,
         "changeValue": 5.89,
         "trend": "ALTA",
-        "priceDate": "2026-10-31",
+        "priceDate": "2026-11-01",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-10-31",
+        "priceDate": "2026-11-01",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -136,7 +136,7 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 2,
+      "count": 1,
       "events": [
         {
           "place": "southeast of Easter Island",
@@ -144,13 +144,6 @@
           "time": "2026-10-29T07:49:50.928Z",
           "tsunamiWarning": false,
           "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000ttxz"
-        },
-        {
-          "place": "Bonin Islands, Japan region",
-          "magnitude": 6.5,
-          "time": "2026-10-25T02:09:23.818Z",
-          "tsunamiWarning": true,
-          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u4r9"
         }
       ],
       "source": "USGS — Significant Earthquakes, Past Week",
