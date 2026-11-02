@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-11-01T17:55:53.302Z",
+  "lastUpdate": "2026-11-02T17:55:52.409Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6523,
+      "value": 6.6466,
       "unit": "¥",
-      "change": -0.07,
-      "asOf": "Oct/30",
+      "change": -0.09,
+      "asOf": "Nov/02",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2714,
+      "value": 2648,
       "unit": "pts",
-      "change": 0.07,
-      "asOf": "Oct/30",
+      "change": -2.43,
+      "asOf": "Nov/02",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6523,
+      "value": 6.6466,
       "unit": "¥",
-      "change": -0.07,
-      "asOf": "Oct/30",
+      "change": -0.09,
+      "asOf": "Nov/02",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2714,
+      "value": 2648,
       "unit": "pts",
-      "change": 0.07,
-      "asOf": "Oct/30",
+      "change": -2.43,
+      "asOf": "Nov/02",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,20 +96,20 @@
         "id": "tdi",
         "priceCny": 17133.33,
         "priceUsd": 2541.70146672027,
-        "changeValue": -1.15,
-        "trend": "BAIXA",
-        "priceDate": "2026-11-01",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-11-02",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 3145,
-        "priceUsd": 466.5556031918634,
-        "changeValue": 5.89,
-        "trend": "ALTA",
-        "priceDate": "2026-11-01",
+        "priceCny": 3270,
+        "priceUsd": 485.0991486287419,
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-11-02",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-01",
+        "priceDate": "2026-11-02",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
