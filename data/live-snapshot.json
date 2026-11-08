@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-11-07T17:55:54.249Z",
+  "lastUpdate": "2026-11-08T17:55:54.643Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -98,7 +98,7 @@
         "priceUsd": 2551.591852114483,
         "changeValue": 0.39,
         "trend": "ALTA",
-        "priceDate": "2026-11-07",
+        "priceDate": "2026-11-08",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 485.0991486287419,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-07",
+        "priceDate": "2026-11-08",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-07",
+        "priceDate": "2026-11-08",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,9 +133,9 @@
         {
           "name": "Pena",
           "classification": "TS",
-          "intensity": "45",
-          "pressure": "998",
-          "lastUpdate": "2026-11-07T15:00:00.000Z"
+          "intensity": "40",
+          "pressure": "1002",
+          "lastUpdate": "2026-11-08T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
