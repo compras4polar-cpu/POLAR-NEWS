@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-11-08T17:55:54.643Z",
+  "lastUpdate": "2026-11-09T17:55:53.380Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.5013,
+      "value": 5.5146,
       "unit": "R$",
-      "change": 0.7176726899910151,
-      "asOf": "2026-11-06 13:06:13.966362",
+      "change": 0.2417610383000398,
+      "asOf": "2026-11-09 13:11:19.041465",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6724,
+      "value": 6.6715,
       "unit": "¥",
-      "change": 0.11,
-      "asOf": "Nov/06",
+      "change": -0.01,
+      "asOf": "Nov/09",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2805,
+      "value": 2854,
       "unit": "pts",
-      "change": 2.37,
-      "asOf": "Nov/06",
+      "change": 1.75,
+      "asOf": "Nov/09",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.5013,
+      "value": 5.5146,
       "unit": "R$",
-      "change": 0.7176726899910151,
-      "asOf": "2026-11-06 13:06:13.966362",
+      "change": 0.2417610383000398,
+      "asOf": "2026-11-09 13:11:19.041465",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6724,
+      "value": 6.6715,
       "unit": "¥",
-      "change": 0.11,
-      "asOf": "Nov/06",
+      "change": -0.01,
+      "asOf": "Nov/09",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2805,
+      "value": 2854,
       "unit": "pts",
-      "change": 2.37,
-      "asOf": "Nov/06",
+      "change": 1.75,
+      "asOf": "Nov/09",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -96,20 +96,20 @@
         "id": "tdi",
         "priceCny": 17200,
         "priceUsd": 2551.591852114483,
-        "changeValue": 0.39,
-        "trend": "ALTA",
-        "priceDate": "2026-11-08",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-11-09",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 3270,
-        "priceUsd": 485.0991486287419,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-11-08",
+        "priceCny": 3180,
+        "priceUsd": 471.74779591418934,
+        "changeValue": -2.75,
+        "trend": "BAIXA",
+        "priceDate": "2026-11-09",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-08",
+        "priceDate": "2026-11-09",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,9 +133,9 @@
         {
           "name": "Pena",
           "classification": "TS",
-          "intensity": "40",
-          "pressure": "1002",
-          "lastUpdate": "2026-11-08T15:00:00.000Z"
+          "intensity": "35",
+          "pressure": "1004",
+          "lastUpdate": "2026-11-09T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
@@ -144,8 +144,16 @@
     },
     "significantEarthquakes": {
       "id": "significant-earthquakes",
-      "count": 0,
-      "events": [],
+      "count": 1,
+      "events": [
+        {
+          "place": "30 km WSW of Lata, Solomon Islands",
+          "magnitude": 6.4,
+          "time": "2026-11-09T03:34:59.466Z",
+          "tsunamiWarning": false,
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tx16"
+        }
+      ],
       "source": "USGS — Significant Earthquakes, Past Week",
       "sourceUrl": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
       "dataStatus": "real"
