@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-11-09T17:55:53.380Z",
+  "lastUpdate": "2026-11-10T17:55:52.513Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.5146,
+      "value": 5.584,
       "unit": "R$",
-      "change": 0.2417610383000398,
-      "asOf": "2026-11-09 13:11:19.041465",
+      "change": 1.2584774961012568,
+      "asOf": "2026-11-10 13:06:01.353639",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6715,
+      "value": 6.6776,
       "unit": "¥",
-      "change": -0.01,
-      "asOf": "Nov/09",
+      "change": 0.12,
+      "asOf": "Nov/10",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2854,
+      "value": 2862,
       "unit": "pts",
-      "change": 1.75,
-      "asOf": "Nov/09",
+      "change": 0.28,
+      "asOf": "Nov/10",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.5146,
+      "value": 5.584,
       "unit": "R$",
-      "change": 0.2417610383000398,
-      "asOf": "2026-11-09 13:11:19.041465",
+      "change": 1.2584774961012568,
+      "asOf": "2026-11-10 13:06:01.353639",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6715,
+      "value": 6.6776,
       "unit": "¥",
-      "change": -0.01,
-      "asOf": "Nov/09",
+      "change": 0.12,
+      "asOf": "Nov/10",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2854,
+      "value": 2862,
       "unit": "pts",
-      "change": 1.75,
-      "asOf": "Nov/09",
+      "change": 0.28,
+      "asOf": "Nov/10",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -98,18 +98,18 @@
         "priceUsd": 2551.591852114483,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-09",
+        "priceDate": "2026-11-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "dcm": {
         "id": "dcm",
-        "priceCny": 3180,
-        "priceUsd": 471.74779591418934,
-        "changeValue": -2.75,
+        "priceCny": 3130,
+        "priceUsd": 464.33037773943795,
+        "changeValue": -1.57,
         "trend": "BAIXA",
-        "priceDate": "2026-11-09",
+        "priceDate": "2026-11-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2165.88610702741,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-09",
+        "priceDate": "2026-11-10",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -135,7 +135,7 @@
           "classification": "TS",
           "intensity": "35",
           "pressure": "1004",
-          "lastUpdate": "2026-11-09T15:00:00.000Z"
+          "lastUpdate": "2026-11-10T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
