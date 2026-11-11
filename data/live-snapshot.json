@@ -1,15 +1,15 @@
 {
-  "lastUpdate": "2026-11-10T17:55:52.513Z",
+  "lastUpdate": "2026-11-11T17:55:52.619Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
     {
       "id": "usdbrl",
       "name": "USD/BRL",
-      "value": 5.584,
+      "value": 5.5606,
       "unit": "R$",
-      "change": 1.2584774961012568,
-      "asOf": "2026-11-10 13:06:01.353639",
+      "change": -0.41905444126073865,
+      "asOf": "2026-11-11 13:02:30.354667",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -17,10 +17,10 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6776,
+      "value": 6.6736,
       "unit": "¥",
-      "change": 0.12,
-      "asOf": "Nov/10",
+      "change": -0.05,
+      "asOf": "Nov/11",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
@@ -39,10 +39,10 @@
     {
       "id": "bdi",
       "name": "Baltic Dry Index",
-      "value": 2862,
+      "value": 2959,
       "unit": "pts",
-      "change": 0.28,
-      "asOf": "Nov/10",
+      "change": 3.39,
+      "asOf": "Nov/11",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -52,10 +52,10 @@
   "live": {
     "usdBrl": {
       "id": "usdbrl",
-      "value": 5.584,
+      "value": 5.5606,
       "unit": "R$",
-      "change": 1.2584774961012568,
-      "asOf": "2026-11-10 13:06:01.353639",
+      "change": -0.41905444126073865,
+      "asOf": "2026-11-11 13:02:30.354667",
       "source": "Banco Central do Brasil — PTAX oficial (API Olinda)",
       "sourceUrl": "https://www.bcb.gov.br/conversao",
       "dataStatus": "real"
@@ -73,20 +73,20 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6776,
+      "value": 6.6736,
       "unit": "¥",
-      "change": 0.12,
-      "asOf": "Nov/10",
+      "change": -0.05,
+      "asOf": "Nov/11",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
       "dataStatus": "real"
     },
     "bdi": {
       "id": "bdi",
-      "value": 2862,
+      "value": 2959,
       "unit": "pts",
-      "change": 0.28,
-      "asOf": "Nov/10",
+      "change": 3.39,
+      "asOf": "Nov/11",
       "source": "Trading Economics (proxy gratuito; Baltic Exchange oficial é pago)",
       "sourceUrl": "https://tradingeconomics.com/commodity/baltic",
       "dataStatus": "real"
@@ -98,7 +98,7 @@
         "priceUsd": 2551.591852114483,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-10",
+        "priceDate": "2026-11-11",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -107,20 +107,20 @@
         "id": "dcm",
         "priceCny": 3130,
         "priceUsd": 464.33037773943795,
-        "changeValue": -1.57,
-        "trend": "BAIXA",
-        "priceDate": "2026-11-10",
+        "changeValue": 0,
+        "trend": "ESTÁVEL",
+        "priceDate": "2026-11-11",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
       },
       "silicone": {
         "id": "silicone",
-        "priceCny": 14600,
-        "priceUsd": 2165.88610702741,
-        "changeValue": 0,
-        "trend": "ESTÁVEL",
-        "priceDate": "2026-11-10",
+        "priceCny": 13800,
+        "priceUsd": 2047.2074162313877,
+        "changeValue": -5.48,
+        "trend": "BAIXA",
+        "priceDate": "2026-11-11",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -133,9 +133,9 @@
         {
           "name": "Pena",
           "classification": "TS",
-          "intensity": "35",
-          "pressure": "1004",
-          "lastUpdate": "2026-11-10T15:00:00.000Z"
+          "intensity": "40",
+          "pressure": "1002",
+          "lastUpdate": "2026-11-11T15:00:00.000Z"
         }
       ],
       "source": "NOAA National Hurricane Center — CurrentStorms.json",
