@@ -1,5 +1,5 @@
 {
-  "lastUpdate": "2026-11-13T17:56:28.179Z",
+  "lastUpdate": "2026-11-14T17:55:53.322Z",
   "nextUpdateIntervalMinutes": 30,
   "fxUsdCny": 6.74089,
   "market": [
@@ -17,9 +17,9 @@
     {
       "id": "usdcny",
       "name": "USD/CNY",
-      "value": 6.6734,
+      "value": 6.6747,
       "unit": "¥",
-      "change": 0,
+      "change": 0.02,
       "asOf": "Nov/13",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -73,9 +73,9 @@
     },
     "usdCny": {
       "id": "usdcny",
-      "value": 6.6734,
+      "value": 6.6747,
       "unit": "¥",
-      "change": 0,
+      "change": 0.02,
       "asOf": "Nov/13",
       "source": "Trading Economics",
       "sourceUrl": "https://tradingeconomics.com/china/currency",
@@ -98,7 +98,7 @@
         "priceUsd": 2551.591852114483,
         "changeValue": 0,
         "trend": "ESTÁVEL",
-        "priceDate": "2026-11-13",
+        "priceDate": "2026-11-14",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -109,7 +109,7 @@
         "priceUsd": 464.33037773943795,
         "changeValue": -1.57,
         "trend": "BAIXA",
-        "priceDate": "2026-11-13",
+        "priceDate": "2026-11-14",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
@@ -120,7 +120,7 @@
         "priceUsd": 2047.2074162313877,
         "changeValue": -5.48,
         "trend": "BAIXA",
-        "priceDate": "2026-11-13",
+        "priceDate": "2026-11-14",
         "source": "SunSirs (China Commodity Data Group)",
         "sourceUrl": "https://www.sunsirs.com/commodity-price/list-chemical.html",
         "dataStatus": "real"
